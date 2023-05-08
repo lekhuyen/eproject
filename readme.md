@@ -7,7 +7,7 @@ Project title: Star Classes
 
 ========> Group 02 <=========
 
-3 collaborators:
+4 collaborators:
 
 Student1455064  Le Van Khuyen
 
