@@ -1,9 +1,9 @@
-Eproject
+Star Classes
 ============================
 
 eProject-2022 Batch no: T1.2207.E1
 
-Project title: Eproject
+Project title: Star Classes
 
 ========> Group 01 <=========
 
