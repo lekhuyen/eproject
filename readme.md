@@ -5,7 +5,7 @@ eProject-2023 Batch no: T1.2302.M0
 
 Project title: Star Classes
 
-========> Group 01 <=========
+========> Group 02 <=========
 
 3 collaborators:
 
@@ -18,7 +18,7 @@ Student1455053  Tran Thanh Phong
 Student930344 Giang Le Phu Thinh
 ============================
 
-eProject documentation at https://github.com/cuoilen007/test/tree/main/document
+eProject documentation at https://github.com/lekhuyen/eproject/tree/main/document
 
 ============================
 
