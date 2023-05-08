@@ -9,6 +9,7 @@ body {
 }
 
 .header {
+    height: 63px;
     position: fixed;
     background-color: transparent;
     width: 100%;
@@ -19,6 +20,7 @@ body {
     justify-content: space-between;
     z-index: 100;
     align-items: center;
+    border: 1px solid;
 }
 
 .navbar a {
@@ -29,7 +31,9 @@ body {
     text-decoration: none;
     font-weight: 500;
 }
-
+.navbar__logo{
+    width: 50px;
+}
 .navbar a::after {
     content: '';
     position: absolute;
