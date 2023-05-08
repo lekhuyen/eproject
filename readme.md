@@ -1,7 +1,7 @@
 Star Classes
 ============================
 
-eProject-2022 Batch no: T1.2207.E1
+eProject-2023 Batch no: T1.2302.M0
 
 Project title: Star Classes
 
@@ -15,14 +15,14 @@ Student1455769  Pham Duy Hau
 
 Student1455053  Tran Thanh Phong
 
-Studen
+Student930344 Giang Le Phu Thinh
 ============================
 
 eProject documentation at https://github.com/cuoilen007/test/tree/main/document
 
 ============================
 
-eProject published at https://lnnhi1310.github.io/Kitchen-Appliances/index.html
+eProject published at https://lekhuyen.github.io/eproject/
 
 ============================
 
