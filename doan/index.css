@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    background-color: black;
+body{
+  font-family:'Roboto';
+  background-color: rgb(23, 23, 45);
 }
 
 .header {
@@ -13,9 +13,6 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: rgb(45, 43, 43);
-  position: fixed;
-  
-
 }
 
 .navbar a {
@@ -52,10 +49,7 @@ body {
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
-body {
-  font-family:'Roboto';
-  background-color: #131417;  
-}
+
 p {
   text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
 }
@@ -99,12 +93,112 @@ p {
 @keyframes text-animation {
   0% {margin-top: 0;}
   10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
+  20% {margin-top: -5rem;}
+  30% {margin-top: -5rem;}
+  40% {margin-top: -11rem;}
+  60% {margin-top: -11rem;}
+  70% {margin-top: -5rem;}
+  80% {margin-top: -5rem;}
   90% {margin-top: 0;}
   100% {margin-top: 0;}
+}
+.container2{
+  display: none;
+  display: flex;
+  width: 100%;
+  height: 50;
+  background-color: transparent;
+  flex-direction: column;
+}
+.container2.show {
+  display: flex;
+}
+.info{
+  width: 60%;
+  height: 50%;
+  background-color: white;
+  margin: 20px;
+  border-radius: 20px;
+}
+.info1{
+  width: 90%;
+  height: 80%;
+  background-color: white;
+  margin: 35px;
+}
+.textinfo{
+  font-size: 40px;
+  font-weight: 600;
+}
+.textinfo2{
+  font-size: 20px;
+}
+.money{
+  width: 40%;
+  height: 50%;
+  background-color: transparent;
+  margin: 20px;
+  border-radius: 20px;
+}
+.moneyinfo{
+  display: flex;
+  background-color: rgb(53, 63, 72);;
+  width: 90%;
+  height: 35%;
+  border-radius: 10px;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+.circle {
+  margin: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: rgb(53, 63, 72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.moneytext{
+  margin: 30px;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 1000;
+  text-align: center;
+  color: white;
+}
+.moneyinfo2{
+  display: flex;
+  background-color: rgb(53, 63, 72);;
+  width: 90%;
+  height: 35%;
+  border-radius: 10px;
+  margin: 10px;
+
+}
+.container3{
+  width: 100%;
+  height: 50vh;
+  background-color: transparent;
+}
+.text{
+  width: 100%;
+  height: 30%;
+  background-color: transparent;
+  text-align: center;
+}
+.text a{
+  text-decoration: none;
+  font-family: 'Waiting for the Sunrise', cursive;
+  color: white;
+  text-shadow: 3px 6px 3px rgba(57, 231, 241, 0.92);
+  pointer-events: none;
+}
+.hinh {
+  display: flex;
+  
 }
