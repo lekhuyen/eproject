@@ -7,8 +7,6 @@
 body{
   font-family:'Roboto';
   background-color: rgb(23, 23, 45);
-  overflow-x: scroll;
-  overflow-x: auto
 }
 
 .header {
