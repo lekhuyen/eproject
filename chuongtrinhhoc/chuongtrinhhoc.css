@@ -575,7 +575,6 @@ p {
     width: 960px;
     height: 250px;
     margin: 0 auto;
-    /* background-color: white; */
 }
 .code-img-1 {
     width: 100%;
@@ -669,4 +668,226 @@ p {
 }
 .tuvan-1 {
     color: black;
+}
+/* ....................................................... */
+.ladi-container-3 {
+    margin-top: 30px;
+    max-height: 1200px;
+    margin-top: 0;
+    background-color: black;
+}
+.ladi-container-3-1 {
+    position: relative;
+    margin: 0  auto;
+    width: 960px;
+    min-height: 600px;
+    /* background-color: white; */
+}
+#group-60 {
+    width: 276px;
+    height: 275px;
+    top: 294px;
+    left: 909px;
+    position: absolute;
+}
+.ladi-group {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.box-1 {
+    width: 124px;
+    height: 124px;
+    top: 27px;
+    overflow: hidden;
+    position: absolute;
+}
+.box-2 {
+    width: 192px;
+    height: 192px;
+    top: 82px;
+    left: 84px;
+    overflow: hidden;
+    position: absolute;
+}
+.box-3 {
+    width: 60px;
+    height: 60px;
+    left: 83px;
+    position: absolute;
+}
+.ladi-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(105, 136, 215, 0.1);
+}
+#group-70 {
+    top: 10px;
+    left: -48px;
+    width: 120px;
+    height: 119px;
+    position: absolute;
+}
+.box-4 {
+    width: 91px;
+    height: 91px;
+    top: 28px;
+    left: 0;
+    position: absolute;
+}
+.box-5 {
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 45px;
+    position: absolute;
+}
+.box-6 {
+    width: 26px;
+    height: 26px;
+    top: 43px;
+    left: 93px;
+    position: absolute;
+}
+#group-80 {
+    width: 487px;
+    height: 324px;
+    top: 135px;
+    left: -285px;
+    overflow: hidden;
+    position: absolute;
+}
+#group-80>.ladi-box {
+    border-radius: 5px;
+    background-size: contain;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-attachment: scroll;
+    background-image: url(/img/group-80.jpeg)
+
+}
+#group-90 {
+    padding-top: 50px;
+    position: absolute;
+    width: 100%;
+}
+.ladi-group-1 {
+    width: 876px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    background-image: linear-gradient(314deg, rgb(26, 42, 83), 
+    rgb(70, 145, 206));
+    border-radius: 5px;
+}
+.ladi-group-1-1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.ladi-group-1-1>h1 {
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    color: white;
+}
+
+#group-100 {
+    width: 570px;
+    height: 258px;
+    top: 311px;
+    left: 275px;
+    position: absolute;
+}
+.ladi-group-2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.ladi-group-2-1 {
+    width: 500px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-image: linear-gradient(0deg, rgba(35, 75, 180, 1), 
+    rgba(31, 88, 134,1));
+    margin-bottom: 20px;
+}
+.logo-s1 {
+    width: 45px;
+    height: 45px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:100px;
+    background-color: rgb(70, 145, 206);
+}
+.logo-s1 h3 {
+    color: white;
+}
+.title-1 {
+    margin-left: 20px;
+    color: white;
+}
+.title-1 p {
+    font-size: 17px;
+}
+#group-110 {
+    width: 532px;
+    height: 90px;
+    top: 192px;
+    left: 241px;
+    position: absolute;
+}
+.ladi-group-3 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.icon-back>i {
+    font-size: 72px;
+    color: white;
+}
+.giaito-title>p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+#group-120 {
+    width: 120px;
+    height: 119px;
+    top: 448px;
+    left: 155px;
+    position: absolute;
+}
+.box-7 {
+    width: 91px;
+    height: 91px;
+    top: 28px;
+    position: absolute;
+}
+.box-8 {
+    width: 59px;
+    height: 59px;
+    left: 44px;
+    position: absolute;
+}
+.box-9 {
+    width: 26px;
+    height: 26px;
+    top: 43px;
+    left: 93px;
+    position: absolute;
 }
