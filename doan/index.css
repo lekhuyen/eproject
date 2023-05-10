@@ -6,7 +6,25 @@
 
 body{
   font-family:'Roboto';
-  background-color: rgb(23, 23, 45);
+}
+.background-containera {
+  position: relative;
+  background-image: url("/img/img-bacground.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 500vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.background-containera::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header {
@@ -76,6 +94,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .animation {
@@ -124,6 +143,7 @@ p {
   height: 50;
   background-color: transparent;
   flex-direction: column;
+  position: relative;
 }
 .container2.show {
   display: flex;
