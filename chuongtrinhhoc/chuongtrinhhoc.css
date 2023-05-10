@@ -5,15 +5,21 @@
 }
 
 body{
-  font-family:'Roboto';
-  background-color: black
+    font-family:'Roboto';
+    background-color: black
 }
 
 .header {
+    min-height: 46.4px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1111;
     display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(45, 43, 43);
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(45, 43, 43);
 }
 
 .navbar a {
@@ -28,14 +34,14 @@ body{
     position: absolute;
     margin: auto;
 	letter-spacing: 0.0015em;
-  color: white;
+    color: white;
 	font-size: 30px;
 	text-shadow: 0 1px #8da1ff, -1px 0 #c0cbff, -1px 2px #8da1ff, -2px 1px #c0cbff,
 		-2px 3px #8da1ff, -3px 2px #c0cbff, -3px 4px #8da1ff, -4px 3px #c0cbff,
 		-4px 5px #8da1ff, -5px 4px #c0cbff, -5px 6px #8da1ff, -6px 5px #c0cbff,
 		-6px 7px #8da1ff, -7px 6px #c0cbff, -7px 8px #8da1ff, -8px 7px #c0cbff;
-  font-weight: 1000;
-  font-family: "Henny Penny", cursive;
+    ont-weight: 1000;
+    font-family: "Henny Penny", cursive;
 	color: #274dff;
 }
 
@@ -58,14 +64,14 @@ body{
     opacity: 1;
 }
 .icon{
-    color: yellowgreen
-      
+    color: yellowgreen;
+
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 
-
+/* ..................................................................................................... */
 p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+    text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
 }
 .route {
     margin-top: 63px;
@@ -86,7 +92,6 @@ p {
 }
 .modal__body {
     width: 100%;
-    /* position: relative; */
 }
 .modal__body-main {
     position: relative;
@@ -139,8 +144,8 @@ p {
     margin-right: 10px;
 }
 .tuvan {
-    width: 220px;
-    height: 50px;
+    width: 200px;
+    height: 40px;
     display: flex;
     cursor: pointer;
     border: 2px solid white;
@@ -149,6 +154,18 @@ p {
     justify-content: center;
     margin: 50px 0 0 20px;
     background-color: rgb(228,161,58);
+    animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 .tuvan__icon {
     margin-left: 20px;
@@ -505,4 +522,151 @@ p {
     right: 131px;
     border: 1px dashed white;
     position: absolute;
+}
+
+/* ................................................. */
+.ladi__main {
+    margin-top: 20px;
+    width: 394px;
+    height: 392px;
+    position: relative;
+    /* background-color: white; */
+}
+.ladi__main-border {
+    right: 0;
+    width: 326px;
+    height: 350px;
+    position: absolute;
+    border: 2px solid wheat;
+}
+.ladi__main-img {
+    width: 360px;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+.ladi__main-img>img {
+    border-bottom-left-radius: 80px;
+    width: 335px;
+    height: 336px;
+}
+.ladi_geleman-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    width: 300px;
+}
+.ladi_geleman-img img {
+    width: 300px;
+}
+.tuvan-1 {
+    position: absolute;
+    margin: 30px 0  auto;
+    left: 50%;
+}
+
+/* ....................................................................... */
+.ladi-container {
+    background-color: black;
+}
+.ladi-container-1 {
+    position: relative;
+    width: 960px;
+    height: 250px;
+    margin: 0 auto;
+    /* background-color: white; */
+}
+.code-img-1 {
+    width: 100%;
+    height: 250px;
+}
+.code-img-1-1 img{
+    width: 600px;
+    height: 250px;
+}
+.modal-3 {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+}
+.modal__overlay-3{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.modal__body-3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.hopnhom-k-3 {
+    position: absolute;
+    top: 50px;
+    right: 184px; 
+}
+.hopnhom-k-3>img {
+    width: 370px;
+}
+.fullstack-java {
+    position: absolute;
+}
+.lotrinh__reactjs-1 {
+    margin-top: 0;
+    padding-top: 40px;
+}
+
+.border-arrow-1-5-5::after {
+    right: 91px;
+}
+.border-arrow-4-1::after {
+    top: 21px;
+    width: 209px;
+    left: 123px;
+}
+.border-arrow-1-4::after {
+    top: 16px;
+}
+.border-arrow-5::before {
+    top: 53px;
+    width: 29px;
+    left: 71px;
+}
+.khung-camket-1 {
+    margin-top: -9px;
+}
+.border-arrow-6-1::after {
+    top: 45px;
+    width: 163px;
+    left: -126px;
+}
+.border-arrow-1-6-1::after {
+    top: 40px;
+    right: 303px;
+}
+.canhchu-h3-1 {
+    margin-top: -22px;
+}
+
+.ladi__main-img-1 {
+    width: 563px;
+    right: -176px;
+    bottom: 63px;
+}
+.ladi__main-img-1>img {
+    width: 410px;
+    height: 253px;
+    border-bottom-left-radius: 0;
+    border: 3px solid rgb(69,100,121);
+}
+.tuvan-3{
+    position: absolute;
+    margin: 29px -175px auto;
+    left: 50%;
+}
+.tuvan-1 {
+    color: black;
 }
