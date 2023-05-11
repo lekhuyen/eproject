@@ -514,7 +514,7 @@ p {
     border: 1px dashed white;
     position: absolute;
 }
-. border-arrow-5-10::before {
+.border-arrow-5-10::before {
     top: 65px;
     width: 21px;
     left: 75px;
@@ -706,8 +706,22 @@ p {
 #group-60 {
     width: 276px;
     height: 275px;
+    top: 386px;
+    left: 909px;
+    position: absolute;
+}
+#group-60-1 {
+    width: 276px;
+    height: 275px;
     top: 294px;
     left: 909px;
+    position: absolute;
+}
+#group-60-2 {
+    width: 276px;
+    height: 275px;
+    top: 188px;
+    left: -108px;
     position: absolute;
 }
 .ladi-group {
@@ -746,6 +760,13 @@ p {
 #group-70 {
     top: 10px;
     left: -48px;
+    width: 120px;
+    height: 119px;
+    position: absolute;
+}
+#group-70-1 {
+    top: 192px;
+    left: 124px;
     width: 120px;
     height: 119px;
     position: absolute;
@@ -886,6 +907,13 @@ p {
     font-size: 20px;
 }
 #group-120 {
+    width: 120px;
+    height: 119px;
+    top: 334px;
+    left: 816px;
+    position: absolute;
+}
+#group-120-1 {
     width: 120px;
     height: 119px;
     top: 448px;
@@ -1221,4 +1249,150 @@ p {
 .tuvan-1-1 {
     margin-top: -63px;
     margin-left: auto;
+    bottom: 75px;
+}
+/* ................................................................. */
+.mota {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    margin-top: 30px;
+}
+.mota-1 {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+}
+.camket-120-day {
+    width: 100%;
+    position: absolute;
+    top: 250px;
+}
+.camket-120-day-0 {
+    display: flex;
+    justify-content:center;
+
+}
+.camket-120-day-1 {
+    width: 52px;
+    height: 223px;
+    border-radius: 5px;
+}
+.form-zero {
+    width: 52px;
+    height: 223px;
+    border-radius: 5px;
+    display: flex;
+    background-image: linear-gradient(rgb(70, 145, 206), rgb(26, 42, 83));
+    position: absolute;
+}
+.form-zero-h3 {
+    width: 223px;
+    height: 52px;
+    top: 85px;
+    left: -85px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+}
+.form-zero-h3>h3 {
+    width: 100%;   
+    color: white;
+    line-height: 14px;
+    font-weight: bold;
+    transform: rotate(90deg);
+    transition: linear .3s;
+}
+.form-zero-h3>h3:hover {
+    transform: rotate(0);
+}
+.camket-120-day-1-0 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.form-zero-1-1::before {
+    content: "";
+    border: 2px solid rgb(70,145,206);
+    width: 206px;
+    position: absolute;
+    top: 18px;
+    left: -211px;
+}
+.form-zero-1-1::after {
+    content: "";
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color:transparent rgb(70,145,206) transparent rgb(70,145,206);
+    position: absolute;
+    top: 10px;
+    left: -9px;
+}
+
+.form-zero-1-2::before {
+    content: "";
+    border: 2px solid rgb(70,145,206);
+    width: 326px;
+    position: absolute;
+    top: 17px;
+    left: -331px;
+}
+.form-zero-1-2::after {
+    content: "";
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color:transparent rgb(70,145,206) transparent rgb(70,145,206);
+    position: absolute;
+    top: 10px;
+    left: -9px;
+}
+.form-zero-1-3::before {
+    content: "";
+    border: 2px solid rgb(70,145,206);
+    width: 445px;
+    position: absolute;
+    top: 17px;
+    left: -450px;
+}
+.form-zero-1-3::after {
+    content: "";
+    border-width: 10px 0 10px 10px;
+    border-style: solid;
+    border-color:transparent rgb(70,145,206) transparent rgb(70,145,206);
+    position: absolute;
+    top: 10px;
+    left: -9px;
+}
+.camket-120-day-2 {
+    margin-left: 500px;
+    position: relative;
+}
+
+.form-zero-1 {
+    width: 133px;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgb(70, 145, 206), rgb(26, 42, 83));
+}
+.form-zero-1-3 {
+    position: absolute;
+    left: -50px;
+    top: 175px;
+    margin-bottom: 0;
+}
+.form-zero-1-1 {
+    position: absolute;
+    left: -290px;
+}
+.form-zero-1-2 {
+    position: absolute;
+    left: -170px;
+    top: 83px;
 }
