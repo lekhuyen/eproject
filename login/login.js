@@ -39,12 +39,12 @@ function ok1() {
   if (cpassword ==="" || cemail ==="" || ba ==="") {
     alert("input pls");
     return false;
-  }else if(!/^[a-zA-Z0-9]{4,}@[a-zA-Z0-9]{3,}\.[a-zA-Z0-9]{3,}$/.test(cemail)){
-    alert("tạo gmail đúng định dàng xxxx@gmail.com");
-    return false;
-  }else if(!/^.{9,}$/.test(cpassword)){
-    alert("tạo mk dài hơn 9 số pls");
-    return false;
+  // }else if(!/^[a-zA-Z0-9]{4,}@[a-zA-Z0-9]{3,}\.[a-zA-Z0-9]{3,}$/.test(cemail)){
+  //   alert("tạo gmail đúng định dàng xxxx@gmail.com");
+  //   return false;
+  // }else if(!/^.{9,}$/.test(cpassword)){
+  //   alert("tạo mk dài hơn 9 số pls");
+  //   return false;
   }else{
     alert("Succes");
     return true;

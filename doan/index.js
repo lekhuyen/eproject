@@ -88,3 +88,13 @@ document.addEventListener('DOMContentLoaded', function() {
         topPanel.style.width = event.clientX + skewHack + delta + 'px';
     });
 });
+const footer = document.getElementById('footer');
+
+// Lấy thẻ nút Liên hệ trong navbar
+const lienHeBtn = document.querySelector('.navbar a[href="#lienhe"]');
+
+// Thêm sự kiện click vào nút Liên hệ
+lienHeBtn.addEventListener('click', function() {
+  // Lăn chuột xuống footer
+  footer.scrollIntoView();
+});

@@ -708,4 +708,7 @@ iframe {
   border: none;
 }
 /* footer */
-
+.footer2 {
+  height: 415px; /* hoặc kích thước tùy chọn */
+  
+}
