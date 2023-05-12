@@ -98,37 +98,8 @@
     </div>
 
    </div>
-<script>
-   function submitData(){
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-            var xmlhttp = new XMLHttpRequest();
-
-            xmlhttp.onreadystatechange = function(){
-                if (this.readyState == 4 && this.status == 200) {
-            var data = JSON.parse(this.responseText);
-            var users = data.users;
-           // var result = document.getElementById("result");
-            var found = false;
-            var name = "";
-            for (var i = 0; i < users.length; i++) {
-              if (users[i].email == email && users[i].password == password) {
-                found = true;
-                name = users[i].name;
-                break;
-              }
-            }
-            if (found) {
-              alert("Welcome " +name );
-            } else {
-              alert("Wrong");
-            }
-          }
-            };
-            xmlhttp.open("GET", "data.json", true);
-        xmlhttp.send();
-
-        }
+<script src="/login/login.js">
+   
 </script>
 </body>
 </html>
