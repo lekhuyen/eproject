@@ -98,3 +98,24 @@ lienHeBtn.addEventListener('click', function() {
   // Lăn chuột xuống footer
   footer.scrollIntoView();
 });
+const userProfile = document.querySelector('#user-profile');
+const loginBtn = document.querySelector('#login-btn');
+
+// Check if user is logged in
+if (loggedIn) {
+  // Show user profile and hide login button
+  userProfile.style.display = 'flex';
+  loginBtn.style.display = 'none';
+
+  // Get user profile image and name
+  const userImg = document.querySelector('#user-profile img');
+  const userName = document.querySelector('#user-name');
+
+  // Update user profile image and name
+  userImg.src = 'path/to/user-profile.jpg';
+  userName.textContent = 'John Doe';
+} else {
+  // Hide user profile and show login button
+  userProfile.style.display = 'none';
+  loginBtn.style.display = 'block';
+}
