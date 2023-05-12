@@ -10,7 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <link rel="stylesheet" href="login.css">
-<script src="login.js"></script>
+
 <style>
     
 </style>
@@ -19,22 +19,21 @@
     <header class="header fixed-top">
         <div>
           <ion-icon name="logo-buffer" class="icon" style="width: 100px; height:
-            40px;"></ion-icon> <span class="course">Star Classes</span>
+            40px;"></ion-icon> <span class="course">School Dev</span>
         </div>
         <nav class="navbar">
-            <a href="/index.html">Main Page</a>
-            <a href="#">Study program</a>
-            <a href="#">Register</a>
-            <a href="#">Contact</a>
-            <a href="/login/login.html">Login</a>
+          <a href="/index.html">Main Page</a>
+          <a href="#">Study program</a>
+          <a href="#">Register</a>
+          <a href="#footer">Contact</a>
         </nav>
       </header>
     <div class="background1"></div>
    <div class="container">
     <div class="content">
-        <h2 class="logo"><ion-icon name="logo-buffer"></ion-icon> Star Classes</h2>
+        <h2 class="logo"><ion-icon name="logo-buffer"></ion-icon> SchoolDev</h2>
         <br>
-        <h2><span style="color: orange; font-weight: 1000;">Welcome</span> To Star Classes</h2>
+        <h2><span style="color: orange; font-weight: 1000;">Welcome</span> To SchoolDev</h2>
         <div class="text">
             <div class="icon">
                 <a href="https://www.facebook.com/"><ion-icon name="logo-facebook" style="color:rgb(0, 128, 255)"></ion-icon></a>
@@ -45,7 +44,7 @@
         </div>
         <div class="loreg-box">
             <div class="box-login login">
-                <form action="/index.html" onsubmit="return ok()">
+                <form action="/index.html">
                     <h2>Sign in</h2>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
@@ -61,7 +60,8 @@
                         <label><input type="checkbox">Remember me</label>
                         <a href="#">Forgot password?</a>
                     </div>
-                    <input type="submit" class="btnn" value="Login"></input>
+                    <input type="submit" class="btnn" value="Login" onclick="submitData()"></input>
+                    
                     <div class="login-register">
                         <p>Don't Have An Account? <a href="#" class="register-link">Sign up</a></p>
                     </div>
@@ -98,8 +98,37 @@
     </div>
 
    </div>
-<script src="login.js">
-   
+<script>
+   function submitData(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function(){
+                if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText);
+            var users = data.users;
+           // var result = document.getElementById("result");
+            var found = false;
+            var name = "";
+            for (var i = 0; i < users.length; i++) {
+              if (users[i].email == email && users[i].password == password) {
+                found = true;
+                name = users[i].name;
+                break;
+              }
+            }
+            if (found) {
+              alert("Welcome " +name );
+            } else {
+              alert("Wrong");
+            }
+          }
+            };
+            xmlhttp.open("GET", "data.json", true);
+        xmlhttp.send();
+
+        }
 </script>
 </body>
 </html>
