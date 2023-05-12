@@ -1,0 +1,390 @@
+header{
+    width: 100%;
+    height: 40%;
+    background-color: rgb(57, 57, 196);
+}
+iframe{
+    width: 100%;
+}
+body{
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg);
+    background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Calligraffitti', cursive;
+}
+.text{
+    text-align: center;
+    font-size: 18px;
+}
+.page1{
+    margin-top: 50px;
+    width: 100%;
+    background-color: rgb(213, 179, 116);
+}
+.textspan{
+    font-size: 25px;
+    font-weight: 1000;
+}
+.flexanh{
+    display: flex;
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.anhtext1{
+    width: 60%;
+    background-color: transparent;
+    font-size: 18px;
+}
+.page2{
+    margin-top: 50px;
+    width: 100%;
+    background-color: white;
+}
+.text2{
+    text-align: center;
+    font-size: 18px;
+}
+.textspan2{
+    font-size: 25px;
+    font-weight: 1000;
+}
+table{
+    margin: 0 auto;
+    border: solid;
+    margin-top: 30px;
+}
+tr{
+    background-color: rgb(248, 242, 232)
+}
+.page3{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+}
+.text3{
+    text-align: center;
+    font-size: 18px;
+}
+.textspan3{
+    font-size: 25px;
+    font-weight: 1000;
+}
+.khungcard{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.card1{
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.card1:hover{
+    box-shadow: rgb(211, 208, 208) 5px 5px 5px 5px;
+}
+.card1 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .card1:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+  .card2 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .card2:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+  .card3 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .card3:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+  .card4 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .card4:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+.card2{
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.card3{
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.card4{
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.card1 hr,
+.card2 hr,
+.card3 hr,
+.card4 hr,
+.card6 hr { 
+    border: none; /* loại bỏ đường viền mặc định của HR */
+    border-bottom: 5px solid rgb(0, 0, 0); /* đường viền dưới của HR */
+}
+.textcard{
+    font-weight: 600;
+    margin-top: 20px;
+}
+.page4{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+}
+.text4{
+    text-align: center;
+    font-size: 18px;
+}
+.textspan4{
+    font-size: 25px;
+    font-weight: 1000;
+}
+.card5{
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.card5:hover{
+    box-shadow: rgb(211, 208, 208) 5px 5px 5px 5px;
+}
+.card5 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .card5:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+.khungcard2{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+.page5{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+}
+.text5{
+    text-align: center;
+    font-size: 18px;
+}
+.textspan5{
+    font-size: 25px;
+    font-weight: 1000;
+}
+.card6{
+    width: 20%;
+    height: 50%;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.card6:hover{
+    box-shadow: rgb(211, 208, 208) 5px 5px 5px 5px;
+}
+.card6 {
+    --g: 4px;     /* the gap */
+    --b: 12px;    /* border thickness*/
+    --c: #669706; /* the color */
+    
+    
+    padding: calc(var(--g) + var(--b));
+    --_c: #0000 0 25%, var(--c) 0 50%;
+    --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+    --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+    background:
+      var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+      var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+    background-size: 200% var(--b),var(--b) 200%;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .3s;
+  }
+  .card6:hover {
+    --_p: 75%;
+    filter: grayscale(0%);
+  }
+.khungcard3{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+.page6{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+    height: 70%;
+    background-color: transparent;
+}
+.text6{
+    text-align: center;
+    font-size: 18px;
+}
+.textspan6{
+    font-size: 25px;
+    font-weight: 1000;
+}
+.ketqualon{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    background-color: transparent;
+}
+.ketqua{
+    width: 22%;
+    background-color: rgb(255, 16, 83);
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+}
+.ketquatext{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 20%;
+    background-color: transparent
+}
+.ketqualon2{
+    display: flex;
+    width: 100%;
+    height: 35%;
+    background-color: transparent;
+}
+.ketqua2{
+    width: 22%;
+    background-color: rgb(255, 16, 83);
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+}
+.ketquatext2{
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 20%;
+    background-color: transparent
+}
