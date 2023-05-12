@@ -132,7 +132,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 58%;
+    width: 70%;
     height: 100%;
     background: transparent;
     color: #e4e4e4;
@@ -172,11 +172,11 @@ body {
     transition-delay: .3s;
 }
 .loreg-box.active .box-login.login {
-    transform: translateX(430px);
+    transform: translateX(550px);
     transition-delay: 0s;
 }
 .loreg-box .box-login.register {
-    transform: translateX(430px);
+    transform: translateX(550px);
     transition: transform .6s ease;
 }
 .loreg-box.active .box-login.register {
