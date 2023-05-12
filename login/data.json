@@ -1,0 +1,10 @@
+{
+    "users":
+    [
+        {"name": "Thinh", "phone": "123456", "email":"abc@gmail.com","password":"123456"},
+        {"name": "Phong", "phone": "123456", "email":"abc1@gmail.com","password":"123456"},
+        {"name": "Hau", "phone": "123456", "email":"abc2@gmail.com","password":"123456"},
+        {"name": "Khuyen", "phone": "123456", "email":"abc3@gmail.com","password":"123456"},
+        {"name": "Cuong", "phone": "123456", "email":"abc4@gmail.com","password":"123456"}
+    ]
+}
