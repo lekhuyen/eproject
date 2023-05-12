@@ -432,7 +432,7 @@ p {
 .border-arrow-1-3::after {
     content: '';
     top: 131px;
-    right: 87px;
+    right: 78px;
     border: 7px solid;
     position: absolute;
     border-color: white transparent transparent transparent;
@@ -479,7 +479,7 @@ p {
 .border-arrow-1-5::after {
     content: '';
     top: 152px;
-    right: 82px;
+    right: 76px;
     border: 7px solid;
     position: absolute;
     border-color: white transparent transparent transparent;
@@ -634,7 +634,7 @@ p {
 }
 
 .border-arrow-1-5-5::after {
-    right: 91px;
+    right: 103px;
 }
 .border-arrow-4-1::after {
     top: 21px;
