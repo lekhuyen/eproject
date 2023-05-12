@@ -19,12 +19,12 @@ function ok() {
   if (password ==="" || email ==="") {
     alert("input pls");
     return false;
-  }else if(!/^[a-zA-Z0-9]{4,}@[a-zA-Z0-9]{3,}\.[a-zA-Z0-9]{3,}$/.test(email)){
-    alert("pls input email");
-    return false;
-  }else if(!/^.{9,}$/.test(password)){
-    alert("nhap mk dài lên");
-    return false;
+  // }else if(!/^[a-zA-Z0-9]{4,}@[a-zA-Z0-9]{3,}\.[a-zA-Z0-9]{3,}$/.test(email)){
+  //   alert("pls input email");
+  //   return false;
+  // }else if(!/^.{9,}$/.test(password)){
+  //   alert("nhap mk dài lên");
+  //   return false;
   }else{
     alert("Succes");
     return true;
