@@ -71,8 +71,10 @@ function submitData(){
   }
   if (found) {
     alert("Welcome " +name );
+    window.location.href="/index.html"
   } else {
     alert("Wrong");
+    return false;
   }
 }
   };
