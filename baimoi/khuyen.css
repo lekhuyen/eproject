@@ -114,13 +114,15 @@
     border-radius: 3px;
     background-color: rgb(229, 71, 23);
 }
-/* .quantity-user-0 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
+
 .name-course {
     margin-top: 20px;
+}
+.name-course>a>span {
+    transition: all 0.4s linear;
+}
+.name-course>a>span:hover {
+    color: rgb(229, 71, 23);
 }
 .name-course a {
     text-decoration: none;
@@ -158,4 +160,328 @@
 }
 .next-icon:hover {
     background-color: rgb(229, 71, 23);
+}
+.a-img img {
+    transition: transform .4s ease-out;
+}
+.a-img img:hover {
+    transform: scale(1.1);
+}
+
+/* ...............................course 2................................... */
+.main-1-img-2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url(/baimoi/img/main-2-img.jpg);
+}
+.name-courses-1 {
+    text-align: center;
+}
+.name-courses-1 p {
+    margin-bottom: 5px;
+}
+.h4-1{
+    margin-bottom: 0;
+}
+.card-1 {
+    position: relative;
+}
+
+.div-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    border-radius: 5px;
+    background: #16aaca;
+    transition: all 0.7s ease;
+}
+.card-1:hover .div-4 {
+    display: block;
+}
+.name-couses-1-1 {
+    padding-top: 100px;
+}
+.quantity-user-1 {
+    margin-top: 15px;
+    padding-left: 30px;
+}
+.price {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    margin-top: 50px;
+}
+.price-0 {
+    width: 137px;
+    height: 40px;
+    display:flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+}
+.price-1 {
+    padding-left: 5px;
+}
+.price-1-icon {
+    width: 40px;
+    height: 30px;
+    margin-right: 5px;
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: #16aaca;
+}
+.price-1-icon:hover {
+    background-color: #11bfe6;
+}
+
+
+/* ...............................course1-js............................... */
+.describe-1 {
+    width: 100%;
+    height: 50px;
+    display: flex;
+
+}
+.overview {
+    width: 25%; 
+    height: 100%;
+}
+.overview-1 {
+    color: rgb(255,84,33);
+    background-color: white;
+}
+.overview,
+.curriculum,
+.instructor,
+.reviews {
+    cursor: pointer;
+    border: 1px solid rgb(231, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overview p,
+.curriculum p,
+.instructor p,
+.reviews p {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.curriculum {
+    width: 25%; 
+    height: 100%;
+}
+.instructor {
+    width: 25%; 
+    height: 100%;
+}
+.tongquan-0 {
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #eee;
+    background-color: rgb(244,243,243);
+
+}
+.reviews {
+    width: 25%; 
+    height: 100%;
+}
+.tongquan {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tongquan-1 {
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border-bottom: 1px solid rgb(208, 207, 207);
+}
+.tongquan-1-1 {
+    display: flex;
+    align-items: center;
+
+}
+.tongquan-1-1 p,
+.tongquan-1-2 p{
+    margin-left: 12px;
+    margin-bottom: 0;
+}
+
+.overview-child {
+    margin: 30px;
+    /* display: none; */
+}
+.curriculum-child {
+    margin-top: 100px;
+    display: none;
+}
+.curriculum-child-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.curriculum-child-2-0 {
+    display: flex;
+    height: 57px;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 200px);
+    cursor: pointer;
+    border-bottom: 1px solid rgb(208, 207, 207);
+}
+.curriculum-child-2-0-1 {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.curriculum-child-2-0-title p {
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.curriculum-child-2-2 {
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+.curriculum-child-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 56px;
+    align-items: center;
+}
+.curriculum-child-1-0 {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color:  rgb(244,243,243);
+    margin-bottom: 30px;
+}
+.curriculum-child-1-0 p {
+    margin-bottom: 0;
+}
+.curriculum-child-2-2-1 {
+    width: 89px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin-right: 20px;
+    background-color: rgb(255,84,33);
+}
+.curriculum-child-2-2-1 p {
+    margin-bottom: 0;
+    color: white;
+}
+.curriculum-child-2-2-2 {
+    width: 89px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: rgb(255,84,33);
+}
+.curriculum-child-2-2-2 p {
+    margin-bottom: 0;
+    color: white;
+}
+.instructor-child-0 {
+    display: none;
+    margin-top: 100px;
+}
+.instructor-child {
+    display: flex;
+    justify-content: center;
+}
+.instructor-1-1 img {
+    border-radius: 100px;
+}
+.instructor-1 {
+    height: 170px;
+    width: calc(100% - 100px);
+    display: flex;
+    align-items: center;
+}
+.tearcher-info {
+    margin-left: 30px;
+}
+.name-teach p {
+    margin-bottom: 0;
+    opacity: .6;
+}
+.tearcher-info-icon a {
+    text-decoration: none;
+    color: black
+}
+.reviews-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviews-child-0 {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 100px);
+    
+}
+.reviews-child-0-0 {
+    margin-top: 100px;
+    display: none;
+}
+.core-star {
+    text-align: center;
+}
+.reviews-child-1 {
+    width: 133px;
+}
+.evaluate-star-1 {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+}
+.quantity-star-1 {
+    opacity: .6;
+    margin-left: 0;
+    text-align: center;
+}
+.reviews-child-2 {
+    width: 100%;
+    margin-left: 60px;
+}
+.reviews-child-2-0 {
+    display: flex;
+    align-items: center;
+    padding-right:20px;
+}
+.reviews-child-2-3 {
+    width: 100%;
+    height: 15px;
+    border-radius: 4px;
+    margin-right: 30px;
+    background-color: rgb(244,243,243);
+}
+.reviews-child-2-2 {
+    margin: 0 7px;
 }
