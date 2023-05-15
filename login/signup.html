@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+  <h1>Add User</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone"><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <button type="button" onclick="addUser()">Add User</button>
+  </form>
+  
+  <script>
+    function addUser() {
+      // Lấy giá trị từ biểu mẫu
+      var name = document.getElementById("name").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+
+      // Tạo một đối tượng mới từ giá trị của biểu mẫu
+      var newUser = {
+        "name": name,
+        "phone": phone,
+        "email": email,
+        "password": password
+      };
+
+      // Lấy dữ liệu từ file JSON
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var users = JSON.parse(this.responseText);
+          // Thêm đối tượng mới vào mảng users
+          users.push(newUser);
+          // Ghi lại dữ liệu vào file JSON
+          var jsonContent = JSON.stringify(users);
+          var fs = require('fs');
+          fs.writeFile("data.json", jsonContent, 'utf8', function (err) {
+            if (err) {
+              console.log("An error occurred while writing JSON Object to File.");
+              return console.log(err);
+            }
+            console.log("JSON file has been saved.");
+            window.location.href="/login.html"
+          });
+        }
+      };
+      xmlhttp.open("GET", "data.json", true);
+      xmlhttp.send();
+    }
+  </script>
+
+
+</body>
+</html>
