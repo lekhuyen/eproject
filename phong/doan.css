@@ -172,13 +172,14 @@ a {
 .page2{
   margin-top: 40px;
   width: 100%;
-  margin-bottom: 40px;
-  background-color: transparent;
+  height: 300px;
+  margin-bottom: 120px;
+  background-color: red;
 }
 .textpage2{
   width: 100%;
   text-align: center;
-  background-color: transparent;
+  background-color: red;
 }
 .textpage2 p{
  font-size: 25px;
@@ -566,18 +567,20 @@ color: white;
 }
 
 .lophoc {
-margin-top: 40px;
+margin-top: 50px;
 text-align: center;
 color: black;
 font-size: 18px;
+margin-bottom: 200px;
 }
 
 .trongpage56 {
 position: relative;
 width: 320px;
-margin-top: 180px;
+height: 300px;
+margin-top: 500px;
 margin-left: 550px;
-perspective: 1500px;
+perspective: 1000px;
 }
 
 .carousel {
@@ -661,4 +664,101 @@ from {
 to {
   transform: rotateY(-360deg);
 }
+}
+
+.card5 {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.wrapper1 {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.card5:hover .wrapper1 {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper1::before,
+.wrapper1::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+}
+.wrapper1::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+.wrapper1::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.card5:hover .wrapper1::before,
+.wrapper::after {
+  opacity: 1;
+}
+
+.card5:hover .wrapper1::after {
+  height: 120px;
+}
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+  transition: transform 0.5s;
+}
+.card5:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+  width: 400px;
+  height: 300px;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card5:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
 }
