@@ -25,8 +25,20 @@ font-weight: 1000;
 .textdau p{
 font-size: 25px;
 }
+
+.navbar{
+  position: relative;
+  z-index: 9999;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* set z-index to a high value */
+}
 /* navbar */
-nav {
+/* nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -68,7 +80,7 @@ text-decoration: none;
 .navbar-link:hover {
 text-decoration: underline;
 color: #999;
-}
+} */
 
 .navbar-language {
 display: flex;
@@ -79,8 +91,16 @@ margin-left: auto;
 #language-selector {
 font-size: 16px;
 padding: 8px;
+padding-right: 50px;
+}
+.icon {
+  display: inline-block;
+  margin-left: 5px;
 }
 
+.icon i {
+  font-size: 14px;
+}
 #nav.active {
   display: block;
   /* Thêm các thuộc tính CSS khác để định dạng thanh nav */
@@ -483,7 +503,6 @@ background-color: transparent;
 }
 footer{
 width: 100%;
-margin-top: 40px;
 height: 440px;
 }
 .thea{
@@ -556,8 +575,9 @@ font-size: 18px;
 .trongpage56 {
 position: relative;
 width: 320px;
-margin: 50px auto 0 auto;
-perspective: 1000px;
+margin-top: 180px;
+margin-left: 550px;
+perspective: 1500px;
 }
 
 .carousel {
