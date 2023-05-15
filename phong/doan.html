@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/day 3/demo2.css">
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="/phong/doan.css">
-
+        <link rel="stylesheet" href="/day 3/demo2.css">
         <script type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
@@ -35,29 +36,55 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     </head>
     <body>
         <header>
-            <nav>
-                <div class="navbar-container">
-                    <a href="#" class="navbar-logo"><img src="/picture/logo.png" width="50px" height="50px"></a>
-                    <ul class="navbar-menu">
-                        <li><a href="#" class="navbar-link" data-i18n="home">Home</a></li>
-                        <li><a href="#" class="navbar-link" data-i18n="about">About Us</a></li>
-                        <li><a href="#" class="navbar-link" data-i18n="contact">Contact Us</a></li>
+            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary " style="background-color: #3275a5;">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">logo</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" data-i18n="home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" data-i18n="about">About Us</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="course">Course
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" data-i18n="contact">Contact Us</a>
+                      </li>
+                      <li>
+                        <div class="navbar-language">
+                            <select id="language-selector" onchange="changeLanguage()">
+                                <option value="en">English</option>
+                                <option value="vn">Tiếng Việt</option>
+                                <option value="hi">हिन्दी</option>
+                              </select>
+                        </div>
+                      </li>
                     </ul>
-                    <div class="navbar-language">
-                        <select id="language-selector"
-                            onchange="changeLanguage()">
-                            <option value="en">English</option>
-                            <option value="vn">Tiếng Việt</option>
-                            <option value="hi">हिन्दी</option>
-                        </select>
-                    </div>
-
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
                 </div>
-            </nav>
+              </nav>
+           
         </header>
         <div class="main-1-img">
         <div class="main-1-img-1">
@@ -69,9 +96,57 @@
             </div>
         </div>
     </div>
+    <div class="page2">
+        <div class="textpage2">
+            <p><span data-i18n="textpage2">SELECT COURSE</span></p>
+            <span style="font-size: 25px;" data-i18n="textpage2-2">Explore Popular Courses</span>
+        </div>
+
+    </div>
+    <!-- CARDpage2 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-1">
+                <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+                    <div class="card5">
+                      <div class="wrapper1">
+                        <img src="/picture/img-courses-1.jpg" class="cover-image" />
+                      </div>
+                      <span class="title">Categories Computer Engineering</span>
+                      <img src="/picture/img-courses-1remove.png" class="character" />
+                    </div>
+                  </a>
+                  
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-1">
+                <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+                    <div class="card5">
+                      <div class="wrapper1">
+                        <img src="/picture/img-courses-2.jpg" class="cover-image" />
+                      </div>
+                      <span class="title">Categories Gym</span>
+                      <img src="/picture/img-courses-2remove.png" class="character" />
+                    </div>
+                  </a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-1">
+                <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+                    <div class="card5">
+                      <div class="wrapper1">
+                        <img src="/picture/img-courses-3.jpg" class="cover-image" />
+                      </div>
+                      <span class="title">Categories Gym</span>
+                      <img src="/picture/img-courses3remove.png" class="character" />
+                    </div>
+                  </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- page2 -->
         <div class="textdau">
-            <span>TOP CATEGORIES</span> <br>
-            <p>Popular Online Categories</p>
+            <span data-i18n="textpage1">TOP CATEGORIES</span> <br>
+            <p data-i18n="textpage1-1">Popular Online Categories</p>
         </div>
         <div class="container">
             <div class="row" style="margin-top: 50px">
@@ -84,7 +159,7 @@
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
-                                        <span>FREE</span>
+                                        <span data-i18n="free">FREE</span>
                                     </div>
                                     <div class="free-1-1" style="font-size: 14px; ">
                                         <span>Web Development</span>
@@ -92,7 +167,7 @@
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span>Learning JavaScript Course For Advanced Items Completed</span>
+                                        <span data-i18n="text1">Learning JavaScript Course For Advanced Items Completed</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -146,7 +221,7 @@
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
-                                        <span>FREE</span>
+                                        <span>$40.00</span>
                                     </div>
                                     <div class="free-1-1" style="font-size: 14px; ">
                                         <span>Gym</span>
@@ -154,7 +229,7 @@
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span>Ready to end the diet self sabotage guilt</span>
+                                        <span data-i18n="text2">Ready to end the diet self sabotage guilt</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -207,7 +282,7 @@
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
-                                        <span>FREE</span>
+                                        <span>$40.00</span>
                                     </div>
                                     <div class="free-1-1" style="font-size: 14px; ">
                                         <span>Gym</span>
@@ -215,7 +290,7 @@
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span>Dream body builder is a 6-week program</span>
+                                        <span data-i18n="text3">Dream body builder is a 6-week program</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -262,81 +337,9 @@
             </div>
         </div>
         <div class="more">
-            <a href="#"><button class="button-5" role="button">View All Categories</button></a>
+            <a href="/baimoi/course1-js.html"><button class="button-5" role="button" data-i18n="view">View All Categories</button></a>
         </div>
-        <div class="page2">
-            <div class="textpage2">
-                <p><span data-i18n="text2">SELECT COURSE</span></p>
-                <span style="font-size: 25px;">Explore Popular Courses</span>
-            </div>
-
-        </div>
-        <!-- CARDpage2 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-1">
-                    <div class="card" style="width: 20rem;">
-                        <img
-                            src="https://images.unsplash.com/photo-1656706939891-04996ef6070e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a href="#" class="thea"><p class="card-text">What
-                                    Do u Think About me</p></a>
-                            <hr>
-                            <div class="icontext">
-                                <ion-icon name="document-sharp"></ion-icon> 16
-                                Session <span style="margin-left: 50px; color:
-                                    rgb(255, 255, 255); background-color:
-                                    rgb(255, 0, 0); border-radius: 10px;
-                                    padding: 5px;">300,000VND</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-1">
-                    <div class="card" style="width: 20rem;">
-                        <img
-                            src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a href="#" class="thea"><p class="card-text">What
-                                    Do u Think About me</p></a>
-                            <hr>
-                            <div class="icontext">
-                                <ion-icon name="document-sharp"></ion-icon> 30
-                                Session <span style="margin-left: 50px; color:
-                                    rgb(255, 255, 255); background-color:
-                                    rgb(255, 0, 0); border-radius: 10px;
-                                    padding: 5px;">300,000VND</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-1">
-                    <div class="card" style="width: 20rem;">
-                        <img
-                            src="https://images.unsplash.com/photo-1622674777904-386b3ef30c4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                            class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a href="#" class="thea"><p class="card-text">What
-                                    Do u Think About me</p></a>
-                            <hr>
-                            <div class="icontext">
-                                <ion-icon name="document-sharp"></ion-icon> 54
-                                Session <span style="margin-left: 50px; color:
-                                    rgb(255, 255, 255); background-color:
-                                    rgb(255, 0, 0); border-radius: 10px;
-                                    padding: 5px;">300,000VND</span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+       
         <div class="page3">
             <div class="textpage3">
                 <div class="anhpage3">
