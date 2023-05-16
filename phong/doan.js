@@ -20,7 +20,8 @@ var languageStrings = {
     "text2":"Dream body builder is a 6-week program",
     "textpage2-2":"Explore Popular Courses",
     "course":"course",
-    "view":"View All Categories"
+    "view":"View All Categories",
+    "login":"Login"
     
   },
   "vn": {
@@ -36,7 +37,8 @@ var languageStrings = {
     "text3":"xây dựng cơ thể mơ ước là một chương trình kéo dài 6 tuần",
     "textpage2-2":"Khám phá các khóa học phổ biến",
     "course":"Khoá Học",
-    "view":"Xem tất cả danh mục"
+    "view":"Xem tất cả danh mục",
+    "login":"Đăng nhập"
   },
   "hi": {
     "home": "होम",
@@ -51,7 +53,8 @@ var languageStrings = {
     "text3":"ड्रीम बॉडी बिल्डर 6 सप्ताह का कार्यक्रम है",
     "textpage2-2":"लोकप्रिय पाठ्यक्रम एक्सप्लोर करें",
     "course":"अवधि",
-    "view":"सभी श्रेणियाँ देखें"
+    "view":"सभी श्रेणियाँ देखें",
+    "login":"लॉग इन करें"
   }
 };
 
@@ -176,4 +179,15 @@ function statusChangeCallback(response) {
   } else {
     // Đăng nhập thất bại
   }
-}
+};
+window.addEventListener('DOMContentLoaded', function() {
+  var storedUsers = sessionStorage.getItem('users');
+  if (storedUsers) {
+    var users = JSON.parse(storedUsers);
+    var currentUser = users[users.length - 1]; // Lấy người dùng mới đăng ký gần nhất
+    var usernameSpan = document.getElementById('usernameSpan');
+    if (usernameSpan) {
+      usernameSpan.textContent = currentUser.username;
+    }
+  }
+});
