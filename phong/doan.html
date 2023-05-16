@@ -8,6 +8,11 @@
         <title>Document</title>
         <link rel="stylesheet" href="/phong/doan.css">
         <link rel="stylesheet" href="/day 3/demo2.css">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
+            nonce="yK0WtsGe"></script>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="abcdefg"></script>
         <script type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
@@ -868,6 +873,15 @@
                         <div class="carousel__face"><span class="span6"></span></div>
                     </div>
                 </div>
+            </div>
+            <div class="comment-fb">
+                <fb:login-button
+                    scope="public_profile,email"
+                    onlogin="checkLoginState();">
+                </fb:login-button>
+                <div class="fb-comments"
+                    data-href="http://127.0.0.1:5502/phong/doan.html"
+                    data-width="1400" data-numposts="10"></div>
             </div>
             <script src="/phong/doan.js"></script>
         </body>

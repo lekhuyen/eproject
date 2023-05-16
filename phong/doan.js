@@ -157,5 +157,13 @@ prevBtnFourth.addEventListener("click", function(event){
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
 
+function statusChangeCallback(response) {
+  // Xử lý trạng thái đăng nhập ở đây
+}
 
