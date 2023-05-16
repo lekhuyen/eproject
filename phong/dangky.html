@@ -7,16 +7,19 @@
     <title>Untitled</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <style>
-      .register-photo {
-  background:#f1f7fc;
-  padding:80px 0;
-}
+      .register-photo{
+        width: 100%;
+        height: 40vh;
+        background-color: transparent;
+        margin-top: 100px;
+      }
 
 .register-photo .image-holder {
   display:table-cell;
   width:auto;
   background:url(https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1684240196~exp=1684240796~hmac=05c955218ac188992f047972225cead416130c39f808b9f5977f37688ff84349);
-  background-size:cover;
+  background-size: cover;
+  height: 400px;
 }
 
 .register-photo .form-container {
@@ -70,7 +73,7 @@
   border-radius:4px;
   padding:11px;
   box-shadow:none;
-  margin-top:35px;
+  margin-top:60px;
   text-shadow:none;
   outline:none !important;
 }
@@ -102,13 +105,14 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form onsubmit="register(event)">
+              <div class="form-group"><input class="form-control" type="text" name="username" id="username" placeholder="Name"></div>
               <div class="form-group"><input class="form-control" type="email" name="email" id="email" placeholder="Email"></div>
               <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Password"></div>
               <div class="form-group"><input class="form-control" type="password" name="password-repeat" id="password-repeat" placeholder="Password (repeat)"></div>
-              <div class="form-group">
+              
                 
               <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div>
-              <a href="#" class="already">You already have an account? <b> Login here</b></a>
+              <a href="/phong/dangnhap.html" class="already">You already have an account? <b> Login here</b></a>
             </form>        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -116,13 +120,13 @@
     <script>
       function register(event) {
         event.preventDefault();
-  
+        var username = document.getElementById('username').value;
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         var passwordRepeat = document.getElementById('password-repeat').value;
   
         // Kiểm tra nếu các trường không được điền hoặc mật khẩu không trùng khớp
-        if (!email || !password || !passwordRepeat) {
+        if (!username || !email || !password || !passwordRepeat) {
           alert('Vui lòng điền đầy đủ thông tin!');
           return;
         }
@@ -131,10 +135,11 @@
           return;
         }
   
-        // Lưu thông tin người dùng đã đăng ký vào localStorage
+        // Lưu thông tin người dùng đã đăng ký vào se
         var user = {
           email: email,
-          password: password
+          password: password,
+          username: username
         };
         var users = [];
         var storedUsers = sessionStorage.getItem('users');
@@ -145,6 +150,7 @@
         sessionStorage.setItem('users', JSON.stringify(users));
         alert('Đăng ký thành công!');
       }
+      
     </script>
   </body>
 
