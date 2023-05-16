@@ -157,6 +157,13 @@ prevBtnFourth.addEventListener("click", function(event){
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
+FB.init({
+  appId      : 'your-app-id',
+  cookie     : true,
+  xfbml      : true,
+  version    : 'v11.0'
+});
+
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -164,6 +171,9 @@ function checkLoginState() {
 }
 
 function statusChangeCallback(response) {
-  // Xử lý trạng thái đăng nhập ở đây
+  if (response.status === 'connected') {
+    // Đăng nhập thành công
+  } else {
+    // Đăng nhập thất bại
+  }
 }
-
