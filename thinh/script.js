@@ -12,13 +12,13 @@ function saveData() {
       password: password
     };
   
-    // Lấy danh sách người dùng từ Local Storage
+    
     var users = JSON.parse(localStorage.getItem('users')) || [];
   
-    // Thêm người dùng mới vào mảng
+    
     users.push(newUser);
   
-    // Lưu danh sách người dùng vào Local Storage
+   
     localStorage.setItem('users', JSON.stringify(users));
   
     alert('Dữ liệu đã được lưu.');
