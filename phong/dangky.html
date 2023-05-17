@@ -124,7 +124,7 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         var passwordRepeat = document.getElementById('password-repeat').value;
-  
+    
         // Kiểm tra nếu các trường không được điền hoặc mật khẩu không trùng khớp
         if (!username || !email || !password || !passwordRepeat) {
           alert('Vui lòng điền đầy đủ thông tin!');
@@ -134,23 +134,23 @@
           alert('Mật khẩu không trùng khớp!');
           return;
         }
-  
-        // Lưu thông tin người dùng đã đăng ký vào se
+    
+        // Lưu thông tin người dùng đã đăng ký vào sessionStorage
         var user = {
           email: email,
           password: password,
           username: username
         };
         var users = [];
-        var storedUsers = sessionStorage.getItem('users');
+        var storedUsers = localStorage.getItem('users');
         if (storedUsers) {
           users = JSON.parse(storedUsers);
         }
         users.push(user);
-        sessionStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('users', JSON.stringify(users));
         alert('Đăng ký thành công!');
+        window.location.href = "/phong/dangnhap.html"; // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
       }
-      
     </script>
   </body>
 

@@ -180,14 +180,9 @@ function statusChangeCallback(response) {
     // Đăng nhập thất bại
   }
 };
-window.addEventListener('DOMContentLoaded', function() {
-  var storedUsers = sessionStorage.getItem('users');
-  if (storedUsers) {
-    var users = JSON.parse(storedUsers);
-    var currentUser = users[users.length - 1]; // Lấy người dùng mới đăng ký gần nhất
-    var usernameSpan = document.getElementById('usernameSpan');
-    if (usernameSpan) {
-      usernameSpan.textContent = currentUser.username;
-    }
+document.addEventListener('DOMContentLoaded', function() {
+  var username = localStorage.getItem('username');
+  if (username) {
+    document.getElementById('usernameSpan').textContent = username;
   }
 });

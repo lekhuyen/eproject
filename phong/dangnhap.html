@@ -107,13 +107,15 @@
       <div class="form-container">
         <div class="image-holder"></div>
         <form onsubmit="login(event)">
-          <div class="form-group" ><input class="form-control" type="email"
+          <div class="form-group"><input class="form-control" type="email"
               name="email" id="email" placeholder="Email"></div>
           <div class="form-group"><input class="form-control" type="password"
               name="password" id="password" placeholder="Password"></div>
-          <div class="form-group" style="margin-top: 200px;"><button class="btn btn-primary btn-block"
+          <div class="form-group" style="margin-top: 200px;"><button class="btn
+              btn-primary btn-block"
               type="submit">Sign In</button></div>
-          <a href="/phong/dangky.html" class="already">You don't have an account? <b>Register
+          <a href="/phong/dangky.html" class="already">You don't have an
+            account? <b>Register
               here</b>.</a>
         </form>
       </div>
@@ -121,31 +123,31 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script
         src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-      <script>
-      function login(event) {
-        event.preventDefault();
-  
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-  
-        // Lấy thông tin người dùng đã đăng ký từ localStorage
-        var storedUsers = sessionStorage.getItem('users');
-        if (storedUsers) {
-          var users = JSON.parse(storedUsers);
-          var foundUser = users.find(function(user) {
-            return user.email === email && user.password === password;
-          });
-          if (foundUser) {
-            alert('Đăng nhập thành công!');
-            window.location.href="/phong/doan.html"
-          } else {
-            alert('Email hoặc mật khẩu không đúng!');
+        <script>
+          function login(event) {
+            event.preventDefault();
+        
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+        
+            // Lấy thông tin người dùng đã đăng ký từ sessionStorage
+            var storedUsers = localStorage.getItem('users');
+            if (storedUsers) {
+              var users = JSON.parse(storedUsers);
+              var foundUser = users.find(function(user) {
+                return user.email === email && user.password === password;
+              });
+              if (foundUser) {
+                localStorage.setItem('username', foundUser.username); // Lưu tên người dùng vào sessionStorage
+                window.location.href = "/phong/doan.html"; // Chuyển hướng đến trang sau khi đăng nhập thành công
+              } else {
+                alert('Email hoặc mật khẩu không đúng!');
+              }
+            } else {
+              alert('Bạn chưa đăng ký!');
+            }
           }
-        } else {
-          alert('Bạn chưa đăng ký!');
-        }
-      }
-    </script>
+        </script>
     </body>
 
   </html>

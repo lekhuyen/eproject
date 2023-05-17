@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trang hiển thị giỏ hàng</title>
+    <style>
+      .delete-button {
+        background-color: #ff0000;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Trang hiển thị giỏ hàng</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quality</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+    </table>
+
+    <script>
+      // Lấy giỏ hàng từ localStorage và hiển thị
+      function displayCartItems() {
+        let cart = localStorage.getItem('cart');
+        if (cart) {
+          cart = JSON.parse(cart);
+          const cartItemsElement = document.getElementById('cart-items');
+
+          cart.forEach(function (item) {
+            const tr = document.createElement('tr');
+            const nameElement = document.createElement('td');
+            nameElement.innerText = item.item;
+            const quantityElement = document.createElement('td');
+            quantityElement.innerText = item.quantity;
+            const priceElement = document.createElement('td');
+            priceElement.innerText = item.price;
+            const totalElement = document.createElement('td');
+            totalElement.innerText = item.quantity * item.price;
+            
+            const deleteButton = document.createElement('button');
+            deleteButton.innerText = 'Xoá';
+            deleteButton.classList.add('delete-button');
+            deleteButton.addEventListener('click', function() {
+              removeFromCart(item.item);
+              tr.remove();
+            });
+
+            const increaseButton = document.createElement('button');
+            increaseButton.innerText = '+';
+            increaseButton.addEventListener('click', function() {
+              item.quantity += 1;
+              quantityElement.innerText = item.quantity;
+              totalElement.innerText = item.quantity * item.price;
+              localStorage.setItem('cart', JSON.stringify(cart));
+            });
+
+            tr.appendChild(nameElement);
+            tr.appendChild(quantityElement);
+            tr.appendChild(priceElement);
+            tr.appendChild(totalElement);
+            
+            const actionCell = document.createElement('td');
+            actionCell.appendChild(deleteButton);
+            actionCell.appendChild(increaseButton);
+            tr.appendChild(actionCell);
+            
+            cartItemsElement.appendChild(tr);
+          });
+        }
+      }
+
+      // Xoá mục hàng khỏi giỏ hàng
+      function removeFromCart(item) {
+        let cart = localStorage.getItem('cart');
+        if (cart) {
+          cart = JSON.parse(cart);
+          cart = cart.filter((cartItem) => cartItem.item !== item);
+          localStorage.setItem('cart', JSON.stringify(cart));
+        }
+      }
+
+      // Gọi hàm hiển thị giỏ hàng khi trang được tải
+      document.addEventListener('DOMContentLoaded', function () {
+        displayCartItems();
+      });
+    </script>
+  </body>
+</html>
