@@ -257,6 +257,10 @@
     width: 25%; 
     height: 100%;
 }
+.overview-00 {
+    background-color: white;
+    color: rgb(255,84,33);
+}
 .overview-1 {
     color: rgb(255,84,33);
     background-color: white;
@@ -523,4 +527,230 @@
 }
 .tongquan-1-price-0:hover a {
     color: white;
+}
+
+/* .................................................. */
+
+ul {
+    list-style: none;
+}
+.accordion-menu {
+    max-width: 700px;
+    margin: 100px auto 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 30px #eee;
+}
+.accordion-menu li:last-child .dropdown{
+    border-bottom: 0;
+}
+.accordion-menu li .active .dropdown{
+    color: #fff;
+}
+.accordion-menu li .active .dropdown .fa-chevron-down {
+    transform: rotate(180deg);
+}
+.accordion-menu li:last-child .dropdown {
+    border-bottom: 0;
+}
+.dropdown {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 45px;
+    font-size: 18px;
+    border-bottom: 1px solid #e1e4e9;
+    color: black;
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.4s ease-out;
+}
+.dropdown:hover {
+    background:rgb(244,243,243);
+    /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#27455c), to(#273a47) ); */
+}
+.dropdown i{
+    position: absolute;
+    top: 17px;
+    left: 16px;
+}
+.dropdown .fa-chevron-down {
+    right: 12px;
+    left: auto;
+    transition: transform 0.2s ease-out;
+}
+.submenuItems {
+    display: none;
+    padding-left: 0;
+    border-bottom: 1px solid #e1e4e9;
+}
+.accordion-menu li.active .submenuItems {
+    display: block;
+}
+.submenuItems a {
+    display: block;
+    font-weight: 600;
+    padding: 12px 12px 12px 45px;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+}
+.submenuItems a:hover {
+    background: #5c7185;
+    color: #fff;
+}
+.giaotrinh {
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid #e1e4e9;
+    display: flex;
+    align-items: center;
+    color: #b6b8bc;
+}
+.giaotrinh:hover {
+    background:rgb(229, 71, 23);
+    color: white;
+}
+.giaotrinh p{
+    margin-bottom: 0;
+}
+/* ........................................... */
+.modal-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background:rgba(73, 74, 76, .4);
+    animation: modalfadeIn ease .4s;
+}
+@keyframes modalfadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.open {
+    display: flex;
+}
+.modal-body-111 {
+    width: 600px;
+    height: 800px;
+    padding: 0 10px;
+    overflow-y: scroll;
+    background-color: black;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 3px;
+}
+.modal-body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.none-icon,
+.none-icon-1,
+.none-icon-2,
+.none-icon-3,
+.none-icon-4,
+.none-icon-5,
+.none-icon-6,
+.none-icon-7,
+.none-icon-8,
+.none-icon-9 {
+    display: none;
+}
+.modal-video {
+    margin-top: 10px;
+}
+.modal-video-2 {
+    display: none;
+}
+.modal-boby-header-1 h4 {
+    font-size: .9em;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: white;
+}
+.modal-body-close {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.modal-body-close:hover {
+    background-color: rgb(229, 88, 88);
+}
+.video-img-1 {
+    height: 69px;
+}
+.video-img-1 img {
+    width: 64px;
+    height: 36px;
+}
+.video-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.video-1:hover {
+    background-color: rgb(62,65,67); 
+}
+.video-background {
+    background-color: rgb(62,65,67); 
+}
+.video-1-1 {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.video-img-1 {
+    display: flex;
+    align-items: center;
+}
+.video-title-1 p {
+    margin-bottom: 0;
+    font-weight: bold;
+    color: white
+}
+.video-title-1 {
+    margin-left: 10px;
+}
+.video-icon {
+    margin-left: 10px;
+    color: white;
+}
+.video-time-1 {
+    color: white;
+    font-weight: bold;
+}
+
+.listpage {
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+.listpage li {
+    background-color: #c9c6c6bd;
+    padding: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.listpage .active {
+    background-color: #B192EF;
+    color: #fff;
 }
