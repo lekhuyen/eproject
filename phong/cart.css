@@ -1,3 +1,9 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .delete-button {
     background-color: #ff0000;
     color: #fff;
@@ -53,8 +59,8 @@
     position: relative;
     background-repeat: no-repeat;
     /* background-color: red; */
-    background: url("/picture/img-courses-6.jpg");
-    background-size: cover;
+    background: url("https://as2.ftcdn.net/v2/jpg/01/18/67/53/1000_F_118675321_3GUYwhUtcjvwgX2HHvadLXn39Qftxa1q.jpg");
+    background-size: 500px;
 }
 .main-1-img-1 {
     width: 100%;
@@ -135,3 +141,14 @@
   width: 100%;
   height: 440px;
   }
+  .navbar-language {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    }
+    
+    #language-selector {
+    font-size: 16px;
+    padding: 8px;
+    padding-right: 50px;
+    }
