@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/day 3/demo2.css">
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,14 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="/phong/doan.css">
-        <link rel="stylesheet" href="/day 3/demo2.css">
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
-            nonce="yK0WtsGe"></script>
-        <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
-            nonce="abcdefg"></script>
+
         <script type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
@@ -50,11 +43,13 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     </head>
     <body>
+        
         <header>
             <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
                 style="background-color: #3275a5;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="/picture/logo.png" width="50px" height="50px"></a>
+                    <a class="navbar-brand" href="#"><img
+                            src="/picture/logo.png" width="50px" height="50px"></a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                         aria-controls="navbarScroll" aria-expanded="false"
@@ -77,11 +72,10 @@
                                     style="margin-left: 20px;">Course
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another
-                                            action</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#"></a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/baimoi/course1.html">Course-1</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="/baimoi/course2.html">Course-2</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -89,20 +83,28 @@
                                     style="margin-left: 20px;">About Us</a>
                                 <span id="usernameSpan"></span>
                             </li>
-          
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#" data-i18n="contact"
                                     style="margin-left: 10px;">Contact Us</a>
                             </li>
-                            <li class="nav-item" >
-                                <a href="/phong/dangnhap.html" class="nav-link" id="loginLink"  style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                                <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
-          
+                            <li class="nav-item">
+                                <a href="/phong/dangnhap.html" class="nav-link"
+                                    id="loginLink" style="text-decoration: none;
+                                    color: rgb(30, 147, 201); margin-left:
+                                    30px;">Login</a>
+                                <a href="#" onclick="logout(event)"
+                                    class="nav-link" id="logoutLink"
+                                    style="display: none; text-decoration: none;
+                                    color: rgb(30, 147, 201);">Logout</a>
+
                             </li>
                             <li class="nav-item">
-                                <p style="margin-left: 20px;" class="nav-link">Username: <span id="username"  style="color: rgb(0, 145, 255); font-weight: 600;"></span></p>
+                                <p style="margin-left: 20px;" class="nav-link">Username:
+                                    <span id="username" style="color: rgb(0,
+                                        145, 255); font-weight: 600;"></span></p>
                             </li>
-          
+
                             <li>
                                 <div class="navbar-language" style="margin-left:
                                     50px;">
@@ -115,10 +117,13 @@
                                 </div>
                             </li>
                             <li class="nav-item" style="margin-left: 50px;">
-                                <a href="/phong/cart.html" class="nav-link"><ion-icon name="cart"
-                                        style="width: 50px; height: 50px; color: blue;"></ion-icon>
-                                        <span id="cartItemCount" class="cart-item-count" style="position: absolute; color: rgb(11, 51, 251);">0</span></a>
-                                        
+                                <a href="/phong/cart.html" class="nav-link"><ion-icon
+                                        name="cart"
+                                        style="width: 50px; height: 50px; color:
+                                        blue;"></ion-icon>
+                                    <span id="cartItemCount"
+                                        class="cart-item-count" style="position:
+                                        absolute; color: rgb(11, 51, 251);">0</span></a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -130,8 +135,8 @@
                     </div>
                 </div>
             </nav>
-          
-          </header>
+
+        </header>
 
         <div class="main-1-img">
             <div class="main-1-img-1">
@@ -898,15 +903,11 @@
                     </div>
                 </div>
             </div>
-            <div class="comment-fb">
-                <fb:login-button
-                    scope="public_profile,email"
-                    onlogin="checkLoginState();">
-                </fb:login-button>
-                <div class="fb-comments"
-                    data-href="http://127.0.0.1:5502/phong/doan.html"
-                    data-width="1400" data-numposts="10"></div>
-            </div>
+            
+            
+            <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0" nonce="wxS60CPX"></script>
+<div class="fb-comments" data-href="http://127.0.0.1:5504/phong/doan.html" data-width="1400" data-numposts="10"></div>
             <script src="/phong/doan.js"></script>
             <script src="/baimoi/cart.js"></script>
             <script
