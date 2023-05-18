@@ -186,3 +186,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('usernameSpan').textContent = username;
   }
 });
+function clearLocalStorage() {
+  localStorage.clear();
+  alert('Đã xóa toàn bộ dữ liệu trong localStorage!');
+}
+// login user
+
+
+

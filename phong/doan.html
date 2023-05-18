@@ -46,66 +46,93 @@
         <link rel="stylesheet"
             href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
             />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     </head>
     <body>
         <header>
-            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary " style="background-color: #3275a5;">
+            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
+                style="background-color: #3275a5;">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">logo</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/phong/doan.html" data-i18n="home" style="margin-left: 10px;">Home</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="course" style="margin-left: 10px;">Course
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <a class="navbar-brand" href="#"><img src="/picture/logo.png" width="50px" height="50px"></a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0
+                            navbar-nav-scroll" style="--bs-scroll-height:
+                            100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="/phong/doan.html" data-i18n="home"
+                                    style="margin-left: 20px;">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" data-i18n="course"
+                                    style="margin-left: 20px;">Course
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another
+                                            action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#"></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-i18n="about"
+                                    style="margin-left: 20px;">About Us</a>
+                                <span id="usernameSpan"></span>
+                            </li>
+          
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-i18n="contact"
+                                    style="margin-left: 10px;">Contact Us</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a href="/phong/dangnhap.html" class="nav-link" id="loginLink"  style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                                <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+          
+                            </li>
+                            <li class="nav-item">
+                                <p style="margin-left: 20px;" class="nav-link">Username: <span id="username"  style="color: rgb(0, 145, 255); font-weight: 600;"></span></p>
+                            </li>
+          
+                            <li>
+                                <div class="navbar-language" style="margin-left:
+                                    50px;">
+                                    <select id="language-selector"
+                                        onchange="changeLanguage()">
+                                        <option value="en">English</option>
+                                        <option value="vn">Tiếng Việt</option>
+                                        <option value="hi">हिन्दी</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="nav-item" style="margin-left: 50px;">
+                                <a href="/phong/cart.html" class="nav-link"><ion-icon name="cart"
+                                        style="width: 50px; height: 50px; color: blue;"></ion-icon>
+                                        <span id="cartItemCount" class="cart-item-count" style="position: absolute; color: rgb(11, 51, 251);">0</span></a>
+                                        
+                            </li>
                         </ul>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#" data-i18n="about" style="margin-left: 10px;">About Us</a>
-                        <span id="usernameSpan"></span>
-                      </li>
-                      
-                      <li class="nav-item">
-                        <a class="nav-link" href="#" data-i18n="contact" style="margin-left: 10px;">Contact Us</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/phong/dangnhap.html" data-i18n="login">Login</a>
-                      </li>
-                      
-
-                      <li>
-                        <div class="navbar-language" style="margin-left: 10px;">
-                            <select id="language-selector" onchange="changeLanguage()">
-                                <option value="en">English</option>
-                                <option value="vn">Tiếng Việt</option>
-                                <option value="hi">हिन्दी</option>
-                              </select>
-                        </div>
-                      </li>
-                      <li class="nav-item" style="margin-left: 400px;">
-                        <a href="/phong/cart.html"><ion-icon name="cart" style="width: 50px; height: 50px;"></ion-icon></a>
-                      </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                  </div>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success"
+                                type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
-              </nav>
-           
-        </header>
-        <span id="usernameSpan"></span>
+            </nav>
+          
+          </header>
+
         <div class="main-1-img">
             <div class="main-1-img-1">
                 <div class="main-1-img-1-title">
@@ -116,6 +143,7 @@
                 </div>
             </div>
         </div>
+
         <div class="page2">
             <div class="textpage2">
                 <p><span data-i18n="textpage2">SELECT COURSE</span></p>
@@ -155,14 +183,14 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-ms-12">
-                    <a href="https://www.mythrillfiction.com/the-dark-rider"
+                    <a href="/phong/viewallui.html"
                         alt="Mythrill" target="_blank">
                         <div class="card5">
                             <div class="wrapper1">
                                 <img src="/picture/img-courses-3.jpg"
                                     class="cover-image" />
                             </div>
-                            <span class="title">Categories Gym</span>
+                            <span class="title">UI/UX</span>
                             <img src="/picture/img-courses3remove.png"
                                 class="character" />
                         </div>
@@ -566,13 +594,13 @@
                                                                             value="1">State</option>
                                                                         <option
                                                                             value="2">VietNam
-                                                                            </option>
+                                                                        </option>
                                                                         <option
                                                                             value="3">American
-                                                                            </option>
+                                                                        </option>
                                                                         <option
                                                                             value="4">Korean
-                                                                            </option>
+                                                                        </option>
                                                                     </select>
                                                                 </div>
                                                                 <div
@@ -583,11 +611,15 @@
                                                                         <option
                                                                             value="1">City</option>
                                                                         <option
-                                                                            value="2">Ho Chi Minh</option>
+                                                                            value="2">Ho
+                                                                            Chi
+                                                                            Minh</option>
                                                                         <option
-                                                                            value="3">Ha Noi</option>
+                                                                            value="3">Ha
+                                                                            Noi</option>
                                                                         <option
-                                                                            value="4">Da Nang</option>
+                                                                            value="4">Da
+                                                                            Nang</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -876,6 +908,46 @@
                     data-width="1400" data-numposts="10"></div>
             </div>
             <script src="/phong/doan.js"></script>
+            <script src="/baimoi/cart.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+            <script>
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa
+                function isLoggedIn() {
+                  return localStorage.getItem('isLoggedIn') === 'true';
+                }
+            
+                // Cập nhật trạng thái đăng nhập
+                function updateLoginStatus() {
+                  var loginLink = document.getElementById('loginLink');
+                  var logoutLink = document.getElementById('logoutLink');
+                  var username = document.getElementById('username');
+            
+                  if (isLoggedIn()) {
+                    username.textContent = localStorage.getItem('username'); // Hiển thị tên người dùng
+                    loginLink.style.display = 'none'; // Ẩn liên kết "Login"
+                    logoutLink.style.display = 'inline-block'; // Hiển thị liên kết "Logout"
+                  } else {
+                    username.textContent = ''; // Xóa tên người dùng
+                    loginLink.style.display = 'inline-block'; // Hiển thị liên kết "Login"
+                    logoutLink.style.display = 'none'; // Ẩn liên kết "Logout"
+                  }
+                }
+            
+                // Xử lý khi trang index được tải
+                document.addEventListener('DOMContentLoaded', function() {
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                });
+            
+                // Xử lý khi người dùng logout
+                function logout(event) {
+                  event.preventDefault();
+                  localStorage.setItem('isLoggedIn', 'false');
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                }
+              </script>
         </body>
         <footer>
             <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
