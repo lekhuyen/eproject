@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Trang hiển thị giỏ hàng</title>
+  <link rel="stylesheet" href="/phong/cart.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary " style="background-color: #3275a5;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">logo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/phong/doan.html" data-i18n="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-i18n="about">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="course">Course
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-i18n="contact">Contact Us</a>
+            </li>
+            <li>
+              <div class="navbar-language">
+                  <select id="language-selector" onchange="changeLanguage()">
+                      <option value="en">English</option>
+                      <option value="vn">Tiếng Việt</option>
+                      <option value="hi">हिन्दी</option>
+                    </select>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+ 
+</header>
+<div class="main-1-img">
+  <div class="main-1-img-2">
+      <div class="main-1-img-1-title">
+          <p>Courses</p>
+          <div class="a-home">
+              <a href="#">Home</a> / Courses Two
+          </div>
+      </div>
+  </div>
+</div>
+<body>
+  <h1>List Of Course</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="cart-items"></tbody>
+  </table>
+  <p id="total-label"><strong>Total: </strong><span id="total-value"></span></p>
+  <a href="cart.html"><button class="checkout-button" id="checkout-button" role="button">Pay Now</button></a>
+
+  <script>
+    // Lấy giỏ hàng từ localStorage và hiển thị
+    function displayCartItems() {
+      let cart = localStorage.getItem('cart');
+      if (cart) {
+        cart = JSON.parse(cart);
+        const cartItemsElement = document.getElementById('cart-items');
+
+        let totalValue = 0;
+
+        cart.forEach(function (item) {
+          const tr = document.createElement('tr');
+  
+          const productName = document.createElement('td');
+          productName.innerText = item.item;
+          tr.appendChild(productName);
+
+          const quantity = document.createElement('td');
+          const quantityContainer = document.createElement('div');
+          quantityContainer.classList.add('quantity-container');
+
+          const quantityInput = document.createElement('input');
+          quantityInput.type = 'number';
+          quantityInput.value = item.quantity;
+          quantityInput.classList.add('quantity-input');
+          quantityInput.addEventListener('change', function() {
+            const quantityValue = parseInt(quantityInput.value);
+            updateQuantity(item.item, quantityValue);
+            updateTotal();
+          });
+          quantityContainer.appendChild(quantityInput);
+
+          quantity.appendChild(quantityContainer);
+          tr.appendChild(quantity);
+
+          const price = document.createElement('td');
+          price.innerText = item.price;
+          tr.appendChild(price);
+
+          const total = document.createElement('td');
+          total.innerText = item.quantity * item.price;
+          tr.appendChild(total);
+
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'Delete';
+          deleteButton.classList.add('delete-button');
+          deleteButton.addEventListener('click', function() {
+            removeFromCart(item.item);
+            tr.remove();
+            updateTotal();
+          });
+
+          const action = document.createElement('td');
+          action.appendChild(deleteButton);
+
+          tr.appendChild(action);
+          cartItemsElement.appendChild(tr);
+
+          totalValue += item.quantity * item.price;
+        });
+
+        document.getElementById('total-value').innerText = totalValue;
+      }
+    }
+
+    // Xoá mục hàng khỏi giỏ hàng
+    function removeFromCart(item) {
+      let cart = localStorage.getItem('cart');
+      if (cart) {
+        cart = JSON.parse(cart);
+        cart = cart.filter((cartItem) => cartItem.item !== item);
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    }
+
+// Cập nhật số lượng mục hàng
+function updateQuantity(item, quantity) {
+  let cart = localStorage.getItem('cart');
+  if (cart) {
+    cart = JSON.parse(cart);
+    const cartItem = cart.find((cartItem) => cartItem.item === item);
+    if (cartItem) {
+      cartItem.quantity = quantity;
+      cartItem.total = cartItem.price * quantity;
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateTotal(); // Cập nhật tổng giá trị tức thì
+    }
+  }
+}
+
+// Cập nhật tổng giá trị
+function updateTotal() {
+  let cart = localStorage.getItem('cart');
+  if (cart) {
+    cart = JSON.parse(cart);
+    let totalValue = 0;
+    cart.forEach(function (cartItem) {
+      totalValue += cartItem.total;
+    });
+    document.getElementById('total-value').innerText = totalValue;
+  }
+}
+    // Gọi hàm hiển thị giỏ hàng khi trang được tải
+    document.addEventListener('DOMContentLoaded', function () {
+      displayCartItems();
+      updateTotal();
+    });
+
+    // Sử dụng mũi tên lên và xuống trên bàn phím để tăng giảm số lượng quantity
+    document.addEventListener('keydown', function (event) {
+      if (event.target.classList.contains('quantity-input')) {
+        const quantityInput = event.target;
+        const item = quantityInput.closest('tr').children[0].innerText;
+        const quantity = parseInt(quantityInput.value);
+
+        if (event.key === 'ArrowUp') {
+          event.preventDefault();
+          quantityInput.value = quantity + 1;
+          updateQuantity(item, quantity + 1);
+          updateTotal();
+        } else if (event.key === 'ArrowDown') {
+          event.preventDefault();
+          if (quantity > 1) {
+            quantityInput.value = quantity - 1;
+            updateQuantity(item, quantity - 1);
+            updateTotal();
+          }
+        }
+      }
+    });
+
+    // Xử lý khi nhấp vào nút "Thanh toán"
+    document.getElementById('checkout-button').addEventListener('click', function () {
+      let cart = localStorage.getItem('cart');
+      if (cart) {
+        cart = JSON.parse(cart);
+        // Thực hiện xử lý thanh toán tại đây...
+        console.log('Đã thanh toán:', cart);
+        // Sau khi thanh toán thành công, bạn có thể xoá giỏ hàng
+        localStorage.removeItem('cart');
+        alert('Đã thanh toán thành công! Giỏ hàng đã được xoá.');
+        // Sau khi xoá giỏ hàng, có thể chuyển hướng người dùng về trang khác hoặc làm bất kỳ thao tác nào khác
+      } else {
+        alert('Giỏ hàng đang trống. Vui lòng thêm mục hàng trước khi thanh toán.');
+      }
+    });
+  </script>
+  <script src="/phong/doan.js"></script>
+</body>
+<footer>
+  <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
+      class="iframe3"></iframe>
+</footer>
+</html>

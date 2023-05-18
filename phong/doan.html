@@ -8,6 +8,13 @@
         <title>Document</title>
         <link rel="stylesheet" href="/phong/doan.css">
         <link rel="stylesheet" href="/day 3/demo2.css">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
+            nonce="yK0WtsGe"></script>
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0"
+            nonce="abcdefg"></script>
         <script type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
@@ -36,7 +43,9 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link rel="stylesheet"
+            href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+            />
     </head>
     <body>
         <header>
@@ -49,10 +58,7 @@
                   <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" data-i18n="home">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#" data-i18n="about">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="/phong/doan.html" data-i18n="home">Home</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="course">Course
@@ -65,8 +71,18 @@
                         </ul>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link" href="#" data-i18n="about">About Us</a>
+                        <span id="usernameSpan"></span>
+                      </li>
+                      
+                      <li class="nav-item">
                         <a class="nav-link" href="#" data-i18n="contact">Contact Us</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/phong/dangnhap.html" data-i18n="login">Login</a>
+                      </li>
+                      
+
                       <li>
                         <div class="navbar-language">
                             <select id="language-selector" onchange="changeLanguage()">
@@ -75,6 +91,9 @@
                                 <option value="hi">हिन्दी</option>
                               </select>
                         </div>
+                      </li>
+                      <li class="nav-item" style="margin-left: 450px;">
+                        <a href="/phong/cart.html"><ion-icon name="cart" style="width: 50px; height: 50px;"></ion-icon></a>
                       </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -86,88 +105,103 @@
               </nav>
            
         </header>
+        <span id="usernameSpan"></span>
         <div class="main-1-img">
-        <div class="main-1-img-1">
-            <div class="main-1-img-1-title">
-                <p>Course Two</p>
-                <div class="a-home">
-                    <a href="#">Home</a> / Courses
+            <div class="main-1-img-1">
+                <div class="main-1-img-1-title">
+                    <p>Course Two</p>
+                    <div class="a-home">
+                        <a href="#">Home</a> / Courses
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="page2">
-        <div class="textpage2">
-            <p><span data-i18n="textpage2">SELECT COURSE</span></p>
-            <span style="font-size: 25px;" data-i18n="textpage2-2">Explore Popular Courses</span>
-        </div>
-
-    </div>
-    <!-- CARDpage2 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-1">
-                <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-                    <div class="card5">
-                      <div class="wrapper1">
-                        <img src="/picture/img-courses-1.jpg" class="cover-image" />
-                      </div>
-                      <span class="title">Categories Computer Engineering</span>
-                      <img src="/picture/img-courses-1remove.png" class="character" />
-                    </div>
-                  </a>
-                  
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-1">
-                <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-                    <div class="card5">
-                      <div class="wrapper1">
-                        <img src="/picture/img-courses-2.jpg" class="cover-image" />
-                      </div>
-                      <span class="title">Categories Gym</span>
-                      <img src="/picture/img-courses-2remove.png" class="character" />
-                    </div>
-                  </a>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-1">
-                <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-                    <div class="card5">
-                      <div class="wrapper1">
-                        <img src="/picture/img-courses-3.jpg" class="cover-image" />
-                      </div>
-                      <span class="title">Categories Gym</span>
-                      <img src="/picture/img-courses3remove.png" class="character" />
-                    </div>
-                  </a>
+        <div class="page2">
+            <div class="textpage2">
+                <p><span data-i18n="textpage2">SELECT COURSE</span></p>
+                <span style="font-size: 25px;" data-i18n="textpage2-2">Explore
+                    Popular Courses</span>
             </div>
 
         </div>
-    </div>
-    <!-- page2 -->
+        <!-- CARDpage2 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-ms-12">
+                    <a href="#">
+                        <div class="card5">
+                            <div class="wrapper1">
+                                <img src="/picture/img-courses-1.jpg"
+                                    class="cover-image" />
+                            </div>
+                            <span class="title">Categories Computer Engineering</span>
+                            <img src="/picture/img-courses-1remove.png"
+                                class="character" />
+                        </div>
+                    </a>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-ms-12">
+                    <a href="/phong/viewallgym.html">
+                        <div class="card5">
+                            <div class="wrapper1">
+                                <img src="/picture/img-courses-2.jpg"
+                                    class="cover-image" />
+                            </div>
+                            <span class="title">Categories Gym</span>
+                            <img src="/picture/img-courses-2remove.png"
+                                class="character" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-ms-12">
+                    <a href="https://www.mythrillfiction.com/the-dark-rider"
+                        alt="Mythrill" target="_blank">
+                        <div class="card5">
+                            <div class="wrapper1">
+                                <img src="/picture/img-courses-3.jpg"
+                                    class="cover-image" />
+                            </div>
+                            <span class="title">Categories Gym</span>
+                            <img src="/picture/img-courses3remove.png"
+                                class="character" />
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- page2 -->
         <div class="textdau">
             <span data-i18n="textpage1">TOP CATEGORIES</span> <br>
             <p data-i18n="textpage1-1">Popular Online Categories</p>
         </div>
         <div class="container">
             <div class="row" style="margin-top: 50px">
-                <div class="col-lg-4 col-md-4 col-ms-12" style="margin-bottom: 30px;">
-                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                <div class="col-lg-4 col-md-4 col-ms-12" style="margin-bottom:
+                    30px;">
+                    <div class="card" style="background-color: rgb(249,248,248);
+                        border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
                                 <a href="/baimoi/course1-js.html" class="a-img">
-                                    <img src="/picture/img-courses-1.jpg" alt="" style="width:100%">
+                                    <img src="/picture/img-courses-1.jpg" alt=""
+                                        style="width:100%">
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
                                         <span data-i18n="free">FREE</span>
                                     </div>
-                                    <div class="free-1-1" style="font-size: 14px; ">
+                                    <div class="free-1-1" style="font-size:
+                                        14px; ">
                                         <span>Web Development</span>
                                     </div>
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span data-i18n="text1">Learning JavaScript Course For Advanced Items Completed</span>
+                                        <span data-i18n="text1">Learning
+                                            JavaScript Course For Advanced Items
+                                            Completed</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -175,7 +209,8 @@
                                         <div class="quantity-user-1">
                                             <div class="quantity-icon">
                                                 <div class="quantity-icon-1">
-                                                    <i class="fa-regular fa-user"></i> 
+                                                    <i class="fa-regular
+                                                        fa-user"></i>
                                                 </div>
                                                 <div class="quantity-icon-2">
                                                     120
@@ -195,15 +230,18 @@
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
                                                 <div class="evaluate-star-1">
-                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular
+                                                        fa-star"></i>
                                                 </div>
-                                                <d class="quantity-star" style="color: black;">
+                                                <d class="quantity-star"
+                                                    style="color: black;">
                                                     (1)
                                                 </d>
-                                            </div>                               
+                                            </div>
                                         </div>
                                         <div class="next-icon">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <i class="fa-solid
+                                                fa-arrow-right-long"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -212,24 +250,29 @@
                     </div>
                 </div>
                 <!-- the 2 -->
-                <div class="col-lg-4 col-md-4 col-ms-12" style="margin-bottom: 30px;">
-                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                <div class="col-lg-4 col-md-4 col-ms-12" style="margin-bottom:
+                    30px;">
+                    <div class="card" style="background-color: rgb(249,248,248);
+                        border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
                                 <a href="/baimoi/course1-js.html" class="a-img">
-                                    <img src="/picture/img-courses-2.jpg" alt="" style="width:100%">
+                                    <img src="/picture/img-courses-4.jpg" alt=""
+                                        style="width:100%">
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
                                         <span>$40.00</span>
                                     </div>
-                                    <div class="free-1-1" style="font-size: 14px; ">
+                                    <div class="free-1-1" style="font-size:
+                                        14px; ">
                                         <span>Gym</span>
                                     </div>
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span data-i18n="text2">Ready to end the diet self sabotage guilt</span>
+                                        <span data-i18n="text2">Ready to end the
+                                            diet self sabotage guilt</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -237,7 +280,8 @@
                                         <div class="quantity-user-1">
                                             <div class="quantity-icon">
                                                 <div class="quantity-icon-1">
-                                                    <i class="fa-regular fa-user"></i> 
+                                                    <i class="fa-regular
+                                                        fa-user"></i>
                                                 </div>
                                                 <div class="quantity-icon-2">
                                                     120
@@ -257,15 +301,18 @@
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
                                                 <div class="evaluate-star-1">
-                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular
+                                                        fa-star"></i>
                                                 </div>
-                                                <d class="quantity-star" style="color: black;">
+                                                <d class="quantity-star"
+                                                    style="color: black;">
                                                     (1)
                                                 </d>
-                                            </div>                               
+                                            </div>
                                         </div>
                                         <div class="next-icon">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <i class="fa-solid
+                                                fa-arrow-right-long"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -273,24 +320,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-ms-12" style="margin-bottom: 30px;">
-                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                <div class="col-lg-4 col-md-4 col-ms-12" style="margin-bottom:
+                    30px;">
+                    <div class="card" style="background-color: rgb(249,248,248);
+                        border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
                                 <a href="/baimoi/course1-js.html" class="a-img">
-                                    <img src="/picture/img-courses-3.jpg" alt="" style="width:100%">
+                                    <img src="/picture/img-courses-5.jpg" alt=""
+                                        style="width:100%">
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
                                         <span>$40.00</span>
                                     </div>
-                                    <div class="free-1-1" style="font-size: 14px; ">
+                                    <div class="free-1-1" style="font-size:
+                                        14px; ">
                                         <span>Gym</span>
                                     </div>
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span data-i18n="text3">Dream body builder is a 6-week program</span>
+                                        <span data-i18n="text3">Dream body
+                                            builder is a 6-week program</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -298,7 +350,8 @@
                                         <div class="quantity-user-1">
                                             <div class="quantity-icon">
                                                 <div class="quantity-icon-1">
-                                                    <i class="fa-regular fa-user"></i> 
+                                                    <i class="fa-regular
+                                                        fa-user"></i>
                                                 </div>
                                                 <div class="quantity-icon-2">
                                                     120
@@ -318,15 +371,18 @@
                                                     <i class="fa-solid fa-star"></i>
                                                 </div>
                                                 <div class="evaluate-star-1">
-                                                    <i class="fa-regular fa-star"></i>
+                                                    <i class="fa-regular
+                                                        fa-star"></i>
                                                 </div>
-                                                <d class="quantity-star" style="color: black;">
+                                                <d class="quantity-star"
+                                                    style="color: black;">
                                                     (1)
                                                 </d>
-                                            </div>                               
+                                            </div>
                                         </div>
                                         <div class="next-icon">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <i class="fa-solid
+                                                fa-arrow-right-long"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -337,9 +393,10 @@
             </div>
         </div>
         <div class="more">
-            <a href="/baimoi/course1-js.html"><button class="button-5" role="button" data-i18n="view">View All Categories</button></a>
+            <a href="/baimoi/course1.html"><button class="button-5"
+                    role="button" data-i18n="view">View All Categories</button></a>
         </div>
-       
+
         <div class="page3">
             <div class="textpage3">
                 <div class="anhpage3">
@@ -361,166 +418,255 @@
                         <div class="popup-form-container">
                             <section class="h-100 bg-dark">
                                 <div class="container py-5 h-100">
-                                    <div class="row d-flex justify-content-center align-items-center
+                                    <div class="row d-flex
+                                        justify-content-center
+                                        align-items-center
                                         h-100">
                                         <div class="col">
-                                            <div class="card card-registration my-4">
+                                            <div class="card card-registration
+                                                my-4">
                                                 <div class="row g-0">
-                                                    <div class="col-xl-6 d-none d-xl-block">
+                                                    <div class="col-xl-6 d-none
+                                                        d-xl-block">
                                                         <img
                                                             src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
-                                                            alt="Sample photo" class="img-fluid"
-                                                            style="border-top-left-radius: .25rem;
-                                                            border-bottom-left-radius: .25rem;" />
+                                                            alt="Sample photo"
+                                                            class="img-fluid"
+                                                            style="border-top-left-radius:
+                                                            .25rem;
+                                                            border-bottom-left-radius:
+                                                            .25rem;" />
                                                     </div>
                                                     <div class="col-xl-6">
-                                                        <div class="card-body p-md-5 text-black">
-                                                            <h3 class="mb-5 text-uppercase">Student
-                                                                registration form</h3>
-                    
+                                                        <div class="card-body
+                                                            p-md-5 text-black">
+                                                            <h3 class="mb-5
+                                                                text-uppercase">Student
+                                                                registration
+                                                                form</h3>
+
                                                             <div class="row">
-                                                                <div class="col-md-6 mb-4">
-                                                                    <div class="form-outline">
-                                                                        <input type="text"
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <div
+                                                                        class="form-outline">
+                                                                        <input
+                                                                            type="text"
                                                                             id="form3Example1m"
                                                                             class="form-control
-                                                                            form-control-lg" />
-                                                                        <label class="form-label"
+                                                                            form-control-lg"
+                                                                            />
+                                                                        <label
+                                                                            class="form-label"
                                                                             for="form3Example1m">First
                                                                             name</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6 mb-4">
-                                                                    <div class="form-outline">
-                                                                        <input type="text"
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <div
+                                                                        class="form-outline">
+                                                                        <input
+                                                                            type="text"
                                                                             id="form3Example1n"
                                                                             class="form-control
-                                                                            form-control-lg" />
-                                                                        <label class="form-label"
+                                                                            form-control-lg"
+                                                                            />
+                                                                        <label
+                                                                            class="form-label"
                                                                             for="form3Example1n">Last
                                                                             name</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                    
-                                                            
-                                                            <div class="form-outline mb-4">
-                                                                <input type="text"
+
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
                                                                     id="form3Example8"
                                                                     class="form-control
-                                                                    form-control-lg" />
-                                                                <label class="form-label"
+                                                                    form-control-lg"
+                                                                    />
+                                                                <label
+                                                                    class="form-label"
                                                                     for="form3Example8">Address</label>
                                                             </div>
-                    
-                                                            <div class="d-md-flex
+
+                                                            <div
+                                                                class="d-md-flex
                                                                 justify-content-start
-                                                                align-items-center mb-4 py-2">
-                    
-                                                                <h6 class="mb-0 me-4">Gender: </h6>
-                                                                <div class="form-check
-                                                                    form-check-inline mb-0 me-4">
-                                                                    <input class="form-check-input"
+                                                                align-items-center
+                                                                mb-4 py-2">
+
+                                                                <h6 class="mb-0
+                                                                    me-4">Gender:
+                                                                </h6>
+                                                                <div
+                                                                    class="form-check
+                                                                    form-check-inline
+                                                                    mb-0 me-4">
+                                                                    <input
+                                                                        class="form-check-input"
                                                                         type="radio"
                                                                         name="inlineRadioOptions"
                                                                         id="femaleGender"
-                                                                        value="option1" />
-                                                                    <label class="form-check-label"
+                                                                        value="option1"
+                                                                        />
+                                                                    <label
+                                                                        class="form-check-label"
                                                                         for="femaleGender">Female</label>
                                                                 </div>
-                    
-                                                                <div class="form-check
-                                                                    form-check-inline mb-0 me-4">
-                                                                    <input class="form-check-input"
+
+                                                                <div
+                                                                    class="form-check
+                                                                    form-check-inline
+                                                                    mb-0 me-4">
+                                                                    <input
+                                                                        class="form-check-input"
                                                                         type="radio"
                                                                         name="inlineRadioOptions"
                                                                         id="maleGender"
-                                                                        value="option2" />
-                                                                    <label class="form-check-label"
+                                                                        value="option2"
+                                                                        />
+                                                                    <label
+                                                                        class="form-check-label"
                                                                         for="maleGender">Male</label>
                                                                 </div>
-                    
-                                                                <div class="form-check
-                                                                    form-check-inline mb-0">
-                                                                    <input class="form-check-input"
+
+                                                                <div
+                                                                    class="form-check
+                                                                    form-check-inline
+                                                                    mb-0">
+                                                                    <input
+                                                                        class="form-check-input"
                                                                         type="radio"
                                                                         name="inlineRadioOptions"
                                                                         id="otherGender"
-                                                                        value="option3" />
-                                                                    <label class="form-check-label"
+                                                                        value="option3"
+                                                                        />
+                                                                    <label
+                                                                        class="form-check-label"
                                                                         for="otherGender">Other</label>
                                                                 </div>
-                    
+
                                                             </div>
-                    
+
                                                             <div class="row">
-                                                                <div class="col-md-6 mb-4">
-                    
-                                                                    <select class="select">
-                                                                        <option value="1">State</option>
-                                                                        <option value="2">Option 1</option>
-                                                                        <option value="3">Option 2</option>
-                                                                        <option value="4">Option 3</option>
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <select
+                                                                        class="select">
+                                                                        <option
+                                                                            value="1">State</option>
+                                                                        <option
+                                                                            value="2">VietNam
+                                                                            </option>
+                                                                        <option
+                                                                            value="3">American
+                                                                            </option>
+                                                                        <option
+                                                                            value="4">Korean
+                                                                            </option>
                                                                     </select>
-                    
                                                                 </div>
-                                                                <div class="col-md-6 mb-4">
-                    
-                                                                    <select class="select">
-                                                                        <option value="1">City</option>
-                                                                        <option value="2">Option 1</option>
-                                                                        <option value="3">Option 2</option>
-                                                                        <option value="4">Option 3</option>
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <select
+                                                                        class="select">
+                                                                        <option
+                                                                            value="1">City</option>
+                                                                        <option
+                                                                            value="2">Ho Chi Minh</option>
+                                                                        <option
+                                                                            value="3">Ha Noi</option>
+                                                                        <option
+                                                                            value="4">Da Nang</option>
                                                                     </select>
-                    
                                                                 </div>
                                                             </div>
-                    
-                                                            <div class="form-outline mb-4">
-                                                                <input type="text"
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="date"
                                                                     id="form3Example9"
                                                                     class="form-control
-                                                                    form-control-lg" />
-                                                                <label class="form-label"
-                                                                    for="form3Example9">DOB</label>
+                                                                    form-control-lg"
+                                                                    />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example9">Birthday</label>
                                                             </div>
-                    
-                                                            <div class="form-outline mb-4">
-                                                                <input type="text"
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
                                                                     id="form3Example90"
                                                                     class="form-control
-                                                                    form-control-lg" />
-                                                                <label class="form-label"
-                                                                    for="form3Example90">Pincode</label>
+                                                                    form-control-lg"
+                                                                    />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example90">ZipCode</label>
                                                             </div>
-                    
-                                                            <div class="form-outline mb-4">
-                                                                <input type="text"
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
                                                                     id="form3Example99"
                                                                     class="form-control
-                                                                    form-control-lg" />
-                                                                <label class="form-label"
-                                                                    for="form3Example99">Course</label>
+                                                                    form-control-lg"
+                                                                    />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example99">Phone</label>
                                                             </div>
-                    
-                                                            <div class="form-outline mb-4">
-                                                                <input type="text"
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
                                                                     id="form3Example97"
                                                                     class="form-control
-                                                                    form-control-lg" />
-                                                                <label class="form-label"
-                                                                    for="form3Example97">Email ID</label>
+                                                                    form-control-lg"
+                                                                    />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example97">Email
+                                                                    ID</label>
                                                             </div>
-                    
-                                                            <div class="d-flex justify-content-end
+
+                                                            <div class="d-flex
+                                                                justify-content-end
                                                                 pt-3">
-                                                                <button type="button" class="btn
-                                                                    btn-light btn-lg">Reset all</button>
-                                                                <button type="button" class="btn
-                                                                    btn-warning btn-lg ms-2">Submit
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn
+                                                                    btn-light
+                                                                    btn-lg">Reset
+                                                                    all</button>
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn
+                                                                    btn-warning
+                                                                    btn-lg
+                                                                    ms-2">Submit
                                                                     form</button>
                                                             </div>
-                    
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -555,20 +701,22 @@
                                     collapse show"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the first item's
-                                            accordion body.</strong> It is shown
-                                        by default, until the collapse plugin
-                                        adds the appropriate classes that we use
-                                        to style each element. These classes
-                                        control the overall appearance, as well
-                                        as the showing and hiding via CSS
-                                        transitions. You can modify any of this
-                                        with custom CSS or overriding our
-                                        default variables. It's also worth
-                                        noting that just about any HTML can go
-                                        within the <code>.accordion-body</code>,
-                                        though the transition does limit
-                                        overflow.
+                                        The admissions requirements typically
+                                        refer to the criteria that applicants
+                                        need to meet in order to be considered
+                                        for admission to a particular
+                                        institution or program. These
+                                        requirements can vary depending on the
+                                        institution and program, but may include
+                                        factors such as academic qualifications,
+                                        standardized test scores, letters of
+                                        recommendation, essays or personal
+                                        statements, and extracurricular
+                                        activities. It's important to research
+                                        the specific admissions requirements for
+                                        the institution or program you are
+                                        interested in to ensure you meet all
+                                        necessary criteria.
                                     </div>
                                 </div>
                             </div>
@@ -587,20 +735,20 @@
                                     collapse"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the second item's
-                                            accordion body.</strong> It is
-                                        hidden by default, until the collapse
-                                        plugin adds the appropriate classes that
-                                        we use to style each element. These
-                                        classes control the overall appearance,
-                                        as well as the showing and hiding via
-                                        CSS transitions. You can modify any of
-                                        this with custom CSS or overriding our
-                                        default variables. It's also worth
-                                        noting that just about any HTML can go
-                                        within the <code>.accordion-body</code>,
-                                        though the transition does limit
-                                        overflow.
+                                        Yes, Star Class offers free courses in
+                                        addition to their paid courses. These
+                                        free courses cover a range of topics and
+                                        are designed to provide learners with an
+                                        introduction to a particular subject
+                                        area. The free courses may be shorter in
+                                        length than the paid courses and may not
+                                        offer the same level of support or
+                                        resources, but they still provide
+                                        valuable learning opportunities. To
+                                        access the free courses on Educavo, you
+                                        can visit their website and browse their
+                                        course catalog to find the courses that
+                                        interest you.
                                     </div>
                                 </div>
                             </div>
@@ -620,20 +768,30 @@
                                     class="accordion-collapse collapse"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the third item's
-                                            accordion body.</strong> It is
-                                        hidden by default, until the collapse
-                                        plugin adds the appropriate classes that
-                                        we use to style each element. These
-                                        classes control the overall appearance,
-                                        as well as the showing and hiding via
-                                        CSS transitions. You can modify any of
-                                        this with custom CSS or overriding our
-                                        default variables. It's also worth
-                                        noting that just about any HTML can go
-                                        within the <code>.accordion-body</code>,
-                                        though the transition does limit
-                                        overflow.
+                                        The transfer application process is the
+                                        process by which students can apply to
+                                        transfer from one college or university
+                                        to another. The process may vary
+                                        depending on the institutions involved,
+                                        but typically involves submitting an
+                                        application that includes transcripts,
+                                        letters of recommendation, essays or
+                                        personal statements, and other
+                                        supporting materials. Students may also
+                                        need to meet certain academic
+                                        requirements, such as a minimum GPA or
+                                        completion of certain coursework. After
+                                        the application is submitted, it will be
+                                        reviewed by the admissions committee at
+                                        the institution the student is applying
+                                        to, and a decision will be made on
+                                        whether or not to accept the student as
+                                        a transfer student. It's important for
+                                        students considering transferring to
+                                        research the transfer application
+                                        process for the institutions they are
+                                        interested in, as the requirements and
+                                        deadlines may vary.
                                     </div>
                                 </div>
                             </div>
@@ -652,20 +810,30 @@
                                     collapse"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>This is the third item's
-                                            accordion body.</strong> It is
-                                        hidden by default, until the collapse
-                                        plugin adds the appropriate classes that
-                                        we use to style each element. These
-                                        classes control the overall appearance,
-                                        as well as the showing and hiding via
-                                        CSS transitions. You can modify any of
-                                        this with custom CSS or overriding our
-                                        default variables. It's also worth
-                                        noting that just about any HTML can go
-                                        within the <code>.accordion-body</code>,
-                                        though the transition does limit
-                                        overflow.
+                                        Distance education refers to a method of
+                                        learning that allows students to
+                                        participate in educational courses or
+                                        programs without physically attending a
+                                        traditional classroom setting. Instead,
+                                        students can access course materials,
+                                        participate in discussions, and complete
+                                        assignments remotely, using various
+                                        communication technologies such as video
+                                        conferencing, email, chat rooms, or
+                                        online learning platforms. Distance
+                                        education is often used to provide
+                                        access to education for students who are
+                                        unable to attend a traditional
+                                        campus-based program due to
+                                        geographical, financial, or personal
+                                        constraints. It is also known as online
+                                        learning, e-learning, or virtual
+                                        learning. Distance education has become
+                                        increasingly popular in recent years,
+                                        particularly due to advancements in
+                                        technology that make it easier and more
+                                        accessible for students to participate
+                                        in remote learning.
                                     </div>
                                 </div>
                             </div>
@@ -677,25 +845,36 @@
                 </div>
 
             </div>
-            <div class="page5"> 
+            <div class="page5">
                 <div class="lophoc">
-                  <h2 style="color: black; font-weight: 1000;">Classroom Pictures</h2>
-                  During class, teachers and students will discuss, analyze, and practice real-life situations and exercises.
+                    <h2 style="color: black; font-weight: 1000;">Classroom
+                        Pictures</h2>
+                    During class, teachers and students will discuss, analyze,
+                    and practice real-life situations and exercises.
                 </div>
                 <div class="trongpage56">
-                  <div class="carousel">
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                    <div class="carousel__face"><span class="span6"></span></div>
-                  </div>
+                    <div class="carousel">
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                        <div class="carousel__face"><span class="span6"></span></div>
+                    </div>
                 </div>
-              </div>
+            </div>
+            <div class="comment-fb">
+                <fb:login-button
+                    scope="public_profile,email"
+                    onlogin="checkLoginState();">
+                </fb:login-button>
+                <div class="fb-comments"
+                    data-href="http://127.0.0.1:5502/phong/doan.html"
+                    data-width="1400" data-numposts="10"></div>
+            </div>
             <script src="/phong/doan.js"></script>
         </body>
         <footer>

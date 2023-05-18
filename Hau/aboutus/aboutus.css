@@ -1,0 +1,34 @@
+.course{
+    color: rgb(90, 87, 87);
+}
+.icon{
+    color: orangered;
+}
+.card-body{
+    background-color: lightgray;
+}
+.aboutstarclasses{
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20px;
+}
+.aboutus1{
+    padding-left: 80px;
+    margin-top: 20px;
+}
+.ourmissionbc{
+    background-color: rgb(58, 55, 55);
+    padding: 40px;
+}
+.aboutus2{
+    padding-left: 10%;
+}
+.ourmission{
+    padding-left: 80px;
+    margin-top: 20px;
+    color: white;
+    padding-right: 11%;
+}
+h6{
+    color: orangered;
+}

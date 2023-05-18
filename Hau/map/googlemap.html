@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Details</title>
+  <style>
+    body{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="map" style="height: 400px; width: 100%;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1959.645078838111!2d106.6593212!3d10.7890745!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ecc8df8d0f7%3A0x5ebcae0d545503ce!2zMTMxIMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyA3LCBUw6JuIELDrG5oLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1683603578105!5m2!1svi!2s"
+      width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <br>
+  <section>
+    <h2>Date and Time (Vietnamese Timezone)</h2>
+    <p>Date: <span id="eventDate"></span></p>
+    <p>Time: <span id="eventTime"></span></p>
+    <p>Location: 131/129, cach mang thang 8 street, ward 7 Tan Binh district, Ho Chi Minh City</p>
+  </section>
+
+  <script>
+    // JavaScript code for updating the event details with Vietnamese date and time
+    function updateEventDetails() {
+      var eventDateElement = document.getElementById("eventDate");
+      var eventTimeElement = document.getElementById("eventTime");
+
+      // Get the current date and time
+      var currentDate = new Date();
+
+      // Format the date as dd/mm/yyyy
+      var eventDate = currentDate.toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric" });
+
+      // Format the time as hh:mm AM/PM
+      var eventTime = currentDate.toLocaleTimeString("en-US", { hour: "numeric", minute: "numeric", hour12: true });
+
+      // Update the event details in the HTML
+      eventDateElement.textContent = eventDate;
+      eventTimeElement.textContent = eventTime;
+    }
+
+    // Call the function to update event details after the page loads
+    window.onload = updateEventDetails;
+  </script>
+</body>
+</html>

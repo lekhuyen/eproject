@@ -120,7 +120,7 @@ padding-right: 50px;
 }
 .main-1-img-1 {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
   background-repeat: no-repeat;
   background-image: url(/picture/img-courses-6.jpg);
@@ -170,16 +170,16 @@ a {
 
 
 .page2{
-  margin-top: 40px;
+  margin-top: 100px;
   width: 100%;
   height: 300px;
   margin-bottom: 120px;
-  background-color: red;
+  background-color: transparent;
 }
 .textpage2{
   width: 100%;
   text-align: center;
-  background-color: red;
+  background-color: transparent;
 }
 .textpage2 p{
  font-size: 25px;
@@ -571,14 +571,14 @@ margin-top: 50px;
 text-align: center;
 color: black;
 font-size: 18px;
-margin-bottom: 200px;
+margin-bottom: 150px;
 }
 
 .trongpage56 {
 position: relative;
 width: 320px;
 height: 300px;
-margin-top: 500px;
+/* margin-top: 50px; */
 margin-left: 550px;
 perspective: 1000px;
 }
@@ -746,12 +746,12 @@ to {
   transition: transform 0.5s;
 }
 .card5:hover .title {
-  transform: translate3d(0%, -50px, 100px);
+  transform: translate3d(0%, -150px, 100px);
 }
 
 .character {
-  width: 400px;
-  height: 300px;
+  width: 500px;
+  height: 250px;
   opacity: 0;
   transition: all 0.5s;
   position: absolute;
@@ -761,4 +761,9 @@ to {
 .card5:hover .character {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
+}
+.comment-fb{
+  width: 100%;
+  height: 400px;
+  background-color: transparent;
 }

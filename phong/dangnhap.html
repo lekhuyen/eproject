@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+      .register-photo{
+        width: 100%;
+        height: 50vh;
+        background-color: transparent;
+        margin-top: 100px;
+      }
+
+.register-photo .image-holder {
+  display:table-cell;
+  width:auto;
+  background:url(https://img.freepik.com/free-vector/colourful-illustration-programmer-working_23-2148281410.jpg?w=740&t=st=1684240196~exp=1684240796~hmac=05c955218ac188992f047972225cead416130c39f808b9f5977f37688ff84349);
+  background-size: cover;
+  height: 500px;
+}
+
+.register-photo .form-container {
+  display:table;
+  max-width:900px;
+  width:90%;
+  margin:0 auto;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.1);
+  
+}
+
+.register-photo form {
+  display:table-cell;
+  width:400px;
+  background-color:#ffffff;
+  padding:40px 60px;
+  color:#505e6c;
+  
+}
+
+@media (max-width:991px) {
+  .register-photo form {
+    padding:40px;
+  }
+}
+
+.register-photo form h2 {
+  font-size:24px;
+  line-height:1.5;
+  margin-bottom:30px;
+}
+
+.register-photo form .form-control {
+  background:#f7f9fc;
+  border:none;
+  border-bottom:1px solid #dfe7f1;
+  border-radius:0;
+  box-shadow:none;
+  outline:none;
+  color:inherit;
+  text-indent:6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.register-photo form .form-check {
+  font-size:13px;
+  line-height:20px;
+}
+
+.register-photo form .btn-primary {
+  background:#f4476b;
+  border:none;
+  border-radius:4px;
+  padding:11px;
+  box-shadow:none;
+  margin-top:35px;
+  text-shadow:none;
+  outline:none !important;
+}
+
+.register-photo form .btn-primary:hover, .register-photo form .btn-primary:active {
+  background:#eb3b60;
+}
+
+.register-photo form .btn-primary:active {
+  transform:translateY(1px);
+}
+
+.register-photo form .already {
+  display:block;
+  text-align:center;
+  font-size:12px;
+  color:#6f7a85;
+  opacity:0.9;
+  text-decoration:none;
+}
+
+    </style>
+  </head>
+
+  <body>
+    <div class="register-photo">
+      <div class="form-container">
+        <div class="image-holder"></div>
+        <form onsubmit="login(event)">
+          <div class="form-group"><input class="form-control" type="email"
+              name="email" id="email" placeholder="Email"></div>
+          <div class="form-group"><input class="form-control" type="password"
+              name="password" id="password" placeholder="Password"></div>
+          <div class="form-group" style="margin-top: 200px;"><button class="btn
+              btn-primary btn-block"
+              type="submit">Sign In</button></div>
+          <a href="/phong/dangky.html" class="already">You don't have an
+            account? <b>Register
+              here</b>.</a>
+        </form>
+      </div>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script>
+          function login(event) {
+            event.preventDefault();
+        
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+        
+            // Lấy thông tin người dùng đã đăng ký từ sessionStorage
+            var storedUsers = localStorage.getItem('users');
+            if (storedUsers) {
+              var users = JSON.parse(storedUsers);
+              var foundUser = users.find(function(user) {
+                return user.email === email && user.password === password;
+              });
+              if (foundUser) {
+                localStorage.setItem('username', foundUser.username); // Lưu tên người dùng vào sessionStorage
+                window.location.href = "/phong/doan.html"; // Chuyển hướng đến trang sau khi đăng nhập thành công
+              } else {
+                alert('Email hoặc mật khẩu không đúng!');
+              }
+            } else {
+              alert('Bạn chưa đăng ký!');
+            }
+          }
+        </script>
+    </body>
+
+  </html>
