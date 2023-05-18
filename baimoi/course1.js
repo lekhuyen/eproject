@@ -38,7 +38,7 @@ function lisPage() {
     }
 
     if(thispage!=count){
-        let next = docment.createElement('li')
+        let next = document.createElement('li')
         next.innerText = 'NEXT'
         next.setAttribute('onclick', "changePage("+(thispage+1)+")")
         document.querySelector('.listpage').appendChild(next)
