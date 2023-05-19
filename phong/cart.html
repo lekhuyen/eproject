@@ -258,27 +258,36 @@ function updateTotal() {
 
     // Xử lý khi nhấp vào nút "Thanh toán"
     document.getElementById('checkout-button').addEventListener('click', function () {
-      let cart = localStorage.getItem('cart');
-      if (cart) {
-        cart = JSON.parse(cart);
-        // Thực hiện xử lý thanh toán tại đây...
-        console.log('Đã thanh toán:', cart);
-        // Sau khi thanh toán thành công, bạn có thể xoá giỏ hàng
-        localStorage.removeItem('cart');
-        alert('Đã thanh toán thành công! Giỏ hàng đã được xoá.');
-        // Sau khi xoá giỏ hàng, có thể chuyển hướng người dùng về trang khác hoặc làm bất kỳ thao tác nào khác
-      } else {
-        
-      }
-    });
-    
+  let cart = localStorage.getItem('cart');
+  if (cart) {
+    cart = JSON.parse(cart);
+    if (isLoggedIn()) {
+      // Thực hiện xử lý thanh toán tại đây...
+      console.log('Đã thanh toán:', cart);
+      // Sau khi thanh toán thành công, bạn có thể xoá giỏ hàng
+      localStorage.removeItem('cart');
+      alert('Đã thanh toán thành công! Giỏ hàng đã được xoá.');
+      // Sau khi xoá giỏ hàng, có thể chuyển hướng người dùng về trang khác hoặc thực hiện các thao tác khác
+    } else {
+      alert('Bạn chưa đăng nhập. Vui lòng đăng nhập để tiếp tục thanh toán.');
+      // Chuyển hướng người dùng đến trang đăng nhập
+      window.location.href = '/phong/dangnhap.html'; 
+    }
+  } else {
+    // Giỏ hàng rỗng, không có gì để thanh toán
+    alert('Giỏ hàng đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.');
+  }
+});
+
+// Kiểm tra xem người dùng đã đăng nhập hay chưa
+function isLoggedIn() {
+  return localStorage.getItem('isLoggedIn') === 'true';
+}
   </script>
   <script src="/phong/doan.js"></script>
   <script src="/baimoi/cart.js"></script>
-  <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
             <script>
                 // Kiểm tra xem người dùng đã đăng nhập hay chưa
                 function isLoggedIn() {
@@ -314,19 +323,6 @@ function updateTotal() {
                   updateLoginStatus(); // Cập nhật trạng thái đăng nhập
                 }
                 // Kiểm tra xem người dùng đã đăng nhập hay chưa
-function isLoggedIn() {
-  return localStorage.getItem('isLoggedIn') === 'true';
-}
-
-// Xử lý sự kiện khi người dùng nhấp vào liên kết "Pay Now"
-document.querySelector('.checkout-link').addEventListener('click', function(event) {
-  if (!isLoggedIn()) {
-    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
-    alert('Bạn chưa đăng nhập. Vui lòng đăng nhập để tiếp tục thanh toán.');
-    // Chuyển hướng người dùng đến trang đăng nhập
-    window.location.href = '/phong/dangnhap.html';
-  }
-});
                 
               </script>
 </body>
