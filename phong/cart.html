@@ -122,7 +122,8 @@
     <tbody id="cart-items"></tbody>
   </table>
   <p id="total-label"><strong>Total: </strong><span id="total-value"></span></p>
-  <a href="cart.html"><button class="checkout-button" id="checkout-button" role="button">Pay Now</button></a>
+  <a href="cart.html" class="checkout-link"><button class="checkout-button" id="checkout-button" role="button">Pay Now</button></a>
+
 
   <script>
     // Lấy giỏ hàng từ localStorage và hiển thị
@@ -267,7 +268,7 @@ function updateTotal() {
         alert('Đã thanh toán thành công! Giỏ hàng đã được xoá.');
         // Sau khi xoá giỏ hàng, có thể chuyển hướng người dùng về trang khác hoặc làm bất kỳ thao tác nào khác
       } else {
-        alert('Giỏ hàng đang trống. Vui lòng thêm mục hàng trước khi thanh toán.');
+        
       }
     });
     
@@ -312,6 +313,21 @@ function updateTotal() {
                   localStorage.setItem('isLoggedIn', 'false');
                   updateLoginStatus(); // Cập nhật trạng thái đăng nhập
                 }
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa
+function isLoggedIn() {
+  return localStorage.getItem('isLoggedIn') === 'true';
+}
+
+// Xử lý sự kiện khi người dùng nhấp vào liên kết "Pay Now"
+document.querySelector('.checkout-link').addEventListener('click', function(event) {
+  if (!isLoggedIn()) {
+    event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+    alert('Bạn chưa đăng nhập. Vui lòng đăng nhập để tiếp tục thanh toán.');
+    // Chuyển hướng người dùng đến trang đăng nhập
+    window.location.href = '/phong/dangnhap.html';
+  }
+});
+                
               </script>
 </body>
 <footer>
