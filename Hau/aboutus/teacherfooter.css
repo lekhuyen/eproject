@@ -1,0 +1,20 @@
+.iframe3{
+    width: 100%;
+    height: 440px;
+    background-color: transparent;
+    }
+    footer{
+    width: 100%;
+    height: 440px;
+    }
+    .navbar-language {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    
+    #language-selector {
+        font-size: 16px;
+        padding: 8px;
+        padding-right: 50px;
+    }
