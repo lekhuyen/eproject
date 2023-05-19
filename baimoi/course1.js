@@ -48,3 +48,19 @@ function changePage(i) {
     thispage = i
     loaditem()
 }
+
+const input = document.querySelector('.input-courses input')
+const row = document.querySelectorAll('.item-1')
+input.addEventListener('input', function(e) {
+    const inputt = e.target.value.toLowerCase()
+    row.forEach(item => {
+        const item1 = item.getAttribute('type')
+        if(item1.includes(inputt)){
+            item.style.display = 'block'
+        }else{
+            item.style.display = 'none'
+
+        }
+
+    })
+})
