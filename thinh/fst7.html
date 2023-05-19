@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fst7.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body ng-app="myApp">
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
+            style="background-color: #3275a5;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="/picture/logo.png" width="50px" height="50px"></a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0
+                        navbar-nav-scroll" style="--bs-scroll-height:
+                        100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="/phong/doan.html" data-i18n="home"
+                                style="margin-left: 20px;">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false" data-i18n="course"
+                                style="margin-left: 20px;">Course
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/baimoi/course1.html">Course-1</a></li>
+                                <li><a class="dropdown-item" href="/baimoi/course2.html">Course-2</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-i18n="about"
+                                style="margin-left: 20px;">About Us</a>
+                            <span id="usernameSpan"></span>
+                        </li>
+      
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-i18n="contact"
+                                style="margin-left: 10px;">Contact Us</a>
+                        </li>
+                        <li class="nav-item" >
+                            <a href="/phong/dangnhap.html" class="nav-link" id="loginLink"  style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                            <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+      
+                        </li>
+                        <li class="nav-item">
+                            <p style="margin-left: 20px;" class="nav-link">Username: <span id="username"  style="color: rgb(0, 145, 255); font-weight: 600;"></span></p>
+                        </li>
+      
+                        <li>
+                            <div class="navbar-language" style="margin-left:
+                                50px;">
+                                <select id="language-selector"
+                                    onchange="changeLanguage()">
+                                    <option value="en">English</option>
+                                    <option value="vn">Tiếng Việt</option>
+                                    <option value="hi">हिन्दी</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li class="nav-item" style="margin-left: 50px;">
+                            <a href="/phong/cart.html" class="nav-link"><ion-icon name="cart"
+                                    style="width: 50px; height: 50px; color: blue;"></ion-icon>
+                                    <span id="cartItemCount" class="cart-item-count" style="position: absolute; color: rgb(11, 51, 251);">0</span></a>
+                                    
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success"
+                            type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+      
+      </header>
+    <div class="main-1-img">
+        <div class="main-1-img-1">
+            <div class="main-1-img-1-title">
+                <p>FST-7: Big and Ripped</p>
+                <div class="a-home">
+                    <a href="#">Home</a> / 
+                    <a href="#">Course</a> / 
+                    <a href="#">Gym</a> / FST-7: Big and Ripped
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="padding-top:100px">
+            <div class="col-lg-8 col-md-12 col-sm-12" style=" padding: 0;  box-shadow: 0 0 30px #eee; margin-bottom: 50px;">
+                <div class="describe-1" style="background-color: rgb(244,243,243);">
+                    <div class="overview">
+                        <p>Overview</p>
+                    </div>
+                    <div class="curriculum">
+                        <p>Curriculum</p>
+                    </div>
+                    <div class="instructor">
+                        <p>Instructor</p>
+                    </div>
+                    <div class="reviews">
+                        <p>Reviews</p>
+                    </div>                   
+                </div>
+                <div class="overview-child">
+                    <h2>Learn from the Champions</h2>
+                    <div class="overview-child-1">
+                        <p>Hany "Pro Creator" Rambod's FST-7 Training System has helped win more than 10 Olympia titles for his clients. Train at a pro level with Rambod in this intense 8-week program to mold jaw-dropping size and definition.
+                        </p>
+                        <p>FST-7 is Fascia Stretch Training, a discipline designed specifically to build a stage-ready physique that dominates the competition—through brutally hard burnout sessions. The program is divided into two parts. Phase 1 will make you big. Phase 2 will make you ripped. You'll hate it, but it works.
+                        </p>
+                    <h2>More than a workout plan. With this plan you also receive:</h2> <br>
+                    <h3>Expert Instruction</h3>
+                    <h4>This is how the pros grow</h4>
+                    <p>
+                        You'll learn the essential concepts that define upper- and lower-body training in the FST-7 system. Then you’ll put them into action in some of the most intense workouts of your life. Prepare to be sore!</p>
+                       <br>
+                    <h3>Nutrition Plan</h3>
+                    <h4>Macros and meal plans</h4>
+                    <p>It isn't easy to become both huge and shredded. But you can get there with targeted, high-quality nutrition. Rambod provides the precise macro breakdowns and meal plans you'll need for unreal growth in Phase 1 and major cuts in Phase 2. He also reveals the supplements that give his pros an edge.</p>
+                        
+                        <button class="viewsample" id="viewsample">View Sample Workout</button>
+                        <button class="viewsample">View Full Calendar</button>
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+                
+                <div class="curriculum-child" style="padding-bottom: 30px;">
+                    <div class="curriculum-child-1">
+                        <div class="curriculum-child-1-0">
+                            <p>Curriculum is empty</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="instructor-child-0" style="padding-bottom: 30px;">
+                    <div class="instructor-child">
+                        <div class="instructor-1">
+                            <div class="instructor-1-1">
+                                <img src="/baimoi/img/img-tearcher-1.jpeg" alt="" style="height: 100%; width: 170px ">
+                            </div>
+                            <div class="tearcher-info">
+                                <div class="name-teach">
+                                    <p>Aden Hezard</p>
+                                    <p>Assistant Teacher</p>
+                                </div>
+                                <div class="tearcher-info-icon">
+                                    <a href="#">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-child-0-0" style="padding-bottom: 30px;">
+                    <div class="reviews-child">
+                        <div class="reviews-child-0">
+                            <div class="reviews-child-1">
+                                <div class="core-star">
+                                    <h1 style="font-size: 4rem; margin-bottom: 0;">4.0</h1>
+                                    <div class="evaluate-star evaluate-star-1">
+                                        <div class="evaluate-star-1">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="evaluate-star-1">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="evaluate-star-1">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="evaluate-star-1">
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="evaluate-star-1">
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        
+                                    </div>    
+                                </div>
+                                <div class="quantity-star quantity-star-1" style="color: black;">
+                                    <span> 1 total</span>
+                                </div>
+                            </div>
+                            <div class="reviews-child-2">
+                                <div class="reviews-child-2-0">
+                                    <div class="reviews-child-2-1" style="opacity: .4; font-size: 1.2rem;">
+                                        5
+                                    </div>
+                                    <div class="reviews-child-2-2" style="color: rgb(255,182,10)">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="reviews-child-2-3">
+                                        
+                                    </div>
+                                    <div class="reviews-child-2-4"  style="opacity: .4; font-size: 1.2rem;">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="reviews-child-2-0">
+                                    <div class="reviews-child-2-1" style="opacity: .4; font-size: 1.2rem;">
+                                        4
+                                    </div>
+                                    <div class="reviews-child-2-2" style="color: rgb(255,182,10)">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="reviews-child-2-3" style="background-color: rgb(255,182,10);">
+                                        
+                                    </div>
+                                    <div class="reviews-child-2-4"  style="opacity: .4; font-size: 1.2rem;">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="reviews-child-2-0">
+                                    <div class="reviews-child-2-1" style="opacity: .4; font-size: 1.2rem;">
+                                        3
+                                    </div>
+                                    <div class="reviews-child-2-2" style="color: rgb(255,182,10)">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="reviews-child-2-3">
+                                        
+                                    </div>
+                                    <div class="reviews-child-2-4"  style="opacity: .4; font-size: 1.2rem;">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="reviews-child-2-0">
+                                    <div class="reviews-child-2-1" style="opacity: .4; font-size: 1.2rem;">
+                                        2
+                                    </div>
+                                    <div class="reviews-child-2-2" style="color: rgb(255,182,10)">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="reviews-child-2-3">
+                                        
+                                    </div>
+                                    <div class="reviews-child-2-4"  style="opacity: .4; font-size: 1.2rem;">
+                                        0
+                                    </div>
+                                </div>
+                                <div class="reviews-child-2-0">
+                                    <div class="reviews-child-2-1" style="opacity: .4; font-size: 1.2rem;">
+                                        1
+                                    </div>
+                                    <div class="reviews-child-2-2" style="color: rgb(255,182,10)">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="reviews-child-2-3">
+                                        
+                                    </div>
+                                    <div class="reviews-child-2-4"  style="opacity: .4; font-size: 1.2rem;">
+                                        0
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12" style="padding-left: 40px;">
+                <div class="card" style="border: none">
+                    <img src="/baimoi/img/img-courses-2.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="tongquan-0">
+                    <div class="tongquan">
+                        <div class="tongquan-1">
+                            <div class="tongquan-1-1">
+                                <div class="trongqun-icon">
+                                    <i class="fa-sharp fa-regular fa-copy" style="color: rgb(255,84,33)"></i>
+                                </div>
+                                <div class="tongquan-title">
+                                    <p>Lectures</p>
+                                </div>
+                            </div>
+                            <div class="tongquan-1-2">
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tongquan">
+                        <div class="tongquan-1">
+                            <div class="tongquan-1-1">
+                                <div class="trongqun-icon">
+                                    <i class="fa fa-puzzle-piece" style="color: rgb(255,84,33)"></i>
+                                </div>
+                                <div class="tongquan-title">
+                                    <p>Quizzes</p>
+                                </div>
+                            </div>
+                            <div class="tongquan-1-2">
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tongquan">
+                        <div class="tongquan-1">
+                            <div class="tongquan-1-1">
+                                <div class="trongqun-icon">
+                                    <i class="fa-regular fa-clock" style="color: rgb(255,84,33)"></i>
+                                </div>
+                                <div class="tongquan-title">
+                                    <p>Duration</p>
+                                </div>
+                            </div>
+                            <div class="tongquan-1-2">
+                                <p>15 week</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tongquan">
+                        <div class="tongquan-1">
+                            <div class="tongquan-1-1">
+                                <div class="trongqun-icon">
+                                    <i class="fa fa-users" style="color: rgb(255,84,33)"></i>
+                                </div>
+                                <div class="tongquan-title">
+                                    <p>Student</p>
+                                </div>
+                            </div>
+                            <div class="tongquan-1-2">
+                                <p>25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tongquan">
+                        <div class="tongquan-1" style="border-bottom: none;">
+                            <div class="tongquan-1-1">
+                                <div class="trongqun-icon">
+                                    <i class="fa-regular fa-square-check" style="color: rgb(255,84,33)"></i>
+                                </div>
+                                <div class="tongquan-title">
+                                    <p>Assessments</p>
+                                </div>
+                            </div>
+                            <div class="tongquan-1-2">
+                                <p>Self</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tongquan-0">
+                    <div class="tongquan-price">
+                        <div class="tongquan-0-price">
+                            <div class="tongquan-1-price" style="margin-top: 50px;">
+                                <p>$40.00</p>
+                            </div>
+                        </div>
+                        <div class="tongquan-0-price">                           
+                            <div class="tongquan-1-price tongquan-1-price-0" style="margin-top:20px; margin-bottom: 50px;">
+                                <div class="tongquan-1-price-1">
+                                    <!-- <a href="#">Buy Now</a> -->
+                                    <a  class="add-to-cart" data-item="Sản phẩm Gym" data-price="40$" data-quantity="1">Buy Now</a>
+                                </div>                          
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+            <script>
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa
+                function isLoggedIn() {
+                  return localStorage.getItem('isLoggedIn') === 'true';
+                }
+            
+                // Cập nhật trạng thái đăng nhập
+                function updateLoginStatus() {
+                  var loginLink = document.getElementById('loginLink');
+                  var logoutLink = document.getElementById('logoutLink');
+                  var username = document.getElementById('username');
+            
+                  if (isLoggedIn()) {
+                    username.textContent = localStorage.getItem('username'); // Hiển thị tên người dùng
+                    loginLink.style.display = 'none'; // Ẩn liên kết "Login"
+                    logoutLink.style.display = 'inline-block'; // Hiển thị liên kết "Logout"
+                  } else {
+                    username.textContent = ''; // Xóa tên người dùng
+                    loginLink.style.display = 'inline-block'; // Hiển thị liên kết "Login"
+                    logoutLink.style.display = 'none'; // Ẩn liên kết "Logout"
+                  }
+                }
+            
+                // Xử lý khi trang index được tải
+                document.addEventListener('DOMContentLoaded', function() {
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                });
+            
+                // Xử lý khi người dùng logout
+                function logout(event) {
+                  event.preventDefault();
+                  localStorage.setItem('isLoggedIn', 'false');
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                }
+                //hiện popup
+                
+
+              </script>
+</body>
+<footer>
+    <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
+        class="iframe3"></iframe>
+</footer>
+<script src="/baimoi/courses.js"></script>
+<script src="/baimoi/cart.js"></script>
+
+</html>
