@@ -112,6 +112,8 @@
       </nav>
 
   </header>
+  <h1>Cart</h1>
+
     <div id="cart-content" class="shopping-cart">
       <div class="column-labels">
         <label class="product-image">Image</label>
@@ -149,7 +151,7 @@
     </div>
     <div id="empty-cart" class="hinhanh" style="display: none;">
       <div class="texthinhanh">
-      <img src="https://img.freepik.com/premium-vector/3d-shopping-cart-with-cloud-online-shopping-digital-marketing-ideas-basket-promotional-labels-white-background-shopping-bag-buy-sell-discount-3d-vector-icon-illustration_412828-974.jpg?w=900" width="30%">
+      <img src="https://img.freepik.com/premium-vector/3d-shopping-cart-with-cloud-online-shopping-digital-marketing-ideas-basket-promotional-labels-white-background-shopping-bag-buy-sell-discount-3d-vector-icon-illustration_412828-974.jpg?w=900" style="border-radius: 10px;" width="30%">
       <h4>Shopping cart feels empty</h4>
       <p>Someone please buy something from my courses</p>
     </div>
@@ -192,7 +194,7 @@
       var isLoggedIn = localStorage.getItem('isLoggedIn');
       if (isLoggedIn === 'true') {
         // Người dùng đã đăng nhập
-        alert('Success');
+        alert('Thanh Toán Thành Công');
         clearCart(); // Xoá giỏ hàng sau khi thanh toán thành công
       } else {
         // Người dùng chưa đăng nhập
