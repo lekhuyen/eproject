@@ -1,295 +1,355 @@
 <!DOCTYPE html>
 <html>
-<head>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Trang hiển thị giỏ hàng</title>
-  <link rel="stylesheet" href="/phong/cart.css">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="/baimoi/cart.js"></script>
+    <!-- <script src="/baimoi/cart.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="/phong/doan.js"></script>
+
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
+          style="background-color: #3275a5;">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img
+                      src="/picture/logo.png" width="50px" height="50px"></a>
+              <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                  aria-controls="navbarScroll" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0
+                      navbar-nav-scroll" style="--bs-scroll-height:
+                      100px;">
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page"
+                              href="/phong/doan.html" data-i18n="home"
+                              style="margin-left: 20px;">Home</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#"
+                              role="button" data-bs-toggle="dropdown"
+                              aria-expanded="false" data-i18n="course"
+                              style="margin-left: 20px;">Course
+                          </a>
+                          <ul class="dropdown-menu">
+                              <li><a class="dropdown-item"
+                                      href="/baimoi/course1.html">Course-1</a></li>
+                              <li><a class="dropdown-item"
+                                      href="/baimoi/course2.html">Course-2</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#" data-i18n="about"
+                              style="margin-left: 20px;">About Us</a>
+                          <span id="usernameSpan"></span>
+                      </li>
 
-</head>
-<header>
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
-      style="background-color: #3275a5;">
-      <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="/picture/logo.png" width="50px" height="50px"></a>
-          <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-              aria-controls="navbarScroll" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
-              <ul class="navbar-nav me-auto my-2 my-lg-0
-                  navbar-nav-scroll" style="--bs-scroll-height:
-                  100px;">
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page"
-                          href="/phong/doan.html" data-i18n="home"
-                          style="margin-left: 20px;">Home</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#"
-                          role="button" data-bs-toggle="dropdown"
-                          aria-expanded="false" data-i18n="course"
-                          style="margin-left: 20px;">Course
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/baimoi/course1.html">Course-1</a></li>
-                        <li><a class="dropdown-item" href="/baimoi/course2.html">Course-2</a></li>
-                        
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#" data-i18n="about"
-                          style="margin-left: 20px;">About Us</a>
-                      <span id="usernameSpan"></span>
-                  </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#" data-i18n="contact"
+                              style="margin-left: 10px;">Contact Us</a>
+                      </li>
+                      <li class="nav-item">
+                          <a href="/phong/dangnhap.html" class="nav-link"
+                              id="loginLink"
+                              style="text-decoration: none;
+                              color: rgb(30, 147, 201); margin-left:
+                              30px;">Login</a>
+                          <a href="#" onclick="logout(event)"
+                              class="nav-link" id="logoutLink"
+                              style="display: none; text-decoration: none;
+                              color: rgb(30, 147, 201);">Logout</a>
 
-                  <li class="nav-item">
-                      <a class="nav-link" href="#" data-i18n="contact"
-                          style="margin-left: 10px;">Contact Us</a>
-                  </li>
-                  <li class="nav-item" >
-                      <a href="/phong/dangnhap.html" class="nav-link" id="loginLink"  style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                      <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                      </li>
+                      <li class="nav-item">
+                          <p style="margin-left: 20px;" class="nav-link">Username:
+                              <span id="username" style="color: rgb(0,
+                                  145, 255); font-weight: 600;"></span></p>
+                      </li>
 
-                  </li>
-                  <li class="nav-item">
-                      <p style="margin-left: 20px;" class="nav-link">Username: <span id="username"  style="color: rgb(0, 145, 255); font-weight: 600;"></span></p>
-                  </li>
-
-                  <li>
-                      <div class="navbar-language" style="margin-left:
-                          50px;">
-                          <select id="language-selector"
-                              onchange="changeLanguage()">
-                              <option value="en">English</option>
-                              <option value="vn">Tiếng Việt</option>
-                              <option value="hi">हिन्दी</option>
-                          </select>
-                      </div>
-                  </li>
-                  <li class="nav-item" style="margin-left: 50px;">
-                      <a href="/phong/cart.html" class="nav-link"><ion-icon name="cart"
-                              style="width: 50px; height: 50px; color: blue;"></ion-icon>
-                              <span id="cartItemCount" class="cart-item-count" style="position: absolute; color: rgb(11, 51, 251);">0</span></a>
-                              
-                  </li>
-              </ul>
-              <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search"
-                      placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success"
-                      type="submit">Search</button>
-              </form>
+                      <li>
+                          <div class="navbar-language"
+                              style="margin-left:
+                              50px;">
+                              <select id="language-selector"
+                                  onchange="changeLanguage()">
+                                  <option value="en">English</option>
+                                  <option value="vn">Tiếng Việt</option>
+                                  <option value="hi">हिन्दी</option>
+                              </select>
+                          </div>
+                      </li>
+                      <li class="nav-item" style="margin-left: 50px;">
+                          <a href="/phong/cart.html" class="nav-link"><ion-icon
+                                  name="cart"
+                                  style="width: 50px; height: 50px; color:
+                                  blue;"></ion-icon>
+                              <span id="cartItemCount"
+                                  class="cart-item-count"
+                                  style="position:
+                                  absolute; color: rgb(11, 51, 251);">0</span></a>
+                      </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search"
+                          placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success"
+                          type="submit">Search</button>
+                  </form>
+              </div>
           </div>
+      </nav>
+
+  </header>
+    <div id="cart-content" class="shopping-cart">
+      <div class="column-labels">
+        <label class="product-image">Image</label>
+        <label class="product-details">Product</label>
+        <label class="product-price">Price</label>
+        <label class="product-quantity">Quantity</label>
+        <label class="product-line-price">Total</label>
+        <label class="product-removal">Remove</label>
       </div>
-  </nav>
 
-</header>
-<div class="main-1-img">
-  <div class="main-1-img-2">
-      <div class="main-1-img-1-title">
-          <p>Courses</p>
-          <div class="a-home">
-              <a href="#">Home</a> / Product List
-          </div>
+      <div class="cart-items">
+        <!-- Các mục hàng sẽ được tạo động từ Local Storage -->
       </div>
-  </div>
-</div>
-<body>
-  <h1>List Of Course</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Total</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody id="cart-items"></tbody>
-  </table>
-  <p id="total-label"><strong>Total: </strong><span id="total-value"></span></p>
-  <a  class="checkout-link"><button class="checkout-button" id="checkout-button" role="button">Pay Now</button></a>
 
+      <div class="totals">
+        <div class="totals-item">
+          <label>Subtotal</label>
+          <div class="totals-value" id="cart-subtotal">0.00</div>
+        </div>
+        <div class="totals-item">
+          <label>Tax (5%)</label>
+          <div class="totals-value" id="cart-tax">0.00</div>
+        </div>
+        <div class="totals-item">
+          <label>Shipping</label>
+          <div class="totals-value" id="cart-shipping">0.00</div>
+        </div>
+        <div class="totals-item totals-item-total">
+          <label>Grand Total</label>
+          <div class="totals-value" id="cart-total">0.00</div>
+        </div>
+      </div>
 
-  <script>
-    // Lấy giỏ hàng từ localStorage và hiển thị
-    function displayCartItems() {
+      <button class="checkout" onclick="checkout()">Checkout</button>
+    </div>
+    <div id="empty-cart" class="hinhanh" style="display: none;">
+      <div class="texthinhanh">
+      <img src="https://img.freepik.com/premium-vector/3d-shopping-cart-with-cloud-online-shopping-digital-marketing-ideas-basket-promotional-labels-white-background-shopping-bag-buy-sell-discount-3d-vector-icon-illustration_412828-974.jpg?w=900" width="30%">
+      <h4>Shopping cart feels empty</h4>
+      <p>Someone please buy something from my courses</p>
+    </div>
+    </div>
+    <div class="sale">
+      <div class="sale1">
+        <img src="https://media3.scdn.vn/img4/2020/12_16/gJwXr6FFZKZCGKWaz4RB.png" width="150px" >
+        <br>
+        <span class="textto">Good Product</span> <br>
+        <span>There Are Many <br> Courses Needed</span>
+      </div>
+      <div class="sale2">
+        <img src="https://media3.scdn.vn/img4/2020/12_16/EfZWQVfV6nQzu2vMmnwC.png" width="150px" >
+        <br>
+        <span class="textto">Super Peace Of Mind</span> <br>
+        <span>Free Returns and Exchanges within 48 hours</span>
+      </div>
+      <div class="sale3">
+        <img src="https://media3.scdn.vn/img4/2020/12_16/j5C6IQz7gIXPgjFJxmRz.png" width="150px" >
+        <br>
+        <span class="textto">Super Safe</span> <br>
+        <span>Don't Worry About <br> Being Scammed</span>
+      </div>
+      <div class="sale4">
+        <img src="https://media3.scdn.vn/img4/2020/12_16/7AJFQGQ5qvS7gGOz8P7a.png"  width="150px" >
+        <br>
+        <span class="textto">Super savings</span> <br>
+        <span>Reasonable price, affordable. There are always many promotions</span>
+      </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script> -->
+    <script>
+    // Lấy giỏ hàng từ Local Storage
+    function getCart() {
       let cart = localStorage.getItem('cart');
-      if (cart) {
-        cart = JSON.parse(cart);
-        const cartItemsElement = document.getElementById('cart-items');
-
-        let totalValue = 0;
-
-        cart.forEach(function (item) {
-          const tr = document.createElement('tr');
-  
-          const productName = document.createElement('td');
-          productName.innerText = item.item;
-          tr.appendChild(productName);
-
-          const quantity = document.createElement('td');
-          const quantityContainer = document.createElement('div');
-          quantityContainer.classList.add('quantity-container');
-
-          const quantityInput = document.createElement('input');
-          quantityInput.type = 'number';
-          quantityInput.value = item.quantity;
-          quantityInput.classList.add('quantity-input');
-          quantityInput.addEventListener('change', function() {
-            const quantityValue = parseInt(quantityInput.value);
-            updateQuantity(item.item, quantityValue);
-            updateTotal();
-          });
-          quantityContainer.appendChild(quantityInput);
-
-          quantity.appendChild(quantityContainer);
-          tr.appendChild(quantity);
-
-          const price = document.createElement('td');
-          price.innerText = item.price;
-          tr.appendChild(price);
-
-          const total = document.createElement('td');
-          total.innerText = item.quantity * item.price;
-          tr.appendChild(total);
-
-          const deleteButton = document.createElement('button');
-          deleteButton.innerText = 'Delete';
-          deleteButton.classList.add('delete-button');
-          deleteButton.addEventListener('click', function() {
-            removeFromCart(item.item);
-            tr.remove();
-            updateTotal();
-          });
-
-          const action = document.createElement('td');
-          action.appendChild(deleteButton);
-
-          tr.appendChild(action);
-          cartItemsElement.appendChild(tr);
-
-          totalValue += item.quantity * item.price;
-        });
-
-        document.getElementById('total-value').innerText = totalValue;
-      }
+      return cart ? JSON.parse(cart) : [];
     }
-
-    // Xoá mục hàng khỏi giỏ hàng
-    function removeFromCart(item) {
-      let cart = localStorage.getItem('cart');
-      if (cart) {
-        cart = JSON.parse(cart);
-        cart = cart.filter((cartItem) => cartItem.item !== item);
-        localStorage.setItem('cart', JSON.stringify(cart));
-      }
-    }
-
-// Cập nhật số lượng mục hàng
-function updateQuantity(item, quantity) {
-  let cart = localStorage.getItem('cart');
-  if (cart) {
-    cart = JSON.parse(cart);
-    const cartItem = cart.find((cartItem) => cartItem.item === item);
-    if (cartItem) {
-      cartItem.quantity = quantity;
-      cartItem.total = cartItem.price * quantity;
-      localStorage.setItem('cart', JSON.stringify(cart));
-      updateTotal(); // Cập nhật tổng giá trị tức thì
-    }
-  }
-}
-
-// Cập nhật tổng giá trị
-function updateTotal() {
-  let cart = localStorage.getItem('cart');
-  if (cart) {
-    cart = JSON.parse(cart);
-    let totalValue = 0;
-    cart.forEach(function (cartItem) {
-      totalValue += cartItem.total;
-    });
-    document.getElementById('total-value').innerText = totalValue;
-  }
-}
-    // Gọi hàm hiển thị giỏ hàng khi trang được tải
-    document.addEventListener('DOMContentLoaded', function () {
-      displayCartItems();
-      updateTotal();
-    });
-
-    // Sử dụng mũi tên lên và xuống trên bàn phím để tăng giảm số lượng quantity
-    document.addEventListener('keydown', function (event) {
-      if (event.target.classList.contains('quantity-input')) {
-        const quantityInput = event.target;
-        const item = quantityInput.closest('tr').children[0].innerText;
-        const quantity = parseInt(quantityInput.value);
-
-        if (event.key === 'ArrowUp') {
-          event.preventDefault();
-          quantityInput.value = quantity + 1;
-          updateQuantity(item, quantity + 1);
-          updateTotal();
-        } else if (event.key === 'ArrowDown') {
-          event.preventDefault();
-          if (quantity > 1) {
-            quantityInput.value = quantity - 1;
-            updateQuantity(item, quantity - 1);
-            updateTotal();
-          }
+    function checkout() {
+      // Kiểm tra xem người dùng đã đăng nhập chưa
+      var isLoggedIn = localStorage.getItem('isLoggedIn');
+      if (isLoggedIn === 'true') {
+        // Người dùng đã đăng nhập
+        alert('Success');
+        clearCart(); // Xoá giỏ hàng sau khi thanh toán thành công
+      } else {
+        // Người dùng chưa đăng nhập
+        var cartItems = getCart();
+        if (cartItems.length > 0) {
+          alert('Bạn chưa đăng nhập!');
+        } else {
+          alert('Giỏ hàng của bạn đang trống!');
         }
       }
-    });
-
-    // Xử lý khi nhấp vào nút "Thanh toán"
-    document.getElementById('checkout-button').addEventListener('click', function () {
-  let cart = localStorage.getItem('cart');
-  if (cart) {
-    cart = JSON.parse(cart);
-    if (isLoggedIn()) {
-      // Thực hiện xử lý thanh toán tại đây...
-      console.log('Đã thanh toán:', cart);
-      // Sau khi thanh toán thành công, bạn có thể xoá giỏ hàng
-      localStorage.removeItem('cart');
-      alert('Đã thanh toán thành công! Giỏ hàng đã được xoá.');
-      // Sau khi xoá giỏ hàng, có thể chuyển hướng người dùng về trang khác hoặc thực hiện các thao tác khác
-    } else {
-      alert('Bạn chưa đăng nhập. Vui lòng đăng nhập để tiếp tục thanh toán.');
-      window.location.href = "/phong/dangnhap.html";
     }
-  } else {
-    // Giỏ hàng rỗng, không có gì để thanh toán
-    alert('Giỏ hàng đang trống. Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.');
-  }
-});
 
-// Kiểm tra xem người dùng đã đăng nhập hay chưa
-function isLoggedIn() {
-  return localStorage.getItem('isLoggedIn') === 'true';
-}
+    // Lấy giỏ hàng từ Local Storage
+    function getCart() {
+      var cart = localStorage.getItem('cart');
+      return cart ? JSON.parse(cart) : [];
+    }
+
+    // Xoá giỏ hàng
+    function clearCart() {
+      localStorage.removeItem('cart');
+      updateCart();
+    }
+
+
+    // Tính tổng giá trị giỏ hàng và cập nhật giao diện
+    function updateCart() {
+      const cartItems = getCart();
+      const cartContainer = document.querySelector('.cart-items');
+      cartContainer.innerHTML = '';
+
+      let subtotal = 0;
+
+      cartItems.forEach((cartItem, index) => {
+        const { item, price, quantity, total, image } = cartItem;
+
+        const productElement = document.createElement('div');
+        productElement.classList.add('product');
+
+        const productImageElement = document.createElement('div');
+        productImageElement.classList.add('product-image');
+        const productImage = document.createElement('img');
+        productImage.src = image;
+        productImageElement.appendChild(productImage);
+
+        const productDetailsElement = document.createElement('div');
+        productDetailsElement.classList.add('product-details');
+        const productTitleElement = document.createElement('div');
+        productTitleElement.classList.add('product-title');
+        productTitleElement.textContent = item;
+        const productQuantityElement = document.createElement('div');
+        productQuantityElement.classList.add('product-quantity');
+        productQuantityElement.textContent = quantity;
+
+        productDetailsElement.appendChild(productTitleElement);
+        productDetailsElement.appendChild(productQuantityElement);
+
+        const productPriceElement = document.createElement('div');
+        productPriceElement.classList.add('product-price');
+        productPriceElement.textContent = price.toFixed(2);
+
+        const productLinePriceElement = document.createElement('div');
+        productLinePriceElement.classList.add('product-line-price');
+        productLinePriceElement.textContent = total.toFixed(2);
+
+        const productRemovalElement = document.createElement('div');
+productRemovalElement.classList.add('product-removal');
+const removeButton = document.createElement('button');
+removeButton.classList.add('remove-from-cart');
+const removeIcon = document.createElement('i');
+removeIcon.classList.add('fas', 'fa-trash-alt');
+removeButton.appendChild(removeIcon);
+productRemovalElement.appendChild(removeButton);
+        removeButton.setAttribute('data-index', index);
+        productRemovalElement.appendChild(removeButton);
+        productElement.appendChild(productImageElement);     
+        productElement.appendChild(productDetailsElement);     
+        productElement.appendChild(productPriceElement);       
+        productElement.appendChild(productQuantityElement);
+        productElement.appendChild(productLinePriceElement);
+        productElement.appendChild(productRemovalElement);
+        cartContainer.appendChild(productElement);
+
+        subtotal += total;
+      });
+
+      const cartSubtotalElement = document.getElementById('cart-subtotal');
+      const cartTaxElement = document.getElementById('cart-tax');
+      const cartTotalElement = document.getElementById('cart-total');
+
+      const taxRate = 0.05;
+      const shippingCost = 0.0;
+
+      const tax = subtotal * taxRate;
+      const total = subtotal + tax + shippingCost;
+
+      cartSubtotalElement.textContent = subtotal.toFixed(2);
+      cartTaxElement.textContent = tax.toFixed(2);
+      cartTotalElement.textContent = total.toFixed(2);
+       // Kiểm tra nếu đã đăng nhập và giỏ hàng trống
+    }
+
+    // Xóa mục hàng khỏi giỏ hàng
+    function removeFromCart(event) {
+      const button = event.target;
+      const index = button.getAttribute('data-index');
+      let cart = getCart();
+      
+
+      if (index >= 0 && index < cart.length) {
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+      }
+      
+    }
+    
+
+    // Lắng nghe sự kiện nhấp vào nút "Buy Now" và "Remove"
+    document.addEventListener('click', function(event) {
+      if (event.target.classList.contains('add-to-cart')) {
+        const button = event.target;
+        const item = button.getAttribute('product-title');
+        const price = parseFloat(button.getAttribute('product-price'));
+        const quantity = parseInt(button.getAttribute('product-quantity'));
+        const image = button.getAttribute('product-image');
+        
+        let cart = getCart();
+
+       
+    
+        // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
+        const existingItem = cart.find((cartItem) => cartItem.item === item);
+        if (existingItem) {
+          existingItem.quantity += quantity;
+          existingItem.total = existingItem.price * existingItem.quantity;
+        } else {
+          cart.push({ item, price, quantity, total: price * quantity, image });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCart();
+      } else if (event.target.classList.contains('remove-from-cart')) {
+        removeFromCart(event);
+      }
+      
+    });
+    
+    
+
+    // Cập nhật giỏ hàng khi trang được tải
+    updateCart();
   </script>
-  <script src="/phong/doan.js"></script>
-  <script src="/baimoi/cart.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-            <script>
-                // Kiểm tra xem người dùng đã đăng nhập hay chưa
-                function isLoggedIn() {
+  <!-- login -->
+  <script>
+    // Kiểm tra xem người dùng đã đăng nhập hay chưa
+    function isLoggedIn() {
                   return localStorage.getItem('isLoggedIn') === 'true';
                 }
             
@@ -321,12 +381,35 @@ function isLoggedIn() {
                   localStorage.setItem('isLoggedIn', 'false');
                   updateLoginStatus(); // Cập nhật trạng thái đăng nhập
                 }
-                // Kiểm tra xem người dùng đã đăng nhập hay chưa
-                
-              </script>
-</body>
-<footer>
-  <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
-      class="iframe3"></iframe>
-</footer>
+    // Kiểm tra xem có hàng trong giỏ hàng hay không
+    function hasItemsInCart() {
+      var cartItems = getCart();
+      return cartItems.length > 0;
+    }
+  
+    // Cập nhật hiển thị giỏ hàng
+    function updateCartDisplay() {
+      var cartContent = document.getElementById('cart-content');
+      var emptyCart = document.getElementById('empty-cart');
+  
+      if (hasItemsInCart()) {
+        cartContent.style.display = 'block';
+        emptyCart.style.display = 'none';
+      } else {
+        cartContent.style.display = 'none';
+        emptyCart.style.display = 'block';
+      }
+    }
+
+    // Các hàm khác để lấy giỏ hàng và cập nhật giỏ hàng đã được đề cập ở các câu trước
+  
+    // Cập nhật hiển thị giỏ hàng khi trang được tải
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartDisplay();
+    });
+  </script>
+  </body>
+  <footer>
+    <iframe src="/phong/footer.html" frameborder="0" scrolling="no" class="iframe3"></iframe>
+  </footer>
 </html>

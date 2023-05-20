@@ -1,154 +1,298 @@
+@import "compass/css3";
+/* I wanted to go with a mobile first approach, but it actually lead to more verbose CSS in this case, so I've gone web first. Can't always force things... Side note: I know that this style of nesting in SASS doesn't result in the most performance efficient CSS code... but on the OCD/organizational side, I like it. So for CodePen purposes, CSS selector performance be damned. */
+/* Global settings */
+/* Global "table" column settings */
 *{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.delete-button {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 20px;
-  }
-  .quantity-container {
-    display: flex;
-    align-items: center;
-  }
-  .quantity-input {
-    width: 50px;
-  }
-  .delete-button {
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-left: 20px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-
-  th {
-    background-color: #f2f2f2;
-  }
-
-  .total {
-    font-weight: bold;
-  }
-  * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-.main-1-img {
-    width: 100%;
-    height: 570px;
-    position: relative;
-    background-repeat: no-repeat;
-    /* background-color: red; */
-    background: url("https://as2.ftcdn.net/v2/jpg/01/18/67/53/1000_F_118675321_3GUYwhUtcjvwgX2HHvadLXn39Qftxa1q.jpg");
-    background-size: 500px;
+ .product-image {
+	 float: left;
+	 width: 20%;
 }
-.main-1-img-1 {
-    width: 100%;
-    height: 100%;
-    /* background-image: url(/picture/img-courses-1.jpg); */
-    
+ .product-details {
+	 float: left;
+	 width: 37%;
 }
-.main-1-img-1-title {
-    color: white;
-    width: 100%;
-    top: 350px;
-    text-align: center;
-    position: absolute;
+ .product-price {
+	 float: left;
+	 width: 12%;
 }
-.main-1-img-1-title>p {
-    font-weight: bold;
-    font-size: 1.8em;
+ .product-quantity {
+	 float: left;
+	 width: 10%;
 }
-.a-home>a {
-    color: white;
-    text-decoration: none;
+ .product-removal {
+	 float: left;
+	 width: 9%;
 }
-.a-home>a:hover {
-    color: wheat;
+ .product-line-price {
+	 float: left;
+	 width: 12%;
+	 text-align: right;
 }
-/* button */
-.checkout-button {
-  align-items: center;
-  background-clip: padding-box;
-  background-color: #fa6400;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
+/* This is used as the traditional .clearfix class */
+ .group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before, .group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+	 content: '';
+	 display: table;
 }
+ .group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+	 clear: both;
+}
+ .group, .shopping-cart, .column-labels, .product, .totals-item {
+	 zoom: 1;
+}
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+ .product .product-price:before, .product .product-line-price:before, .totals-value:before {
+	 content: '$';
+}
+/* Body/Header stuff */
+ body {
 
-.checkout-button:hover,
-.checkout-button:focus {
-  background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+	 font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	 font-weight: 100;
 }
-
-.checkout-button:hover {
-  transform: translateY(-1px);
+ h1 {
+	 font-weight: 100;
 }
-
-.checkout-button:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-  transform: translateY(0);
+ label {
+	 color: #aaa;
 }
-/* footer */
-.iframe3{
-  width: 100%;
-  height: 440px;
-  background-color: transparent;
-  }
-  footer{
-  width: 100%;
-  height: 440px;
-  }
-  .navbar-language {
+ .shopping-cart {
+	 margin-top: 150px;
+}
+/* Column headers */
+ .column-labels label {
+	 padding-bottom: 15px;
+	 margin-bottom: 15px;
+	 border-bottom: 1px solid #eee;
+}
+ .column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+	 text-indent: -9999px;
+}
+/* Product entries */
+ .product {
+	 margin-bottom: 20px;
+	 padding-bottom: 10px;
+	 border-bottom: 1px solid #eee;
+}
+ .product .product-image {
+	 text-align: center;
+}
+ .product .product-image img {
+	 width: 100px;
+}
+ .product .product-details .product-title {
+	 margin-right: 20px;
+	 font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+}
+ .product .product-details .product-description {
+	 margin: 5px 20px 5px 0;
+	 line-height: 1.4em;
+}
+ .product .product-quantity input {
+	 width: 40px;
+}
+ .product .remove-product {
+	 border: 0;
+	 padding: 4px 8px;
+	 background-color: #c66;
+	 color: #fff;
+	 font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+	 font-size: 12px;
+	 border-radius: 3px;
+}
+ .product .remove-product:hover {
+	 background-color: #a44;
+}
+/* Totals section */
+ .totals .totals-item {
+	 float: right;
+	 clear: both;
+	 width: 100%;
+	 margin-bottom: 10px;
+}
+ .totals .totals-item label {
+	 float: left;
+	 clear: both;
+	 width: 79%;
+	 text-align: right;
+}
+ .totals .totals-item .totals-value {
+	 float: right;
+	 width: 21%;
+	 text-align: right;
+}
+ .totals .totals-item-total {
+	 font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+}
+ .checkout {
+	 float: right;
+	 border: 0;
+	 margin-top: 20px;
+	 padding: 6px 25px;
+	 background-color: #6b6;
+	 color: #fff;
+	 font-size: 25px;
+	 border-radius: 3px;
+}
+ .checkout:hover {
+	 background-color: #494;
+}
+/* Make adjustments for tablet */
+ @media screen and (max-width: 650px) {
+	 .shopping-cart {
+		 margin: 0;
+		 padding-top: 20px;
+		 border-top: 1px solid #eee;
+	}
+	 .column-labels {
+		 display: none;
+	}
+	 .product-image {
+		 float: right;
+		 width: auto;
+	}
+	 .product-image img {
+		 margin: 0 0 10px 10px;
+	}
+	 .product-details {
+		 float: none;
+		 margin-bottom: 10px;
+		 width: auto;
+	}
+	 .product-price {
+		 clear: both;
+		 width: 70px;
+	}
+	 .product-quantity {
+		 width: 100px;
+	}
+	 .product-quantity input {
+		 margin-left: 20px;
+	}
+	 .product-quantity:before {
+		 content: 'x';
+	}
+	 .product-removal {
+		 width: auto;
+	}
+	 .product-line-price {
+		 float: right;
+		 width: 70px;
+	}
+}
+/* Make more adjustments for phone */
+ @media screen and (max-width: 350px) {
+	 .product-removal {
+		 float: right;
+	}
+	 .product-line-price {
+		 float: right;
+		 clear: left;
+		 width: auto;
+		 margin-top: 10px;
+	}
+	 .product .product-line-price:before {
+		 content: 'Item Total: $';
+	}
+	 .totals .totals-item label {
+		 width: 60%;
+	}
+	 .totals .totals-item .totals-value {
+		 width: 40%;
+	}
+}
+.product-removal {
     display: flex;
     align-items: center;
-    margin-left: auto;
+  }
+  
+  .product-removal .remove-from-cart {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .product-removal .remove-from-cart:hover {
+    color: darkred;
+  }
+  .hinhanh{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+  }
+  .texthinhanh{
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+    margin-top: 150px;
+  }
+  .sale{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 180px;
+    background-color: rgb(232, 236, 240);
+  }
+.sale1{
+    position: absolute;
+    text-align: center;
+    margin-left: 2%;
+    width: 20%;
+
+    background-color: transparent;
+}
+.sale2{
+    position: absolute;
+    margin-left: 28%;
+    text-align: center;
+    width: 20%;
+
+    background-color: transparent;
+}
+.sale3{
+    position: absolute;
+    margin-left: 53%;
+    text-align: center;
+    width: 20%;
+
+    background-color: transparent;
+}
+.sale4{
+    position: absolute;
+    margin-left: 78%;
+    text-align: center;
+    width: 20%;
+
+    background-color: transparent;
+}
+.textto{
+    font-size: 20px;
+    font-weight: 600;
+}
+.iframe3{
+    width: 100%;
+    height: 440px;
+    background-color: transparent;
     }
-    
-    #language-selector {
-    font-size: 16px;
-    padding: 8px;
-    padding-right: 50px;
+    footer{
+    width: 100%;
+    height: 440px;
     }
+    .navbar-language {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        }
+        
+        #language-selector {
+        font-size: 16px;
+        padding: 8px;
+        padding-right: 50px;
+        }

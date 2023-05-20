@@ -1,5 +1,10 @@
-// Thêm mục hàng vào giỏ hàng
-function addToCart(item, price, quantity) {
+function addToCart(event) {
+  const button = event.target;
+  const item = button.getAttribute('product-title');
+  const price = parseFloat(button.getAttribute('product-price'));
+  const quantity = parseInt(button.getAttribute('product-quantity'));
+  const image = button.getAttribute('product-image');
+  
   let cart = localStorage.getItem('cart');
   if (!cart) {
     cart = [];
@@ -10,26 +15,20 @@ function addToCart(item, price, quantity) {
   // Kiểm tra xem sản phẩm đã tồn tại trong giỏ hàng chưa
   const existingItem = cart.find((cartItem) => cartItem.item === item);
   if (existingItem) {
-    existingItem.quantity += 1;
+    existingItem.quantity += quantity;
     existingItem.total = existingItem.price * existingItem.quantity;
   } else {
-    cart.push({ item, price, quantity: 1, total: price });
+    cart.push({ item, price, quantity, total: price * quantity, image });
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  updateCartItemCount();
+  updateCartItemCount(); // Cập nhật số lượng sản phẩm
 }
 
-// Xoá mục hàng khỏi giỏ hàng
-function removeFromCart(item) {
-  let cart = localStorage.getItem('cart');
-  if (cart) {
-    cart = JSON.parse(cart);
-    cart = cart.filter((cartItem) => cartItem.item !== item);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartItemCount();
-  }
-}
+// Lắng nghe sự kiện nhấp vào nút "Add to Cart"
+document.querySelectorAll('.add-to-cart').forEach((button) => {
+  button.addEventListener('click', addToCart);
+});
 
 // Cập nhật số lượng sản phẩm trong giỏ hàng
 function updateCartItemCount() {
@@ -50,15 +49,6 @@ function displayCartItemCount(count) {
     cartItemCountElement.textContent = count;
   }
 }
-
-// Gọi hàm thêm mục hàng vào giỏ hàng khi nhấp vào nút "Mua hàng"
-document.addEventListener('click', function(event) {
-  if (event.target.classList.contains('add-to-cart')) {
-    const item = event.target.getAttribute('data-item');
-    const price = parseInt(event.target.getAttribute('data-price'));
-    addToCart(item, price, 1);
-  }
-});
 
 // Tải số lượng sản phẩm trong giỏ hàng khi trang được tải
 document.addEventListener('DOMContentLoaded', function() {
