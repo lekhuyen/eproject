@@ -58,13 +58,14 @@
                             <a class="nav-link" href="#" data-i18n="contact"
                                 style="margin-left: 10px;">Contact Us</a>
                         </li>
-                        <li class="nav-item" >
-                            <a href="/phong/dangnhap.html" class="nav-link" id="loginLink"  style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                            <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
-      
-                        </li>
                         <li class="nav-item">
-                            <p style="margin-left: 20px;" class="nav-link">Username: <span id="username"  style="color: rgb(0, 145, 255); font-weight: 600;"></span></p>
+                            <p style="margin-left: 20px;" class="nav-link">
+                                Username: <span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()"></span>
+                            </p>
+                            <div id="userOptions" class="user-options">
+                                <div class="option" onclick="showChangePasswordModal()">Đổi mật khẩu</div>
+                                <div class="option" onclick="showChangeNameModal()">Đổi tên</div>
+                              </div>
                         </li>
       
                         <li>
@@ -444,10 +445,51 @@
                 }
               </script>
 </body>
+<div id="changePasswordModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Đổi mật khẩu</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="changePassword(event)">
+            <div class="form-group">
+              <label for="newPassword">Mật khẩu mới:</label>
+              <input type="password" class="form-control" id="newPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Đổi tên Modal -->
+  <div id="changeNameModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Đổi tên</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="changeName(event)">
+            <div class="form-group">
+              <label for="newName">Tên mới:</label>
+              <input type="text" class="form-control" id="newName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đổi tên</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 <footer>
     <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
         class="iframe3"></iframe>
 </footer>
 <script src="/baimoi/courses.js"></script>
 <script src="/baimoi/cart.js"></script>
+<script src="/phong/doan.js"></script>
 </html>

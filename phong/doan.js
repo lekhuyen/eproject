@@ -142,6 +142,108 @@ function clearLocalStorage() {
   localStorage.clear();
   alert('Đã xóa toàn bộ dữ liệu trong localStorage!');
 }
+// / Kiểm tra xem người dùng đã đăng nhập hay chưa
+function checkLoggedIn() {
+    var isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+        var username = localStorage.getItem('username');
+        document.getElementById('loginLink').style.display = 'none';
+        document.getElementById('logoutLink').style.display = 'block';
+        document.getElementById('username').textContent = username;
+    } else {
+        document.getElementById('loginLink').style.display = 'block';
+        document.getElementById('logoutLink').style.display = 'none';
+        document.getElementById('username').textContent = '';
+    }
+}
 
+function showUserOptions() {
+  var userOptions = document.getElementById('userOptions');
+  userOptions.classList.toggle('show');
+}
 
+// Hiển thị pop-up đổi mật khẩu
+function showChangePasswordModal() {
+  $('#changePasswordModal').modal('show');
+}
 
+// Hiển thị pop-up đổi tên
+function showChangeNameModal() {
+  $('#changeNameModal').modal('show');
+}
+
+// Đóng pop-up đổi mật khẩu
+function closeChangePasswordModal() {
+  $('#changePasswordModal').modal('hide');
+}
+
+// Đóng pop-up đổi tên
+function closeChangeNameModal() {
+  $('#changeNameModal').modal('hide');
+}
+
+// Function để đổi mật khẩu
+function changePassword(event) {
+  event.preventDefault();
+
+  var newPassword = document.getElementById('newPassword').value;
+
+  // Kiểm tra mật khẩu mới không được để trống
+  if (!newPassword) {
+    alert('Vui lòng nhập mật khẩu mới!');
+    return;
+  }
+
+  // Lấy thông tin người dùng từ localStorage
+  var storedUsers = localStorage.getItem('users');
+  if (storedUsers) {
+    var users = JSON.parse(storedUsers);
+    var currentUser = localStorage.getItem('username');
+    if (currentUser) {
+      var foundUser = users.find(function(user) {
+        return user.username === currentUser;
+      });
+      if (foundUser) {
+        // Cập nhật mật khẩu mới
+        foundUser.password = newPassword;
+        localStorage.setItem('users', JSON.stringify(users));
+        alert('Đổi mật khẩu thành công!');
+        $('#changePasswordModal').modal('hide');
+      }
+    }
+  }
+}
+
+// Function để đổi tên người dùng
+function changeName(event) {
+  event.preventDefault();
+
+  var newName = document.getElementById('newName').value;
+
+  // Kiểm tra tên mới không được để trống
+  if (!newName) {
+    alert('Vui lòng nhập tên mới!');
+    return;
+  }
+
+  // Lấy thông tin người dùng từ localStorage
+  var storedUsers = localStorage.getItem('users');
+  if (storedUsers) {
+    var users = JSON.parse(storedUsers);
+    var currentUser = localStorage.getItem('username');
+    if (currentUser) {
+      var foundUser = users.find(function(user) {
+        return user.username === currentUser;
+      });
+      if (foundUser) {
+        // Cập nhật tên mới
+        foundUser.username = newName;
+        localStorage.setItem('users', JSON.stringify(users));
+        localStorage.setItem('username', newName);
+        document.getElementById('username').textContent = newName; // Cập nhật tên người dùng hiển thị trên trang
+        alert('Đổi tên thành công!');
+        $('#changeNameModal').modal('hide');
+      }
+    }
+  }
+}
