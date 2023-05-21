@@ -1,11 +1,4 @@
-// const showNavButton = document.getElementById("show-nav");
-// const nav = document.getElementById("nav");
-// const iframe = document.getElementById("my-iframe");
 
-// showNavButton.addEventListener("click", () => {
-//   nav.classList.add("active");
-//   iframe.style.height = "100vh";
-// });
 var languageStrings = {
   "en": {
     "home": "Home",
@@ -160,6 +153,9 @@ function checkLoggedIn() {
 function showUserOptions() {
   var userOptions = document.getElementById('userOptions');
   userOptions.classList.toggle('show');
+  userOptions.classList.toggle('active');
+  var fileInputContainer = document.getElementById('fileInputContainer');
+  fileInputContainer.style.display = userOptions.classList.contains('active') ? 'block' : 'none';
 }
 
 // Hiển thị pop-up đổi mật khẩu
@@ -246,4 +242,16 @@ function changeName(event) {
       }
     }
   }
+}
+
+// Function để thay đổi avatar
+function changeAvatar(event) {
+  var file = event.target.files[0];
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var avatarImg = document.getElementById('avatarImg');
+    avatarImg.src = e.target.result;
+    avatarImg.style.display = 'inline-block'; // Hiển thị hình ảnh
+  };
+  reader.readAsDataURL(file);
 }

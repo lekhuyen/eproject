@@ -9,46 +9,46 @@
         <link rel="stylesheet" href="/phong/doan.css">
         <link rel="stylesheet" href="/rating/index.css">
         <script type="module"
-src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
-src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
             crossorigin="anonymous">
         <script
-src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-crossorigin="anonymous"></script>
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
         <script
-src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-crossorigin="anonymous"></script>
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
         <script
-src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-crossorigin="anonymous"></script>
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
         <link rel="stylesheet"
-            href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
-            />
+            href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     </head>
     <body>
 
         <header>
-            <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
+            <nav
+                class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img
-                            src="/picture/logo.png" width="50px" height="50px"></a>
+                            src="/picture/logo.png" width="30px" height="30px"></a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                         aria-controls="navbarScroll" aria-expanded="false"
@@ -78,7 +78,9 @@ crossorigin="anonymous"></script>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-i18n="about"
+                                <a class="nav-link"
+                                    href="/Hau/aboutus/aboutus.html"
+                                    data-i18n="about"
                                     style="margin-left: 20px;">About Us</a>
                                 <span id="usernameSpan"></span>
                             </li>
@@ -88,24 +90,45 @@ crossorigin="anonymous"></script>
                                     style="margin-left: 10px;">Contact Us</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/phong/dangnhap.html" class="nav-link" id="loginLink" style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                                <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                                <a href="/phong/dangnhap.html" class="nav-link"
+                                    id="loginLink"
+                                    style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                                <a href="#" onclick="logout(event)"
+                                    class="nav-link" id="logoutLink"
+                                    style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
                             </li>
                             <li class="nav-item">
                                 <p style="margin-left: 20px;" class="nav-link">
-                                    Username: <span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()"></span>
+                                    Username: <span id="username"
+                                        style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                        onclick="showUserOptions()">Username</span>
+                                    <img id="avatarImg" src
+                                        style="width: 50px; height: 50px; margin-left: 10px; display: none;">
                                 </p>
                                 <div id="userOptions" class="user-options">
-                                    <div class="option" onclick="showChangePasswordModal()">Đổi mật khẩu</div>
-                                    <div class="option" onclick="showChangeNameModal()">Đổi tên</div>
-                                  </div>
+                                    <div class="option"
+                                        onclick="showChangePasswordModal()">Đổi
+                                        mật khẩu</div>
+                                    <div class="option"
+                                        onclick="showChangeNameModal()">Đổi tên</div>
+                                    <div class="option"
+                                        onclick="document.getElementById('avatarInput').click()">Đổi
+                                        avatar</div>
+                                    <div id="fileInputContainer"
+                                        style="display: none;">
+                                        <input type="file" id="avatarInput"
+                                            accept="image/*"
+                                            onchange="changeAvatar(event)"
+                                            style="display: none;">
+                                    </div>
+                                </div>
                             </li>
                             <!-- Modal cho đổi mật khẩu -->
 
                             <li>
                                 <div class="navbar-language"
                                     style="margin-left:
-                                    50px;">
+                                    100px;">
                                     <select id="language-selector"
                                         onchange="changeLanguage()">
                                         <option value="en">English</option>
@@ -211,24 +234,29 @@ crossorigin="anonymous"></script>
         </div>
         <div class="container">
             <div class="row row-1" style="margin-top: 50px">
-                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="webdeveloper">
-                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1"
+                    style="margin-bottom: 30px;" type="webdeveloper">
+                    <div class="card"
+                        style="background-color: rgb(249,248,248);  border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
                                 <a href="/baimoi/course1-js.html" class="a-img">
-                                    <img src="/baimoi/img/img-courses-1.jpg" alt="" style="width:100%">
+                                    <img src="/baimoi/img/img-courses-1.jpg" alt
+                                        style="width:100%">
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
                                         <span>FREE</span>
                                     </div>
-                                    <div class="free-1-1" style="font-size: 14px; ">
+                                    <div class="free-1-1"
+                                        style="font-size: 14px; ">
                                         <span>Web Development</span>
                                     </div>
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-js.html">
-                                        <span data-i18n="text1">The ultimate in becoming an Excel teacher</span>
+                                        <span data-i18n="text1">The ultimate in
+                                            becoming an Excel teacher</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -236,7 +264,8 @@ crossorigin="anonymous"></script>
                                         <div class="quantity-user-1">
                                             <div class="quantity-icon">
                                                 <div class="quantity-icon-1">
-                                                    <i class="fa-regular fa-user"></i> 
+                                                    <i
+                                                        class="fa-regular fa-user"></i>
                                                 </div>
                                                 <div class="quantity-icon-2">
                                                     120
@@ -244,41 +273,87 @@ crossorigin="anonymous"></script>
                                             </div>
                                             <div class="evaluate-star">
                                                 <div class="rating">
-                                                    <input type="radio" id="star5-5" name="rating" value="5" />
-                                                    <label class = "full" for="star5-5" title="Awesome - 5 stars"></label>
-                                                    
-                                                    <input type="radio" id="star4half-5" name="rating" value="4 and a half" />
-                                                    <label class="half" for="star4half-5" title="Pretty good - 4.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="star4-5" name="rating" value="4" />
-                                                    <label class = "full" for="star4-5" title="Pretty good - 4 stars"></label>
-                                                    
-                                                    <input type="radio" id="star3half-5" name="rating" value="3 and a half" />
-                                                    <label class="half" for="star3half-5" title="Meh - 3.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="star3-5" name="rating" value="3" />
-                                                    <label class = "full" for="star3-5" title="Meh - 3 stars"></label>
-                                                    
-                                                    <input type="radio" id="star2half-5" name="rating" value="2 and a half" />
-                                                    <label class="half" for="star2half-5" title="Kinda bad - 2.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="star2-5" name="rating" value="2" />
-                                                    <label class = "full" for="star2-5" title="Kinda bad - 2 stars"></label>
-                                                    
-                                                    <input type="radio" id="star1half-5" name="rating" value="1 and a half" />
-                                                    <label class="half" for="star1half-5" title="Meh - 1.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="star1-5" name="rating" value="1" />
-                                                    <label class = "full" for="star1-5" title="Sucks big time - 1 star"></label>
-                                                    
-                                                    <input type="radio" id="starhalf-5" name="rating" value="half" />
-                                                    <label class="half" for="starhalf-5" title="Sucks big time - 0.5 stars"></label>
+                                                    <input type="radio"
+                                                        id="star5-5"
+                                                        name="rating" value="5" />
+                                                    <label class="full"
+                                                        for="star5-5"
+                                                        title="Awesome - 5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star4half-5"
+                                                        name="rating"
+                                                        value="4 and a half" />
+                                                    <label class="half"
+                                                        for="star4half-5"
+                                                        title="Pretty good - 4.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star4-5"
+                                                        name="rating" value="4" />
+                                                    <label class="full"
+                                                        for="star4-5"
+                                                        title="Pretty good - 4 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star3half-5"
+                                                        name="rating"
+                                                        value="3 and a half" />
+                                                    <label class="half"
+                                                        for="star3half-5"
+                                                        title="Meh - 3.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star3-5"
+                                                        name="rating" value="3" />
+                                                    <label class="full"
+                                                        for="star3-5"
+                                                        title="Meh - 3 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star2half-5"
+                                                        name="rating"
+                                                        value="2 and a half" />
+                                                    <label class="half"
+                                                        for="star2half-5"
+                                                        title="Kinda bad - 2.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star2-5"
+                                                        name="rating" value="2" />
+                                                    <label class="full"
+                                                        for="star2-5"
+                                                        title="Kinda bad - 2 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star1half-5"
+                                                        name="rating"
+                                                        value="1 and a half" />
+                                                    <label class="half"
+                                                        for="star1half-5"
+                                                        title="Meh - 1.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star1-5"
+                                                        name="rating" value="1" />
+                                                    <label class="full"
+                                                        for="star1-5"
+                                                        title="Sucks big time - 1 star"></label>
+
+                                                    <input type="radio"
+                                                        id="starhalf-5"
+                                                        name="rating"
+                                                        value="half" />
+                                                    <label class="half"
+                                                        for="starhalf-5"
+                                                        title="Sucks big time - 0.5 stars"></label>
                                                 </div>
-                                                
-                                            </div>                               
+
+                                            </div>
                                         </div>
                                         <div class="next-icon">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <i
+                                                class="fa-solid fa-arrow-right-long"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -286,24 +361,29 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="gym">
-                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1"
+                    style="margin-bottom: 30px;" type="gym">
+                    <div class="card"
+                        style="background-color: rgb(249,248,248);  border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
                                 <a href="/baimoi/course1-gym.html" class="a-img">
-                                    <img src="/baimoi/img/img-courses-2.jpg" alt="" style="width:100%">
+                                    <img src="/baimoi/img/img-courses-2.jpg" alt
+                                        style="width:100%">
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
                                         <span>$40.00</span>
                                     </div>
-                                    <div class="free-1-1" style="font-size: 14px; ">
+                                    <div class="free-1-1"
+                                        style="font-size: 14px; ">
                                         <span>Gym</span>
                                     </div>
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-gym.html">
-                                        <span data-i18n="text2">Weight Training Fundamentals</span>
+                                        <span data-i18n="text2">Weight Training
+                                            Fundamentals</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -311,7 +391,8 @@ crossorigin="anonymous"></script>
                                         <div class="quantity-user-1">
                                             <div class="quantity-icon">
                                                 <div class="quantity-icon-1">
-                                                    <i class="fa-regular fa-user"></i> 
+                                                    <i
+                                                        class="fa-regular fa-user"></i>
                                                 </div>
                                                 <div class="quantity-icon-2">
                                                     25
@@ -319,40 +400,66 @@ crossorigin="anonymous"></script>
                                             </div>
                                             <div class="evaluate-star">
                                                 <div class="rating">
-                                                    <input type="radio" id="aa" name="rating" value="5" />
-                                                    <label class = "full" for="aa" title="Awesome - 5 stars"></label>
-                                                    
-                                                    <input type="radio" id="bb" name="rating" value="4 and a half" />
-                                                    <label class="half" for="bb" title="Pretty good - 4.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="cc" name="rating" value="4" />
-                                                    <label class = "full" for="cc" title="Pretty good - 4 stars"></label>
-                                                    
-                                                    <input type="radio" id="dd" name="rating" value="3 and a half" />
-                                                    <label class="half" for="dd" title="Meh - 3.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="ee" name="rating" value="3" />
-                                                    <label class = "full" for="ee" title="Meh - 3 stars"></label>
-                                                    
-                                                    <input type="radio" id="ff" name="rating" value="2 and a half" />
-                                                    <label class="half" for="ff" title="Kinda bad - 2.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="gg" name="rating" value="2" />
-                                                    <label class = "full" for="gg" title="Kinda bad - 2 stars"></label>
-                                                    
-                                                    <input type="radio" id="hh" name="rating" value="1 and a half" />
-                                                    <label class="half" for="hh" title="Meh - 1.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="tt" name="rating" value="1" />
-                                                    <label class = "full" for="tt" title="Sucks big time - 1 star"></label>
-                                                    
-                                                    <input type="radio" id="yy" name="rating" value="half" />
-                                                    <label class="half" for="yy" title="Sucks big time - 0.5 stars"></label>
-                                                </div>                                        
-                                            </div>                               
+                                                    <input type="radio" id="aa"
+                                                        name="rating" value="5" />
+                                                    <label class="full" for="aa"
+                                                        title="Awesome - 5 stars"></label>
+
+                                                    <input type="radio" id="bb"
+                                                        name="rating"
+                                                        value="4 and a half" />
+                                                    <label class="half" for="bb"
+                                                        title="Pretty good - 4.5 stars"></label>
+
+                                                    <input type="radio" id="cc"
+                                                        name="rating" value="4" />
+                                                    <label class="full" for="cc"
+                                                        title="Pretty good - 4 stars"></label>
+
+                                                    <input type="radio" id="dd"
+                                                        name="rating"
+                                                        value="3 and a half" />
+                                                    <label class="half" for="dd"
+                                                        title="Meh - 3.5 stars"></label>
+
+                                                    <input type="radio" id="ee"
+                                                        name="rating" value="3" />
+                                                    <label class="full" for="ee"
+                                                        title="Meh - 3 stars"></label>
+
+                                                    <input type="radio" id="ff"
+                                                        name="rating"
+                                                        value="2 and a half" />
+                                                    <label class="half" for="ff"
+                                                        title="Kinda bad - 2.5 stars"></label>
+
+                                                    <input type="radio" id="gg"
+                                                        name="rating" value="2" />
+                                                    <label class="full" for="gg"
+                                                        title="Kinda bad - 2 stars"></label>
+
+                                                    <input type="radio" id="hh"
+                                                        name="rating"
+                                                        value="1 and a half" />
+                                                    <label class="half" for="hh"
+                                                        title="Meh - 1.5 stars"></label>
+
+                                                    <input type="radio" id="tt"
+                                                        name="rating" value="1" />
+                                                    <label class="full" for="tt"
+                                                        title="Sucks big time - 1 star"></label>
+
+                                                    <input type="radio" id="yy"
+                                                        name="rating"
+                                                        value="half" />
+                                                    <label class="half" for="yy"
+                                                        title="Sucks big time - 0.5 stars"></label>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="next-icon">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <i
+                                                class="fa-solid fa-arrow-right-long"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -360,24 +467,30 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="gym">
-                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1"
+                    style="margin-bottom: 30px;" type="gym">
+                    <div class="card"
+                        style="background-color: rgb(249,248,248);  border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
-                                <a href="/baimoi/course1-gym2.html" class="a-img">
-                                    <img src="/baimoi/img/img-courses-4.jpg" alt="" style="width:100%">
+                                <a href="/baimoi/course1-gym2.html"
+                                    class="a-img">
+                                    <img src="/baimoi/img/img-courses-4.jpg" alt
+                                        style="width:100%">
                                 </a>
                                 <div class="free">
                                     <div class="free-1">
                                         <span>$40.00</span>
                                     </div>
-                                    <div class="free-1-1" style="font-size: 14px; ">
+                                    <div class="free-1-1"
+                                        style="font-size: 14px; ">
                                         <span>Gym</span>
                                     </div>
                                 </div>
                                 <div class="name-course">
                                     <a href="/baimoi/course1-gym2.html">
-                                        <span data-i18n="text3">Calorie Blast Aerobics: Shape, Burn, and Tone</span>
+                                        <span data-i18n="text3">Calorie Blast
+                                            Aerobics: Shape, Burn, and Tone</span>
                                     </a>
                                 </div>
                                 <div class="quantity-user-0">
@@ -385,7 +498,8 @@ crossorigin="anonymous"></script>
                                         <div class="quantity-user-1">
                                             <div class="quantity-icon">
                                                 <div class="quantity-icon-1">
-                                                    <i class="fa-regular fa-user"></i> 
+                                                    <i
+                                                        class="fa-regular fa-user"></i>
                                                 </div>
                                                 <div class="quantity-icon-2">
                                                     120
@@ -393,41 +507,67 @@ crossorigin="anonymous"></script>
                                             </div>
                                             <div class="evaluate-star">
                                                 <div class="rating">
-                                                    <input type="radio" id="a" name="rating" value="5" />
-                                                    <label class = "full" for="a" title="Awesome - 5 stars"></label>
-                                                    
-                                                    <input type="radio" id="b" name="rating" value="4 and a half" />
-                                                    <label class="half" for="b" title="Pretty good - 4.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="c" name="rating" value="4" />
-                                                    <label class = "full" for="c" title="Pretty good - 4 stars"></label>
-                                                    
-                                                    <input type="radio" id="d" name="rating" value="3 and a half" />
-                                                    <label class="half" for="d" title="Meh - 3.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="e" name="rating" value="3" />
-                                                    <label class = "full" for="e" title="Meh - 3 stars"></label>
-                                                    
-                                                    <input type="radio" id="f" name="rating" value="2 and a half" />
-                                                    <label class="half" for="f" title="Kinda bad - 2.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="r" name="rating" value="2" />
-                                                    <label class = "full" for="r" title="Kinda bad - 2 stars"></label>
-                                                    
-                                                    <input type="radio" id="g" name="rating" value="1 and a half" />
-                                                    <label class="half" for="g" title="Meh - 1.5 stars"></label>
-                                                    
-                                                    <input type="radio" id="t" name="rating" value="1" />
-                                                    <label class = "full" for="t" title="Sucks big time - 1 star"></label>
-                                                    
-                                                    <input type="radio" id="y" name="rating" value="half" />
-                                                    <label class="half" for="y" title="Sucks big time - 0.5 stars"></label>
-                                                </div>                   
-                                            
-                                            </div>                               
+                                                    <input type="radio" id="a"
+                                                        name="rating" value="5" />
+                                                    <label class="full" for="a"
+                                                        title="Awesome - 5 stars"></label>
+
+                                                    <input type="radio" id="b"
+                                                        name="rating"
+                                                        value="4 and a half" />
+                                                    <label class="half" for="b"
+                                                        title="Pretty good - 4.5 stars"></label>
+
+                                                    <input type="radio" id="c"
+                                                        name="rating" value="4" />
+                                                    <label class="full" for="c"
+                                                        title="Pretty good - 4 stars"></label>
+
+                                                    <input type="radio" id="d"
+                                                        name="rating"
+                                                        value="3 and a half" />
+                                                    <label class="half" for="d"
+                                                        title="Meh - 3.5 stars"></label>
+
+                                                    <input type="radio" id="e"
+                                                        name="rating" value="3" />
+                                                    <label class="full" for="e"
+                                                        title="Meh - 3 stars"></label>
+
+                                                    <input type="radio" id="f"
+                                                        name="rating"
+                                                        value="2 and a half" />
+                                                    <label class="half" for="f"
+                                                        title="Kinda bad - 2.5 stars"></label>
+
+                                                    <input type="radio" id="r"
+                                                        name="rating" value="2" />
+                                                    <label class="full" for="r"
+                                                        title="Kinda bad - 2 stars"></label>
+
+                                                    <input type="radio" id="g"
+                                                        name="rating"
+                                                        value="1 and a half" />
+                                                    <label class="half" for="g"
+                                                        title="Meh - 1.5 stars"></label>
+
+                                                    <input type="radio" id="t"
+                                                        name="rating" value="1" />
+                                                    <label class="full" for="t"
+                                                        title="Sucks big time - 1 star"></label>
+
+                                                    <input type="radio" id="y"
+                                                        name="rating"
+                                                        value="half" />
+                                                    <label class="half" for="y"
+                                                        title="Sucks big time - 0.5 stars"></label>
+                                                </div>
+
+                                            </div>
                                         </div>
                                         <div class="next-icon">
-                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                            <i
+                                                class="fa-solid fa-arrow-right-long"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -504,8 +644,7 @@ crossorigin="anonymous"></script>
                                                                             type="text"
                                                                             id="form3Example1m"
                                                                             class="form-control
-                                                                            form-control-lg"
-                                                                            />
+                                                                            form-control-lg" />
                                                                         <label
                                                                             class="form-label"
                                                                             for="form3Example1m">First
@@ -521,8 +660,7 @@ crossorigin="anonymous"></script>
                                                                             type="text"
                                                                             id="form3Example1n"
                                                                             class="form-control
-                                                                            form-control-lg"
-                                                                            />
+                                                                            form-control-lg" />
                                                                         <label
                                                                             class="form-label"
                                                                             for="form3Example1n">Last
@@ -538,8 +676,7 @@ crossorigin="anonymous"></script>
                                                                     type="text"
                                                                     id="form3Example8"
                                                                     class="form-control
-                                                                    form-control-lg"
-                                                                    />
+                                                                    form-control-lg" />
                                                                 <label
                                                                     class="form-label"
                                                                     for="form3Example8">Address</label>
@@ -563,8 +700,7 @@ crossorigin="anonymous"></script>
                                                                         type="radio"
                                                                         name="inlineRadioOptions"
                                                                         id="femaleGender"
-                                                                        value="option1"
-                                                                        />
+                                                                        value="option1" />
                                                                     <label
                                                                         class="form-check-label"
                                                                         for="femaleGender">Female</label>
@@ -579,8 +715,7 @@ crossorigin="anonymous"></script>
                                                                         type="radio"
                                                                         name="inlineRadioOptions"
                                                                         id="maleGender"
-                                                                        value="option2"
-                                                                        />
+                                                                        value="option2" />
                                                                     <label
                                                                         class="form-check-label"
                                                                         for="maleGender">Male</label>
@@ -595,8 +730,7 @@ crossorigin="anonymous"></script>
                                                                         type="radio"
                                                                         name="inlineRadioOptions"
                                                                         id="otherGender"
-                                                                        value="option3"
-                                                                        />
+                                                                        value="option3" />
                                                                     <label
                                                                         class="form-check-label"
                                                                         for="otherGender">Other</label>
@@ -651,8 +785,7 @@ crossorigin="anonymous"></script>
                                                                     type="date"
                                                                     id="form3Example9"
                                                                     class="form-control
-                                                                    form-control-lg"
-                                                                    />
+                                                                    form-control-lg" />
                                                                 <label
                                                                     class="form-label"
                                                                     for="form3Example9">Birthday</label>
@@ -665,8 +798,7 @@ crossorigin="anonymous"></script>
                                                                     type="text"
                                                                     id="form3Example90"
                                                                     class="form-control
-                                                                    form-control-lg"
-                                                                    />
+                                                                    form-control-lg" />
                                                                 <label
                                                                     class="form-label"
                                                                     for="form3Example90">ZipCode</label>
@@ -679,8 +811,7 @@ crossorigin="anonymous"></script>
                                                                     type="text"
                                                                     id="form3Example99"
                                                                     class="form-control
-                                                                    form-control-lg"
-                                                                    />
+                                                                    form-control-lg" />
                                                                 <label
                                                                     class="form-label"
                                                                     for="form3Example99">Phone</label>
@@ -693,8 +824,7 @@ crossorigin="anonymous"></script>
                                                                     type="text"
                                                                     id="form3Example97"
                                                                     class="form-control
-                                                                    form-control-lg"
-                                                                    />
+                                                                    form-control-lg" />
                                                                 <label
                                                                     class="form-label"
                                                                     for="form3Example97">Email
@@ -740,19 +870,21 @@ crossorigin="anonymous"></script>
                         <div class="accordion" id="accordionExample">
                             <div class="accordion-item" style="margin-bottom:
                                 20px;">
-                                <h2 class="accordion-header" >
+                                <h2 class="accordion-header">
                                     <button class="accordion-button"
                                         type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne"
                                         aria-expanded="true"
-                                        aria-controls="collapseOne" data-i18n="text10">
+                                        aria-controls="collapseOne"
+                                        data-i18n="text10">
                                         What are the admissions requirements ?
                                     </button>
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse
                                     collapse show"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body" data-i18n="text11">
+                                    <div class="accordion-body"
+                                        data-i18n="text11">
                                         The admissions requirements typically
                                         refer to the criteria that applicants
                                         need to meet in order to be considered
@@ -773,20 +905,22 @@ crossorigin="anonymous"></script>
                                 </div>
                             </div>
                             <div class="accordion-item" style="margin-bottom:
-                                20px;" >
-                                <h2 class="accordion-header" >
+                                20px;">
+                                <h2 class="accordion-header">
                                     <button class="accordion-button collapsed"
                                         type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseTwo"
                                         aria-expanded="false"
-                                        aria-controls="collapseTwo" data-i18n="text12">
+                                        aria-controls="collapseTwo"
+                                        data-i18n="text12">
                                         Does Educavo offer free courses?
                                     </button>
                                 </h2>
                                 <div id="collapseTwo" class="accordion-collapse
                                     collapse"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body" data-i18n="text13">
+                                    <div class="accordion-body"
+                                        data-i18n="text13">
                                         Yes, Star Class offers free courses in
                                         addition to their paid courses. These
                                         free courses cover a range of topics and
@@ -811,7 +945,8 @@ crossorigin="anonymous"></script>
                                         type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseThree"
                                         aria-expanded="false"
-                                        aria-controls="collapseThree" data-i18n="text14">
+                                        aria-controls="collapseThree"
+                                        data-i18n="text14">
                                         What is the transfer application
                                         process?
                                     </button>
@@ -819,7 +954,8 @@ crossorigin="anonymous"></script>
                                 <div id="collapseThree"
                                     class="accordion-collapse collapse"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body" data-i18n="text15">
+                                    <div class="accordion-body"
+                                        data-i18n="text15">
                                         The transfer application process is the
                                         process by which students can apply to
                                         transfer from one college or university
@@ -854,7 +990,8 @@ crossorigin="anonymous"></script>
                                         type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseFour"
                                         aria-expanded="false"
-                                        aria-controls="collapseFour" data-i18n="text16">
+                                        aria-controls="collapseFour"
+                                        data-i18n="text16">
                                         What is distance education?
                                     </button>
                                 </h2>
@@ -862,7 +999,8 @@ crossorigin="anonymous"></script>
                                     class="accordion-collapse
                                     collapse"
                                     data-bs-parent="#accordionExample">
-                                    <div class="accordion-body" data-i18n="text17">
+                                    <div class="accordion-body"
+                                        data-i18n="text17">
                                         Distance education refers to a method of
                                         learning that allows students to
                                         participate in educational courses or
@@ -900,9 +1038,11 @@ crossorigin="anonymous"></script>
             </div>
             <div class="page5">
                 <div class="lophoc">
-                    <h2 style="color: black; font-weight: 1000;" data-i18n="text18">Classroom
+                    <h2 style="color: black; font-weight: 1000;"
+                        data-i18n="text18">Classroom
                         Pictures</h2>
-                    <span data-i18n="text19">During class, teachers and students will discuss, analyze,
+                    <span data-i18n="text19">During class, teachers and students
+                        will discuss, analyze,
                         and practice real-life situations and exercises.</span>
                 </div>
                 <div class="trongpage56">
@@ -921,16 +1061,18 @@ crossorigin="anonymous"></script>
             </div>
 
             <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0" nonce="wxS60CPX"></script>
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
+                nonce="wxS60CPX"></script>
             <div class="fb-comments"
                 data-href="http://127.0.0.1:5504/phong/doan.html"
                 data-width="1400" data-numposts="10"></div>
             <script src="/phong/doan.js"></script>
             <script src="/baimoi/cart.js"></script>
             <script
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script
-src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
             <script>
                 // Kiểm tra xem người dùng đã đăng nhập hay chưa
                 function isLoggedIn() {
@@ -969,44 +1111,50 @@ src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap
         </body>
         <div id="changePasswordModal" class="modal">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Đổi mật khẩu</h5>
-                  <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
-                </div>
-                <div class="modal-body">
-                  <form onsubmit="changePassword(event)">
-                    <div class="form-group">
-                      <label for="newPassword">Mật khẩu mới:</label>
-                      <input type="password" class="form-control" id="newPassword" required>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Đổi mật khẩu</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            onclick="closeChangePasswordModal()">&times;</button>
                     </div>
-                    <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
-                  </form>
+                    <div class="modal-body">
+                        <form onsubmit="changePassword(event)">
+                            <div class="form-group">
+                                <label for="newPassword">Mật khẩu mới:</label>
+                                <input type="password" class="form-control"
+                                    id="newPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đổi
+                                mật khẩu</button>
+                        </form>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          
-          <!-- Đổi tên Modal -->
-          <div id="changeNameModal" class="modal">
+        </div>
+
+        <!-- Đổi tên Modal -->
+        <div id="changeNameModal" class="modal">
             <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Đổi tên</h5>
-                  <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
-                </div>
-                <div class="modal-body">
-                  <form onsubmit="changeName(event)">
-                    <div class="form-group">
-                      <label for="newName">Tên mới:</label>
-                      <input type="text" class="form-control" id="newName" required>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Đổi tên</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            onclick="closeChangePasswordModal()">&times;</button>
                     </div>
-                    <button type="submit" class="btn btn-primary">Đổi tên</button>
-                  </form>
+                    <div class="modal-body">
+                        <form onsubmit="changeName(event)">
+                            <div class="form-group">
+                                <label for="newName">Tên mới:</label>
+                                <input type="text" class="form-control"
+                                    id="newName" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đổi
+                                tên</button>
+                        </form>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+        </div>
         <footer>
             <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
                 class="iframe3"></iframe>

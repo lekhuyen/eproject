@@ -18,10 +18,10 @@
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
-            style="background-color: #3275a5;">
+        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="/picture/logo.png" width="50px" height="50px"></a>
+                <a class="navbar-brand" href="#"><img
+                        src="/picture/logo.png" width="30px" height="30px"></a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false"
@@ -44,34 +44,46 @@
                                 style="margin-left: 20px;">Course
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/baimoi/course1.html">Course-1</a></li>
-                                <li><a class="dropdown-item" href="/baimoi/course2.html">Course-2</a></li>
-                                
+                                <li><a class="dropdown-item"
+                                        href="/baimoi/course1.html">Course-1</a></li>
+                                <li><a class="dropdown-item"
+                                        href="/baimoi/course2.html">Course-2</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-i18n="about"
+                            <a class="nav-link" href="/Hau/aboutus/aboutus.html" data-i18n="about"
                                 style="margin-left: 20px;">About Us</a>
                             <span id="usernameSpan"></span>
                         </li>
-      
+
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-i18n="contact"
                                 style="margin-left: 10px;">Contact Us</a>
                         </li>
                         <li class="nav-item">
+                            <a href="/phong/dangnhap.html" class="nav-link" id="loginLink" style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                            <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                        </li>
+                        <li class="nav-item">
                             <p style="margin-left: 20px;" class="nav-link">
-                                Username: <span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()"></span>
+                              Username: <span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()">Username</span>
+                              <img id="avatarImg" src="" style="width: 50px; height: 50px; margin-left: 10px; display: none;">
                             </p>
                             <div id="userOptions" class="user-options">
-                                <div class="option" onclick="showChangePasswordModal()">Đổi mật khẩu</div>
-                                <div class="option" onclick="showChangeNameModal()">Đổi tên</div>
+                              <div class="option" onclick="showChangePasswordModal()">Đổi mật khẩu</div>
+                              <div class="option" onclick="showChangeNameModal()">Đổi tên</div>
+                              <div class="option" onclick="document.getElementById('avatarInput').click()">Đổi avatar</div>
+                              <div id="fileInputContainer" style="display: none;">
+                                <input type="file" id="avatarInput" accept="image/*" onchange="changeAvatar(event)" style="display: none;">
                               </div>
-                        </li>
-      
+                            </div>
+                          </li>
+                        <!-- Modal cho đổi mật khẩu -->
+
                         <li>
-                            <div class="navbar-language" style="margin-left:
-                                50px;">
+                            <div class="navbar-language"
+                                style="margin-left:
+                                100px;">
                                 <select id="language-selector"
                                     onchange="changeLanguage()">
                                     <option value="en">English</option>
@@ -81,10 +93,14 @@
                             </div>
                         </li>
                         <li class="nav-item" style="margin-left: 50px;">
-                            <a href="/phong/cart.html" class="nav-link"><ion-icon name="cart"
-                                    style="width: 50px; height: 50px; color: blue;"></ion-icon>
-                                    <span id="cartItemCount" class="cart-item-count" style="position: absolute; color: rgb(11, 51, 251);">0</span></a>
-                                    
+                            <a href="/phong/cart.html" class="nav-link"><ion-icon
+                                    name="cart"
+                                    style="width: 50px; height: 50px; color:
+                                    blue;"></ion-icon>
+                                <span id="cartItemCount"
+                                    class="cart-item-count"
+                                    style="position:
+                                    absolute; color: rgb(11, 51, 251);">0</span></a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -96,8 +112,8 @@
                 </div>
             </div>
         </nav>
-      
-      </header>
+
+    </header>
     <div class="main-1-img">
         <div class="main-1-img-1">
             <div class="main-1-img-1-title">
