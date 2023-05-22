@@ -3,10 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-* {
-  cursor: url('/picture/alien.png'), auto;
-}
-
 iframe{
   width: 100%;
 }
