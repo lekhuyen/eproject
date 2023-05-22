@@ -1,472 +1,1070 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
-      crossorigin="anonymous">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/doan/index.css">
+    <head>
+        <script>
+            "use strict";
+            
+            !function() {
+              var t = window.driftt = window.drift = window.driftt || [];
+              if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+                t.factory = function(e) {
+                  return function() {
+                    var n = Array.prototype.slice.call(arguments);
+                    return n.unshift(e), t.push(n), t;
+                  };
+                }, t.methods.forEach(function(e) {
+                  t[e] = t.factory(e);
+                }), t.load = function(t) {
+                  var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                  o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                  var i = document.getElementsByTagName("script")[0];
+                  i.parentNode.insertBefore(o, i);
+                };
+              }
+            }();
+            drift.SNIPPET_VERSION = '0.3.1';
+            drift.load('skd536zbews8');
+            </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/phong/doan.css">
+        <link rel="stylesheet" href="/rating/index.css">
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    </head>
+    <body>
 
-    <script type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
-  </head>
-  <body>
-    <header class="header fixed-top">
-      <div>
-        <ion-icon name="logo-buffer" class="icon" style="width: 100px; height:
-          40px;"></ion-icon> <span class="course">Star Classes</span>
-      </div>
-      <nav class="navbar">
-        <a href="index.html">Main Page</a>
-        <a href="/index123.html">Study program</a>
-        <a href="#footer">Contact</a>
-        <a href="/login/login.html">Login</a>
-        <a href="#" class="user-profile">
-          <ion-icon name="person-circle-outline" style="width: 20px; height: 20px;"></ion-icon>
-        </a>
-      </nav>    
-    </header>
+        <header>
+            <nav
+                class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img
+                            src="/picture/logo.png" width="40px" height="40px"></a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0
+                            navbar-nav-scroll" style="--bs-scroll-height:
+                            100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="index.html" data-i18n="home"
+                                    style="margin-left: 20px;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                href="/baimoi/course1.html" data-i18n="home"
+                                style="margin-left: 20px;">Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="/Hau/aboutus/aboutus.html"
+                                    data-i18n="about"
+                                    style="margin-left: 20px;">About Us</a>
+                                <span id="usernameSpan"></span>
+                            </li>
 
-    <div class="splitview skewed">
-      <div class="panel bottom">
-          <div class="content">
-              <div class="description">
-                  <h3 class="animate-charcter">Best Choose For You To Learn Code</h3>
-              </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-i18n="contact"
+                                    style="margin-left: 10px;">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/phong/dangnhap.html" class="nav-link"
+                                    id="loginLink"
+                                    style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                                <a href="#" onclick="logout(event)"
+                                    class="nav-link" id="logoutLink"
+                                    style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <p style="margin-left: 20px;" class="nav-link">
+                                    Username: <span id="username"
+                                        style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                        onclick="showUserOptions()">Username</span>
+                                    <img id="avatarImg" src
+                                        style="width: 30px; height: 30px; margin-left: 10px; display: none;">
+                                </p>
+                                <div id="userOptions" class="user-options">
+                                    <div class="option"
+                                        onclick="showChangePasswordModal()">Đổi
+                                        mật khẩu</div>
+                                    <div class="option"
+                                        onclick="showChangeNameModal()">Đổi tên</div>
+                                    <div class="option"
+                                        onclick="document.getElementById('avatarInput').click()">Đổi
+                                        avatar</div>
+                                    <div id="fileInputContainer"
+                                        style="display: none;">
+                                        <input type="file" id="avatarInput"
+                                            accept="image/*"
+                                            onchange="changeAvatar(event)"
+                                            style="display: none;">
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Modal cho đổi mật khẩu -->
 
-              <img src="/img/Banner-Giang-Vien-FPT.jpg" alt="Original">
-          </div>
-      </div>
+                            <li>
+                                <div class="navbar-language"
+                                    style="margin-left:
+                                    100px;">
+                                    <select id="language-selector"
+                                        onchange="changeLanguage()">
+                                        <option value="en">English</option>
+                                        <option value="vn">Tiếng Việt</option>
+                                        <option value="hi">हिन्दी</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="nav-item" style="margin-left: 50px;">
+                                <a href="/phong/cart.html" class="nav-link"><ion-icon
+                                        name="cart"
+                                        style="width: 50px; height: 50px; color:
+                                        blue;"></ion-icon>
+                                    <span id="cartItemCount"
+                                        class="cart-item-count"
+                                        style="position:
+                                        absolute; color: rgb(11, 51, 251);">0</span></a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success"
+                                type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
 
-      <div class="panel top">
-          <div class="content">
-              <div class="description">
-                <h3 class="animate-charcter">Welcome To Star Classes</h3>
-                  
-              </div>
+        </header>
 
-              <img src="/img/background-2.jpg" alt="Duotone">
-          </div>
-      </div>
-
-      <div class="handle"></div>
-  </div>
-  
-    <div class="container2">
-      <div style="display: flex;">
-        <div class="info">
-          <div class="info1">
-            <span class="textinfo">Become an iterator within 2 months</span><br>
-            <span class="textinfo2">Opportunity to experience the real work of
-              a programmer, start your career as a programmer with
-              The world's most popular Javascript language! After only 2 months of study,
-              You can completely master the basics of programming and
-              Create your own website.
-              Marathon Education is the shortest path to success
-              you are in the technology field. What are you waiting for without looking
-              understand now!</span>
-          </div>
-        </div>
-        <div class="money">
-          <div class="moneyinfo">
-            <div class="circle">&nbsp;&nbsp;$900&nbsp;&nbsp; </div> <span class="moneytext"> Wage
-              of the students <br> after the course </span>
-          </div>
-          <div class="moneyinfo2">
-            <div class="circle"> &nbsp;&nbsp;&nbsp;95%&nbsp;&nbsp; </div> <span
-              class="moneytext">Number of students
-              satisfied with the course</span>
-          </div>
-
-        </div>
-      </div>
-      <div class="text10">
-        Course For Who?
-        
-      </div>
-        <span style="text-align: center; color: white;">
-          Diverse courses are suitable for students, students aged 17 and over and working people.
-        </span>
-        <div class="hinh">
-          <div style="position: relative;">
-            <img src="/img/thpt.jpg" width="80%" height="130%"
-              style="border-radius: 10px;">
-            <div class="textthpt">
-              HIGH SCHOOL STUDENTS <br>
-              Interested in computers, technology, looking for a field of study that has
-               An open future, a programming training facility with guaranteed output.
+        <div class="main-1-img">
+            <div class="main-1-img-1">
+                <div class="main-1-img-1-title">
+                    <p>Home</p>
+                    <div class="a-home">
+                        <a href="#">Home</a> / Courses
+                    </div>
+                </div>
             </div>
-          </div>
-          <div style="position: relative;">
-            <img src="/img/sinhvien.jpg" width="80%" height="130%"
-              style="border-radius: 10px;">
-            <div class="textsinhvien">
-              HIGHER EDUCATION<br>
-              Students majoring in IT/Left major looking for a learning environment
-               Full, professional programming practice, comprehensive development
-               skills.
+        </div>
+
+        <div class="page2">
+            <div class="textpage2">
+                <p><span data-i18n="textpage2">SELECT COURSE</span></p>
+                <span style="font-size: 25px;" data-i18n="textpage2-2">Explore
+                    Popular Courses</span>
             </div>
-          </div>
-          <div style="position: relative;">
-            <img src="/img/nguoilon.jpg" width="80%" height="130%"
-              style="border-radius: 10px;">
-            <div class="textnguoilon">
-              WORKER <br>
-              Desire to improve and supplement professional knowledge. Or want to move?
-               industry, looking for a job with an attractive income, changing jobs
-               Present.
-            </div>
-          </div>
+
         </div>
-      </div>
-      <div class="container4">
-        <div class="text4">
-          BOOTCAMP FULL-STACK COURSE
-        </div>
-        <div style="text-align: center; color: white; font-size: 16px;">
-          You will learn programming languages such as HTML5, CSS3, JavaScript,
-           Lavarel, React, Chat GPT,... according to the roadmap after 4 months, you will have
-           You can build a complete e-commerce website by yourself
-           Sendo or Tiki includes both Front-end and Back-end work.
-        </div>
-        <div class="text5">
-          Skill Class <span style="color: orange;">Front-End</span>
-        </div>
-        <div style="text-align: center; color: white; font-size: 16px;">
-          Students will learn programming languages such as HTML5, CSS3,
-           JavaScript,...can customize and cut the layout of a website
-          <br> complete
-        </div>
-        <!-- khung front-end -->
+        <!-- CARDpage2 -->
         <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-1">
-              <div class="card" style="width: 20rem;
-                background:url(https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)
-                no-repeat">
-                <img src="/img/logo-html-css.jpg" class="card-img-top w-50"
-                style="margin-left: 80px; width: 150px;"> <br>
-                <span style="text-align: center; font-size: 25px; color:
-                  yellowgreen; font-weight: 1000; border: 5px orange dotted;;">HTML + CSS</span>
-                <div class="card-body">
-                  <p class="card-text"><span style="font-size: 14px;"><ion-icon
-                        name="chevron-forward-outline"></ion-icon>Use the
-                        HTML tags and CSS Effects to build
-                        a complete interface <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Direction
-                      CSS class naming guide according to BEM standards & Dev conventions
-                      Global <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Mastering
-                      Flexbox when building website layouts <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Direction
-                      Guide knowledge about Responsive Web Design on multiple devices
-                      <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Understand
-                      methods to build website structure with HTML5 & CSS3
-                      <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Share
-                      Your HTML and CSS coding experiences
-                      &nbsp;
-                      <br>
-                      <br>
-                      
-                    </p></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-1">
-              <div class="card" style="width: 20rem;
-                background:url(https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)
-                no-repeat">
-                <img src="/img/logo-js.jpg" class="card-img-top"
-                  style="margin-left: 80px; width: 150px;">
-                <span style="text-align: center; font-size: 25px; color:
-                  yellowgreen; font-weight: 1000; border: 5px orange dotted;">JAVASCRIPT</span>
-                <div class="card-body">
-                  <p class="card-text"><span style="font-size: 14px;"> <ion-icon
-                        name="chevron-forward-outline"></ion-icon>Understood
-                        details on basic JS concepts and features in
-                        ES6 version <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Learn about
-                      variables, loops, array data in Javascript
-                      from basic to advanced <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Learn about
-                      structs, methods, function declaration objects
-                      in Javascript <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Application
-                      Use BOM, DOM APIs, Event… to build a website
-                      professional <br>
-                      <ion-icon name="chevron-forward-outline"></ion-icon>Build
-                      a foundation to learn JS/p> frameworks and libraries </span>
-                    <br>
-                    <br><br>
-                    <br>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-1">
-                <div class="card" style="width: 20rem;
-                  background:url(https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)
-                  no-repeat">
-                  <img src="/img/react-native-1.svg" class="card-img-top"
-                    style="margin-left: 80px; width: 150px;">
-                  <span style="text-align: center; font-size: 25px; color:
-                    yellowgreen; font-weight: 1000; border: 5px orange dotted;">REACT
-                    JS</span>
-                  <div class="card-body">
-                    <p class="card-text"><span style="font-size: 14px;">
-                        <ion-icon name="chevron-forward-outline"></ion-icon>Learn
-                        about
-                        SPA/MPA . concept <br>
-                        <ion-icon name="chevron-forward-outline"></ion-icon>Understand
-                        how ReactJS works & how to optimize application
-                        performance <br>
-                        <ion-icon name="chevron-forward-outline"></ion-icon>Understand
-                        about Redux workflow & using redux-thunk middleware
-                        How to Deploy to Github/Gitlab page <br>
-                        <ion-icon name="chevron-forward-outline"></ion-icon>Hiểu
-                        về khái niệm Hooks & các function/class component <br>
-                        <ion-icon name="chevron-forward-outline"></ion-icon>Training
-                        RESTful API workbook & using Redux in the project
-                        reality</p></span>
-                    <br>
-                    <br>
-
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="text5">
-              Skill class <span style="color: orange;">Back-End</span>
-            </div>
-            <div style="text-align: center; color: white; font-size: 16px;">
-              Students will learn programming languages such as HTML5, CSS3,
-               JavaScript,...can customize and cut the layout of a website
-              <br> complete
-            </div>
-            <!-- khung back-end -->
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-1">
-                  <div class="card" style="width: 20rem;
-                    background:url(https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)
-                    no-repeat">
-                    <img src="/img/new-php-logo.svg" class="card-img-top"
-                      style="margin-left: 80px; width: 170px;"> <br>
-                    <span style="text-align: center; font-size: 25px; color:
-                      yellowgreen; font-weight: 1000; border: 5px orange
-                      dotted;;">PHP Language</span>
-                    <div class="card-body">
-                      <p class="card-text"><span style="font-size: 14px;"><ion-icon name="chevron-forward-outline"></ion-icon>Understand
-                        basic concepts: variables, constants, strings, operators, sentences
-                        conditional statements, looping statements... <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Learn to process data from forms <br>
-                          Understanding Object Oriented Programming (OOP) <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Understand how it works and build a control system
-                          MVC direction (Model - View - Controller) <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Mastering Ajax Techniques in jQuery to Handle Tasks
-                          background in website <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Approaching the Laravel framework <br>
-                          <br> <br>
-                          
-                        </p></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-1">
-                  <div class="card" style="width: 20rem;
-                    background:url(https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)
-                    no-repeat">
-                    <img src="/img/laravel-2.svg" class="card-img-top"
-                      style="margin-left: 100px; width: 110px;">
-                    <span style="text-align: center; font-size: 25px; color:
-                      yellowgreen; font-weight: 1000; border: 5px orange
-                      dotted;">JAVASCRIPT</span>
-                    <div class="card-body">
-                      <p class="card-text"><span style="font-size: 14px;"><ion-icon name="chevron-forward-outline"></ion-icon> Use
-                          number, String, Date & libraries to handle numbers,
-                          strings, time <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Familiar with Python Data Type, Function Control, Loop,
-                          OOP <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Getting familiar with Middleware and Routes <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Access to the Pandas open source library, Numpy <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Working with XML files & building applications with databases <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Data Model and MVC pattern (Model - View - Controller) <br>
-                          <ion-icon name="chevron-forward-outline"></ion-icon>Manipulating SQL Database and ORM (Object Relational
-                          Mapping) <br> <br> 
-                          
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-1">
-                      <div class="card" style="width: 20rem;
-                        background:url(https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80)
-                        no-repeat">
-                        <img src="/img/c-logo.svg" class="card-img-top"
-                          style="margin-left: 100px; width: 100px;">
-                        <span style="text-align: center; font-size: 25px; color:
-                          yellowgreen; font-weight: 1000; border: 5px orange
-                          dotted;">REACT JS</span>
-                        <div class="card-body">
-                          <p class="card-text"><span style="font-size: 14px;">
-                            <ion-icon name="chevron-forward-outline"></ion-icon>Working with URLs via Route in Laravel
-                            Framework & customize navigation with the system
-                              <ion-icon name="chevron-forward-outline"></ion-icon>Routing multiple options <br>
-                              <ion-icon name="chevron-forward-outline"></ion-icon>Understanding Controllers in Laravel Framework <br>
-                              <ion-icon name="chevron-forward-outline"></ion-icon>Know how to operate and use proficiently
-                              <ion-icon name="chevron-forward-outline"></ion-icon>MVC(Model - View - Controller) in Laravel <br>
-                              <ion-icon name="chevron-forward-outline"></ion-icon>Control login and security with the Auth class in
-                              Laravel Framework <br>
-                              <ion-icon name="chevron-forward-outline"></ion-icon>Instructions for accessing the database with Query Builder,
-                              Eloquent ORM <br>
-                              <ion-icon name="chevron-forward-outline"></ion-icon>Instructions for handling paging and creating system interfaces
-                              Smart system with Master Layout
-
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-ms-12">
+                    <a href="#">
+                        <div class="card5">
+                            <div class="wrapper1">
+                                <img src="/picture/img-courses-1.jpg"
+                                    class="cover-image" />
                             </div>
-                          </div>
+                            <span class="title" data-i18n="text4">Categories
+                                Computer Engineering</span>
+                            <img src="/picture/img-courses-1remove.png"
+                                class="character" />
                         </div>
+                    </a>
 
-                      </div>
-                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-ms-12">
+                    <a href="/phong/viewallgym.html">
+                        <div class="card5">
+                            <div class="wrapper1">
+                                <img src="/picture/img-courses-2.jpg"
+                                    class="cover-image" />
+                            </div>
+                            <span class="title" data-i18n="text5">Categories Gym</span>
+                            <img src="/picture/img-courses-2remove.png"
+                                class="character" />
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-ms-12">
+                    <a href="/phong/viewallui.html"
+                        alt="Mythrill" target="_blank">
+                        <div class="card5">
+                            <div class="wrapper1">
+                                <img src="/picture/img-courses-3.jpg"
+                                    class="cover-image" />
+                            </div>
+                            <span class="title">UI/UX</span>
+                            <img src="/picture/img-courses3remove.png"
+                                class="character" />
+                        </div>
+                    </a>
+                </div>
 
-                    <div class="container5">
-                      <div class="gioithieu">
-                        <h1 style="color: orange;">Introduction</h1>
-                        <h3>Teaching staff</h3>
-                      </div>
-                      <!-- flex -->
-                      <div class="khungteacher">
-                        <div class="teacher">
-                          <img src="/img/teacher" width="100%" height="60%"
-                            style="border-radius: 10px;">
-                          <h3>Lecturer Bui Quang Đat</h3> <br>
-                          <ion-icon name="send-outline"></ion-icon> <span
-                            style="font-size:
-                            18px;"><span><b>Teaching subject</b></span>: .NET</span>
+            </div>
+        </div>
+        <!-- page2 -->
+        <div class="textdau">
+            <span data-i18n="textpage1">TOP CATEGORIES</span> <br>
+            <p data-i18n="textpage1-1">Popular Online Categories</p>
+        </div>
+        <div class="container">
+            <div class="row row-1" style="margin-top: 50px">
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1"
+                    style="margin-bottom: 30px;" type="webdeveloper">
+                    <div class="card"
+                        style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                                <a href="/baimoi/course1-js.html" class="a-img">
+                                    <img src="/baimoi/img/img-excel.jpg" alt
+                                        style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>FREE</span>
+                                    </div>
+                                    <div class="free-1-1"
+                                        style="font-size: 14px; ">
+                                        <span>Excel</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/course1-js.html">
+                                        <span data-i18n="text1">The ultimate in
+                                            becoming an Excel teacher</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i
+                                                        class="fa-regular fa-user"></i>
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio"
+                                                        id="star5-5"
+                                                        name="rating" value="5" />
+                                                    <label class="full"
+                                                        for="star5-5"
+                                                        title="Awesome - 5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star4half-5"
+                                                        name="rating"
+                                                        value="4 and a half" />
+                                                    <label class="half"
+                                                        for="star4half-5"
+                                                        title="Pretty good - 4.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star4-5"
+                                                        name="rating" value="4" />
+                                                    <label class="full"
+                                                        for="star4-5"
+                                                        title="Pretty good - 4 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star3half-5"
+                                                        name="rating"
+                                                        value="3 and a half" />
+                                                    <label class="half"
+                                                        for="star3half-5"
+                                                        title="Meh - 3.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star3-5"
+                                                        name="rating" value="3" />
+                                                    <label class="full"
+                                                        for="star3-5"
+                                                        title="Meh - 3 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star2half-5"
+                                                        name="rating"
+                                                        value="2 and a half" />
+                                                    <label class="half"
+                                                        for="star2half-5"
+                                                        title="Kinda bad - 2.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star2-5"
+                                                        name="rating" value="2" />
+                                                    <label class="full"
+                                                        for="star2-5"
+                                                        title="Kinda bad - 2 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star1half-5"
+                                                        name="rating"
+                                                        value="1 and a half" />
+                                                    <label class="half"
+                                                        for="star1half-5"
+                                                        title="Meh - 1.5 stars"></label>
+
+                                                    <input type="radio"
+                                                        id="star1-5"
+                                                        name="rating" value="1" />
+                                                    <label class="full"
+                                                        for="star1-5"
+                                                        title="Sucks big time - 1 star"></label>
+
+                                                    <input type="radio"
+                                                        id="starhalf-5"
+                                                        name="rating"
+                                                        value="half" />
+                                                    <label class="half"
+                                                        for="starhalf-5"
+                                                        title="Sucks big time - 0.5 stars"></label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="next-icon">
+                                            <i
+                                                class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="teacher2">
-                          <img src="/img/teacher2" width="100%" height="60%"
-                            style="border-radius: 10px;">
-                          <h3>Lecturer Truong Ngoc Khac Nguyen</h3> <br>
-                          <ion-icon name="send-outline"></ion-icon> <span
-                            style="font-size:
-                            18px;"><span><b>Teaching subject</b></span>:
-                            .NET,PHP,Winform</span>
-                        </div>
-                        <div class="teacher3">
-                          <img src="/img/teacher3" width="100%" height="60%"
-                            style="border-radius: 10px;">
-                          <h3>Lecturer Bui Duy Khiem</h3> <br>
-                          <ion-icon name="send-outline"></ion-icon> <span
-                            style="font-size:
-                            18px;"><span><b>Teaching subject</b></span>: Java,
-                            .NET, PHP,
-                            Mobile,
-                            Front-End, Back-End</span>
-                        </div>
-                      </div>
-                      <!-- flex -->
-                      <div class="khungteacher2">
-                        <div class="teacher4">
-                          <img src="/img/teacher4" width="100%" height="60%"
-                            style="border-radius: 10px;">
-                          <h3>Lecturer Vu Quoc Tuan</h3> <br>
-                          <ion-icon name="send-outline"></ion-icon> <span
-                            style="font-size:
-                            18px;"><span><b>Teaching subject</b></span>: .NET</span>
-                        </div>
-                        <div class="teacher5">
-                          <img src="/img/teacher5.png" width="100%" height="60%"
-                            style="border-radius: 10px;">
-                          <h3>Lecturer Dang Minh Tuan</h3> <br>
-                          <ion-icon name="send-outline"></ion-icon> <span
-                            style="font-size:
-                            18px;"><span><b>Teaching subject</b></span>: C, HTML,
-                            CSS, JS,
-                            PHP,
-                            C#, XML, SQL …</span>
-                        </div>
-                        <div class="teacher6">
-                          <img src="/img/teacher6.png" width="100%" height="60%"
-                            style="border-radius: 10px;">
-                          <h3>Lecturer Phan Huu Tri</h3> <br>
-                          <ion-icon name="send-outline"></ion-icon> <span
-                            style="font-size:
-                            18px;"><span><b>Teaching subject</b></span>: Java,
-                            .NET, PHP,
-                            Mobile,
-                            Front-End,...</span>
-                        </div>
-                      </div>
                     </div>
-                    <div class="container6">
-                      <div class="hotro">
-                        <h1 style="color: orange;">AFTER COURSE SUPPORT</h1>
-                        <h6>After completing the course, students will be
-                          Star Classes transplant
-                          paper
-                          Course completion confirmation, internship confirmation, support
-                          CV writing assistant,
-                          conclude
-                          Connect businesses and join student clubs
-                          go to work</h6>
-                      </div>
-                      <div class="khunghotro">
-                        <div class="hotro1">
-                          <ion-icon name="school" class="icon1"></ion-icon>
-                          <b>Course completion confirmation</b>
-                          <br>
-                          <span>Students participate in more than 80% of successful lessons
-                            accumulator
-                            practice
-                            good, will be issued a certificate of course completion
-                            due to public
-                            ty
-                            Program <span style="color: rgb(72, 235, 72);
-                              font-size:
-                              20px;
-                              font-weight: 1000;">Star Classes</span> Vietnam level</span>
+                </div>
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1"
+                    style="margin-bottom: 30px;" type="gym">
+                    <div class="card"
+                        style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                                <a href="/baimoi/course1-gym.html" class="a-img">
+                                    <img src="/baimoi/img/img-courses-2.jpg" alt
+                                        style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>$40.00</span>
+                                    </div>
+                                    <div class="free-1-1"
+                                        style="font-size: 14px; ">
+                                        <span>Gym</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/course1-gym.html">
+                                        <span data-i18n="text2">Weight Training
+                                            Fundamentals</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i
+                                                        class="fa-regular fa-user"></i>
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    25
+                                                </div>
+                                            </div>
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="aa"
+                                                        name="rating" value="5" />
+                                                    <label class="full" for="aa"
+                                                        title="Awesome - 5 stars"></label>
+
+                                                    <input type="radio" id="bb"
+                                                        name="rating"
+                                                        value="4 and a half" />
+                                                    <label class="half" for="bb"
+                                                        title="Pretty good - 4.5 stars"></label>
+
+                                                    <input type="radio" id="cc"
+                                                        name="rating" value="4" />
+                                                    <label class="full" for="cc"
+                                                        title="Pretty good - 4 stars"></label>
+
+                                                    <input type="radio" id="dd"
+                                                        name="rating"
+                                                        value="3 and a half" />
+                                                    <label class="half" for="dd"
+                                                        title="Meh - 3.5 stars"></label>
+
+                                                    <input type="radio" id="ee"
+                                                        name="rating" value="3" />
+                                                    <label class="full" for="ee"
+                                                        title="Meh - 3 stars"></label>
+
+                                                    <input type="radio" id="ff"
+                                                        name="rating"
+                                                        value="2 and a half" />
+                                                    <label class="half" for="ff"
+                                                        title="Kinda bad - 2.5 stars"></label>
+
+                                                    <input type="radio" id="gg"
+                                                        name="rating" value="2" />
+                                                    <label class="full" for="gg"
+                                                        title="Kinda bad - 2 stars"></label>
+
+                                                    <input type="radio" id="hh"
+                                                        name="rating"
+                                                        value="1 and a half" />
+                                                    <label class="half" for="hh"
+                                                        title="Meh - 1.5 stars"></label>
+
+                                                    <input type="radio" id="tt"
+                                                        name="rating" value="1" />
+                                                    <label class="full" for="tt"
+                                                        title="Sucks big time - 1 star"></label>
+
+                                                    <input type="radio" id="yy"
+                                                        name="rating"
+                                                        value="half" />
+                                                    <label class="half" for="yy"
+                                                        title="Sucks big time - 0.5 stars"></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="next-icon">
+                                            <i
+                                                class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="hotro2">
-                          <ion-icon name="bookmark" class="icon1"></ion-icon>
-                          <b>Confirmation of corporate internship</b>
-                          <br>
-                          <span>&nbsp;Students participating in the project
-                            construction at the end of the course,
-                            diligent in studying will be granted a certificate of internship at the Programming company. <span style="color: rgb(72, 235, 72);
-                              font-size: 20px;
-                              font-weight: 1000;">Star Classes</span> Vietnam</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1"
+                    style="margin-bottom: 30px;" type="gym">
+                    <div class="card"
+                        style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                                <a href="/baimoi/course1-gym2.html"
+                                    class="a-img">
+                                    <img src="/baimoi/img/img-courses-4.jpg" alt
+                                        style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>$40.00</span>
+                                    </div>
+                                    <div class="free-1-1"
+                                        style="font-size: 14px; ">
+                                        <span>Gym</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/course1-gym2.html">
+                                        <span data-i18n="text3">Calorie Blast
+                                            Aerobics: Shape, Burn, and Tone</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i
+                                                        class="fa-regular fa-user"></i>
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="a"
+                                                        name="rating" value="5" />
+                                                    <label class="full" for="a"
+                                                        title="Awesome - 5 stars"></label>
+
+                                                    <input type="radio" id="b"
+                                                        name="rating"
+                                                        value="4 and a half" />
+                                                    <label class="half" for="b"
+                                                        title="Pretty good - 4.5 stars"></label>
+
+                                                    <input type="radio" id="c"
+                                                        name="rating" value="4" />
+                                                    <label class="full" for="c"
+                                                        title="Pretty good - 4 stars"></label>
+
+                                                    <input type="radio" id="d"
+                                                        name="rating"
+                                                        value="3 and a half" />
+                                                    <label class="half" for="d"
+                                                        title="Meh - 3.5 stars"></label>
+
+                                                    <input type="radio" id="e"
+                                                        name="rating" value="3" />
+                                                    <label class="full" for="e"
+                                                        title="Meh - 3 stars"></label>
+
+                                                    <input type="radio" id="f"
+                                                        name="rating"
+                                                        value="2 and a half" />
+                                                    <label class="half" for="f"
+                                                        title="Kinda bad - 2.5 stars"></label>
+
+                                                    <input type="radio" id="r"
+                                                        name="rating" value="2" />
+                                                    <label class="full" for="r"
+                                                        title="Kinda bad - 2 stars"></label>
+
+                                                    <input type="radio" id="g"
+                                                        name="rating"
+                                                        value="1 and a half" />
+                                                    <label class="half" for="g"
+                                                        title="Meh - 1.5 stars"></label>
+
+                                                    <input type="radio" id="t"
+                                                        name="rating" value="1" />
+                                                    <label class="full" for="t"
+                                                        title="Sucks big time - 1 star"></label>
+
+                                                    <input type="radio" id="y"
+                                                        name="rating"
+                                                        value="half" />
+                                                    <label class="half" for="y"
+                                                        title="Sucks big time - 0.5 stars"></label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="next-icon">
+                                            <i
+                                                class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="hotro3">
-                          <ion-icon name="people" class="icon1"></ion-icon>
-                          <b>Job</b>
-                          <br>
-                          <span>&nbsp;Support students to build CVs, share interview experiences, connect jobs with businesses, join clubs of working students</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <a href="/baimoi/course1.html"><button class="button-5"
+                    role="button" data-i18n="view">View All Categories</button></a>
+        </div>
+
+        <div class="page3">
+            <div class="textpage3">
+                <div class="anhpage3">
+                    <div class="trongpage3">
+                    </div>
+                </div>
+                <div class="anhpage4">
+                    <div class="saletext">
+                        <p class="p1" data-i18n="text7">20% Offer Running - Join
+                            Today</p>
+                        <p class="p2" data-i18n="text8">Welcome to our special
+                            offer! We are pleased to announce that we are
+                            currently running a program with a remarkable offer
+                            just for you.
+                            With the "20% Offer Running" program, you have
+                            access to the latest knowledge and developments in
+                            the field of science. With a 20% discount, you will
+                            have the opportunity to save a significant part of
+                            your costs and at the same time increase your level
+                            of knowledge..</p>
+                        <p class="p3"><button class="button-92" id="button-92"
+                                role="button" data-i18n="register">Register Now</button></p>
+                        <div class="popup-form-container">
+                            <section class="h-100 bg-dark">
+                                <div class="container py-5 h-100">
+                                    <div class="row d-flex
+                                        justify-content-center
+                                        align-items-center
+                                        h-100">
+                                        <div class="col">
+                                            <div class="card card-registration
+                                                my-4">
+                                                <div class="row g-0">
+                                                    <div class="col-xl-6 d-none
+                                                        d-xl-block">
+                                                        <img
+                                                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                                                            alt="Sample photo"
+                                                            class="img-fluid"
+                                                            style="border-top-left-radius:
+                                                            .25rem;
+                                                            border-bottom-left-radius:
+                                                            .25rem;" />
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="card-body
+                                                            p-md-5 text-black">
+                                                            <h3 class="mb-5
+                                                                text-uppercase">Student
+                                                                registration
+                                                                form</h3>
+
+                                                            <div class="row">
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <div
+                                                                        class="form-outline">
+                                                                        <input
+                                                                            type="text"
+                                                                            id="form3Example1m"
+                                                                            class="form-control
+                                                                            form-control-lg" />
+                                                                        <label
+                                                                            class="form-label"
+                                                                            for="form3Example1m">First
+                                                                            name</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <div
+                                                                        class="form-outline">
+                                                                        <input
+                                                                            type="text"
+                                                                            id="form3Example1n"
+                                                                            class="form-control
+                                                                            form-control-lg" />
+                                                                        <label
+                                                                            class="form-label"
+                                                                            for="form3Example1n">Last
+                                                                            name</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example8"
+                                                                    class="form-control
+                                                                    form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example8">Address</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-md-flex
+                                                                justify-content-start
+                                                                align-items-center
+                                                                mb-4 py-2">
+
+                                                                <h6 class="mb-0
+                                                                    me-4">Gender:
+                                                                </h6>
+                                                                <div
+                                                                    class="form-check
+                                                                    form-check-inline
+                                                                    mb-0 me-4">
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="inlineRadioOptions"
+                                                                        id="femaleGender"
+                                                                        value="option1" />
+                                                                    <label
+                                                                        class="form-check-label"
+                                                                        for="femaleGender">Female</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="form-check
+                                                                    form-check-inline
+                                                                    mb-0 me-4">
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="inlineRadioOptions"
+                                                                        id="maleGender"
+                                                                        value="option2" />
+                                                                    <label
+                                                                        class="form-check-label"
+                                                                        for="maleGender">Male</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="form-check
+                                                                    form-check-inline
+                                                                    mb-0">
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="inlineRadioOptions"
+                                                                        id="otherGender"
+                                                                        value="option3" />
+                                                                    <label
+                                                                        class="form-check-label"
+                                                                        for="otherGender">Other</label>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <select
+                                                                        class="select">
+                                                                        <option
+                                                                            value="1">State</option>
+                                                                        <option
+                                                                            value="2">VietNam
+                                                                        </option>
+                                                                        <option
+                                                                            value="3">American
+                                                                        </option>
+                                                                        <option
+                                                                            value="4">Korean
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div
+                                                                    class="col-md-6
+                                                                    mb-4">
+                                                                    <select
+                                                                        class="select">
+                                                                        <option
+                                                                            value="1">City</option>
+                                                                        <option
+                                                                            value="2">Ho
+                                                                            Chi
+                                                                            Minh</option>
+                                                                        <option
+                                                                            value="3">Ha
+                                                                            Noi</option>
+                                                                        <option
+                                                                            value="4">Da
+                                                                            Nang</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="date"
+                                                                    id="form3Example9"
+                                                                    class="form-control
+                                                                    form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example9">Birthday</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example90"
+                                                                    class="form-control
+                                                                    form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example90">ZipCode</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example99"
+                                                                    class="form-control
+                                                                    form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example99">Phone</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example97"
+                                                                    class="form-control
+                                                                    form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example97">Email
+                                                                    ID</label>
+                                                            </div>
+
+                                                            <div class="d-flex
+                                                                justify-content-end
+                                                                pt-3">
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn
+                                                                    btn-light
+                                                                    btn-lg">Reset
+                                                                    all</button>
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn
+                                                                    btn-warning
+                                                                    btn-lg
+                                                                    ms-2">Submit
+                                                                    form</button>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                  <div class="container7">
-                    <div class="lophoc">
-                      <h2 style="color: orange;">Classroom Pictures</h2>
-                      During class, teachers and students will discuss, analyze, and practice real-life situations and exercises.
+                </div>
+            </div>
+        </div>
+        <div class="page4">
+            <div class="textpage4" data-i18n="text9">Frequently Asked Questions</div>
+            <div class="khungpage5">
+                <div class="anhpage5">
+                    <div class="trongpage5">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item" style="margin-bottom:
+                                20px;">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne"
+                                        data-i18n="text10">
+                                        What are the admissions requirements ?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse
+                                    collapse show"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"
+                                        data-i18n="text11">
+                                        The admissions requirements typically
+                                        refer to the criteria that applicants
+                                        need to meet in order to be considered
+                                        for admission to a particular
+                                        institution or program. These
+                                        requirements can vary depending on the
+                                        institution and program, but may include
+                                        factors such as academic qualifications,
+                                        standardized test scores, letters of
+                                        recommendation, essays or personal
+                                        statements, and extracurricular
+                                        activities. It's important to research
+                                        the specific admissions requirements for
+                                        the institution or program you are
+                                        interested in to ensure you meet all
+                                        necessary criteria.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="margin-bottom:
+                                20px;">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="collapseTwo"
+                                        data-i18n="text12">
+                                        Does Educavo offer free courses?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse
+                                    collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"
+                                        data-i18n="text13">
+                                        Yes, Star Class offers free courses in
+                                        addition to their paid courses. These
+                                        free courses cover a range of topics and
+                                        are designed to provide learners with an
+                                        introduction to a particular subject
+                                        area. The free courses may be shorter in
+                                        length than the paid courses and may not
+                                        offer the same level of support or
+                                        resources, but they still provide
+                                        valuable learning opportunities. To
+                                        access the free courses on Educavo, you
+                                        can visit their website and browse their
+                                        course catalog to find the courses that
+                                        interest you.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="margin-bottom:
+                                20px;">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="collapseThree"
+                                        data-i18n="text14">
+                                        What is the transfer application
+                                        process?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree"
+                                    class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"
+                                        data-i18n="text15">
+                                        The transfer application process is the
+                                        process by which students can apply to
+                                        transfer from one college or university
+                                        to another. The process may vary
+                                        depending on the institutions involved,
+                                        but typically involves submitting an
+                                        application that includes transcripts,
+                                        letters of recommendation, essays or
+                                        personal statements, and other
+                                        supporting materials. Students may also
+                                        need to meet certain academic
+                                        requirements, such as a minimum GPA or
+                                        completion of certain coursework. After
+                                        the application is submitted, it will be
+                                        reviewed by the admissions committee at
+                                        the institution the student is applying
+                                        to, and a decision will be made on
+                                        whether or not to accept the student as
+                                        a transfer student. It's important for
+                                        students considering transferring to
+                                        research the transfer application
+                                        process for the institutions they are
+                                        interested in, as the requirements and
+                                        deadlines may vary.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item" style="margin-bottom:
+                                20px;">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed"
+                                        type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFour"
+                                        data-i18n="text16">
+                                        What is distance education?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour"
+                                    class="accordion-collapse
+                                    collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body"
+                                        data-i18n="text17">
+                                        Distance education refers to a method of
+                                        learning that allows students to
+                                        participate in educational courses or
+                                        programs without physically attending a
+                                        traditional classroom setting. Instead,
+                                        students can access course materials,
+                                        participate in discussions, and complete
+                                        assignments remotely, using various
+                                        communication technologies such as video
+                                        conferencing, email, chat rooms, or
+                                        online learning platforms. Distance
+                                        education is often used to provide
+                                        access to education for students who are
+                                        unable to attend a traditional
+                                        campus-based program due to
+                                        geographical, financial, or personal
+                                        constraints. It is also known as online
+                                        learning, e-learning, or virtual
+                                        learning. Distance education has become
+                                        increasingly popular in recent years,
+                                        particularly due to advancements in
+                                        technology that make it easier and more
+                                        accessible for students to participate
+                                        in remote learning.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="container8">
-                      <div class="carousel">
+                </div>
+                <div class="anhpage6">
+
+                </div>
+
+            </div>
+            <div class="page5">
+                <div class="lophoc">
+                    <h2 style="color: black; font-weight: 1000;"
+                        data-i18n="text18">Classroom
+                        Pictures</h2>
+                    <span data-i18n="text19">During class, teachers and students
+                        will discuss, analyze,
+                        and practice real-life situations and exercises.</span>
+                </div>
+                <div class="trongpage56">
+                    <div class="carousel">
                         <div class="carousel__face"><span class="span6"></span></div>
                         <div class="carousel__face"><span class="span6"></span></div>
                         <div class="carousel__face"><span class="span6"></span></div>
@@ -476,16 +1074,107 @@
                         <div class="carousel__face"><span class="span6"></span></div>
                         <div class="carousel__face"><span class="span6"></span></div>
                         <div class="carousel__face"><span class="span6"></span></div>
-                      </div>
                     </div>
-                  </div>
-                  <!-- footer -->
-                  <script src="/doan/index.js"></script>
-                </body>
-                <footer class="footer" id="footer">
-                  <iframe src="/Hau/about.html" frameborder="0" scrolling="no"></iframe>
-                </footer>
-                <footer class="footer2">
-                  <iframe src="/footer.html" frameborder="0" scrolling="no"></iframe>
-                </footer>
-              </html>
+                </div>
+            </div>
+
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v16.0"
+                nonce="wxS60CPX"></script>
+            <div class="fb-comments"
+                data-href="http://127.0.0.1:5504/phong/doan.html"
+                data-width="1400" data-numposts="10"></div>
+            <script src="/phong/doan.js"></script>
+            <script src="/baimoi/cart.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+            <script>
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa
+                function isLoggedIn() {
+                  return localStorage.getItem('isLoggedIn') === 'true';
+                }
+            
+                // Cập nhật trạng thái đăng nhập
+                function updateLoginStatus() {
+                  var loginLink = document.getElementById('loginLink');
+                  var logoutLink = document.getElementById('logoutLink');
+                  var username = document.getElementById('username');
+            
+                  if (isLoggedIn()) {
+                    username.textContent = localStorage.getItem('username'); // Hiển thị tên người dùng
+                    loginLink.style.display = 'none'; // Ẩn liên kết "Login"
+                    logoutLink.style.display = 'inline-block'; // Hiển thị liên kết "Logout"
+                  } else {
+                    username.textContent = ''; // Xóa tên người dùng
+                    loginLink.style.display = 'inline-block'; // Hiển thị liên kết "Login"
+                    logoutLink.style.display = 'none'; // Ẩn liên kết "Logout"
+                  }
+                }
+            
+                // Xử lý khi trang index được tải
+                document.addEventListener('DOMContentLoaded', function() {
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                });
+            
+                // Xử lý khi người dùng logout
+                function logout(event) {
+                  event.preventDefault();
+                  localStorage.setItem('isLoggedIn', 'false');
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                }
+              </script>
+        </body>
+        <div id="changePasswordModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Đổi mật khẩu</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            onclick="closeChangePasswordModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="changePassword(event)">
+                            <div class="form-group">
+                                <label for="newPassword">Mật khẩu mới:</label>
+                                <input type="password" class="form-control"
+                                    id="newPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đổi
+                                mật khẩu</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Đổi tên Modal -->
+        <div id="changeNameModal" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Đổi tên</h5>
+                        <button type="button" class="close" data-dismiss="modal"
+                            onclick="closeChangePasswordModal()">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="changeName(event)">
+                            <div class="form-group">
+                                <label for="newName">Tên mới:</label>
+                                <input type="text" class="form-control"
+                                    id="newName" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đổi
+                                tên</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
+                class="iframe3"></iframe>
+        </footer>
+    </html>
