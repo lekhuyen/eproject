@@ -90,10 +90,11 @@
 </head>
 <body>
   <header>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
+    <nav
+        class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img
-                    src="/picture/logo.png" width="30px" height="30px"></a>
+            <a class="navbar-brand" href="/index.html"><img
+                    src="/picture/logo.png" width="40px" height="40px"></a>
             <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false"
@@ -106,50 +107,60 @@
                     100px;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
-                            href="/phong/doan.html" data-i18n="home"
+                            href="/index.html" data-i18n="home"
                             style="margin-left: 20px;">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#"
-                            role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" data-i18n="course"
-                            style="margin-left: 20px;">Course
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item"
-                                    href="/baimoi/course1.html">Course-1</a></li>
-                            <li><a class="dropdown-item"
-                                    href="/baimoi/course2.html">Course-2</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                        href="/baimoi/course1.html" data-i18n="home"
+                        style="margin-left: 20px;">Course</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/Hau/aboutus/aboutus.html" data-i18n="about"
+                        <a class="nav-link"
+                            href="/Hau/aboutus/aboutus.html"
+                            data-i18n="about"
                             style="margin-left: 20px;">About Us</a>
                         <span id="usernameSpan"></span>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-i18n="contact"
+                        <a class="nav-link" href="/Hau/Contact us/contact.html" data-i18n="contact"
                             style="margin-left: 10px;">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/phong/dangnhap.html" class="nav-link" id="loginLink" style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                        <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                        <a href="/phong/dangnhap.html" class="nav-link"
+                            id="loginLink"
+                            style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                        <a href="#" onclick="logout(event)"
+                            class="nav-link" id="logoutLink"
+                            style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
                     </li>
                     <li class="nav-item">
                         <p style="margin-left: 20px;" class="nav-link">
-                          Username: <span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()">Username</span>
-                          <img id="avatarImg" src="" style="width: 50px; height: 50px; margin-left: 10px; display: none;">
+                            Username: <span id="username"
+                                style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                onclick="showUserOptions()">Username</span>
+                            <img id="avatarImg" src
+                                style="width: 30px; height: 30px; margin-left: 10px; display: none;">
                         </p>
                         <div id="userOptions" class="user-options">
-                          <div class="option" onclick="showChangePasswordModal()">Đổi mật khẩu</div>
-                          <div class="option" onclick="showChangeNameModal()">Đổi tên</div>
-                          <div class="option" onclick="document.getElementById('avatarInput').click()">Đổi avatar</div>
-                          <div id="fileInputContainer" style="display: none;">
-                            <input type="file" id="avatarInput" accept="image/*" onchange="changeAvatar(event)" style="display: none;">
-                          </div>
+                            <div class="option"
+                                onclick="showChangePasswordModal()">Đổi
+                                mật khẩu</div>
+                            <div class="option"
+                                onclick="showChangeNameModal()">Đổi tên</div>
+                            <div class="option"
+                                onclick="document.getElementById('avatarInput').click()">Đổi
+                                avatar</div>
+                            <div id="fileInputContainer"
+                                style="display: none;">
+                                <input type="file" id="avatarInput"
+                                    accept="image/*"
+                                    onchange="changeAvatar(event)"
+                                    style="display: none;">
+                            </div>
                         </div>
-                      </li>
+                    </li>
                     <!-- Modal cho đổi mật khẩu -->
 
                     <li>
@@ -194,7 +205,7 @@
             <nav aria-label="breadcrumb-item" class="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                <li class="breadcrumb-item active" aria-current="page" data-i18n="contact">Contact Us</li>
               </ol>
           </nav>
         </div>

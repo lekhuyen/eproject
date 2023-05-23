@@ -92,8 +92,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                href="/baimoi/course1.html" data-i18n="home"
-                                style="margin-left: 20px;">Course</a>
+                                    href="/baimoi/course1.html" data-i18n="home"
+                                    style="margin-left: 20px;">Course</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
@@ -104,7 +104,9 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-i18n="contact"
+                                <a class="nav-link"
+                                    href="/Hau/Contact us/contact.html"
+                                    data-i18n="contact"
                                     style="margin-left: 10px;">Contact Us</a>
                             </li>
                             <li class="nav-item">
@@ -760,38 +762,18 @@
                                                                 <div
                                                                     class="col-md-6
                                                                     mb-4">
-                                                                    <select
-                                                                        class="select">
-                                                                        <option
-                                                                            value="1">State</option>
-                                                                        <option
-                                                                            value="2">VietNam
-                                                                        </option>
-                                                                        <option
-                                                                            value="3">American
-                                                                        </option>
-                                                                        <option
-                                                                            value="4">Korean
-                                                                        </option>
+                                                                    <select class="select" id="stateSelect">
+                                                                        <option value="1">State</option>
+                                                                        <option value="2">VietNam</option>
+                                                                        <option value="3">American</option>
+                                                                        <option value="4">Hindi</option>
                                                                     </select>
                                                                 </div>
                                                                 <div
                                                                     class="col-md-6
                                                                     mb-4">
-                                                                    <select
-                                                                        class="select">
-                                                                        <option
-                                                                            value="1">City</option>
-                                                                        <option
-                                                                            value="2">Ho
-                                                                            Chi
-                                                                            Minh</option>
-                                                                        <option
-                                                                            value="3">Ha
-                                                                            Noi</option>
-                                                                        <option
-                                                                            value="4">Da
-                                                                            Nang</option>
+                                                                    <select class="select" id="citySelect">
+                                                                        <option value="1">City</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -858,13 +840,8 @@
                                                                     btn-light
                                                                     btn-lg">Reset
                                                                     all</button>
-                                                                <button
-                                                                    type="button"
-                                                                    class="btn
-                                                                    btn-warning
-                                                                    btn-lg
-                                                                    ms-2">Submit
-                                                                    form</button>
+                                                                    <button type="button" id="submitBtn" class="btn btn-warning btn-lg ms-2">Submit form</button>
+
                                                             </div>
 
                                                         </div>

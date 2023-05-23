@@ -52,10 +52,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
+        <nav
+            class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img
-                        src="/picture/logo.png" width="30px" height="30px"></a>
+                <a class="navbar-brand" href="/index.html"><img
+                        src="/picture/logo.png" width="40px" height="40px"></a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false"
@@ -68,50 +69,60 @@
                         100px;">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="/phong/doan.html" data-i18n="home"
+                                href="/index.html" data-i18n="home"
                                 style="margin-left: 20px;">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"
-                                role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" data-i18n="course"
-                                style="margin-left: 20px;">Course
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                        href="/baimoi/course1.html">Course-1</a></li>
-                                <li><a class="dropdown-item"
-                                        href="/baimoi/course2.html">Course-2</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                            href="/baimoi/course1.html" data-i18n="home"
+                            style="margin-left: 20px;">Course</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Hau/aboutus/aboutus.html" data-i18n="about"
+                            <a class="nav-link"
+                                href="/Hau/aboutus/aboutus.html"
+                                data-i18n="about"
                                 style="margin-left: 20px;">About Us</a>
                             <span id="usernameSpan"></span>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-i18n="contact"
+                            <a class="nav-link" href="/Hau/Contact us/contact.html" data-i18n="contact"
                                 style="margin-left: 10px;">Contact Us</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/phong/dangnhap.html" class="nav-link" id="loginLink" style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                            <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                            <a href="/phong/dangnhap.html" class="nav-link"
+                                id="loginLink"
+                                style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                            <a href="#" onclick="logout(event)"
+                                class="nav-link" id="logoutLink"
+                                style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
                         </li>
                         <li class="nav-item">
                             <p style="margin-left: 20px;" class="nav-link">
-                              Username: <span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()">Username</span>
-                              <img id="avatarImg" src="" style="width: 50px; height: 50px; margin-left: 10px; display: none;">
+                                Username: <span id="username"
+                                    style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                    onclick="showUserOptions()">Username</span>
+                                <img id="avatarImg" src
+                                    style="width: 30px; height: 30px; margin-left: 10px; display: none;">
                             </p>
                             <div id="userOptions" class="user-options">
-                              <div class="option" onclick="showChangePasswordModal()">Đổi mật khẩu</div>
-                              <div class="option" onclick="showChangeNameModal()">Đổi tên</div>
-                              <div class="option" onclick="document.getElementById('avatarInput').click()">Đổi avatar</div>
-                              <div id="fileInputContainer" style="display: none;">
-                                <input type="file" id="avatarInput" accept="image/*" onchange="changeAvatar(event)" style="display: none;">
-                              </div>
+                                <div class="option"
+                                    onclick="showChangePasswordModal()">Đổi
+                                    mật khẩu</div>
+                                <div class="option"
+                                    onclick="showChangeNameModal()">Đổi tên</div>
+                                <div class="option"
+                                    onclick="document.getElementById('avatarInput').click()">Đổi
+                                    avatar</div>
+                                <div id="fileInputContainer"
+                                    style="display: none;">
+                                    <input type="file" id="avatarInput"
+                                        accept="image/*"
+                                        onchange="changeAvatar(event)"
+                                        style="display: none;">
+                                </div>
                             </div>
-                          </li>
+                        </li>
                         <!-- Modal cho đổi mật khẩu -->
 
                         <li>
@@ -164,10 +175,10 @@
 
         <div class="text-center">
             <div>
-                <h3>THE MODERN WAY TO LEARN!</h3>
+                <h3 data-i18n="text284">THE MODERN WAY TO LEARN!</h3>
             </div>
             <div>
-                <h4>Star Classes proudly teaching online courses with online experts throughout the world for the past 4 years.</h4>
+                <h4 data-i18n="text285">Star Classes proudly teaching online courses with online experts throughout the world for the past 4 years.</h4>
             </div>
         </div>
         <br>
@@ -184,7 +195,7 @@
                             <br>
                             
                             <div>
-                                <h3>200+ <p class="course">Courses</p></h3>
+                                <h3 data-i18n="text286">200+ <p class="course">Courses</p></h3>
                             </div>
                         </div>
                     </div>
@@ -201,7 +212,7 @@
                             <br>
                             
                             <div>
-                                <h3>6.3k+ <p class="course">Students</p></h3>
+                                <h3 data-i18n="text287">6.3k+ <p class="course">Students</p></h3>
                             </div>
                         </div>
                     </div>
@@ -219,7 +230,7 @@
                             <br>
                             
                             <div>
-                                <h3>4.20 <p class="course">Average CGPA</p></h3>
+                                <h3 data-i18n="text288">4.20 <p class="course">Average CGPA</p></h3>
                             </div>
                         </div>
                     </div>
@@ -237,7 +248,7 @@
                             <br>
                             
                             <div>
-                                <h3>96% <p class="course">Certified</p></h3>
+                                <h3 data-i18n="text289">96% <p class="course">Certified</p></h3>
                             </div>
                         </div>
                     </div>
@@ -251,10 +262,10 @@
             <div class="col aboutstarclasses">
                 <div>
                     <div>
-                        <h3>About Star Classes</h3>
+                        <h3 data-i18n="text290">About Star Classes</h3>
                     </div>
                     <div>
-                        Welcome to <strong>Star classes</strong>, your premier destination for high-quality programming courses. Whether you're a beginner looking to learn the basics or an experienced developer aiming to enhance your skills, we offer a comprehensive range of courses in HTML, CSS, C programming, and more.
+                       <span data-i18n="text291"> Welcome to <strong>Star classes</strong>, your premier destination for high-quality programming courses. Whether you're a beginner looking to learn the basics or an experienced developer aiming to enhance your skills, we offer a comprehensive range of courses in HTML, CSS, C programming, and more. </span>
                     </div>
                 </div>
             </div>
@@ -281,10 +292,10 @@
                 <div class="col ourmission">
                     <div>
                         <div>
-                            <h3>Our Mission</h3>
+                            <h3 data-i18n="text292">Our Mission</h3>
                         </div>
                         <div>
-                            At <strong>Star Classes</strong>, our mission is to empower individuals with the knowledge and skills to succeed in the dynamic world of programming. We are committed to providing top-notch educational resources and creating a supportive learning community that fosters growth, creativity, and innovation.
+                          <span data-i18n="text293">  At <strong>Star Classes</strong>, our mission is to empower individuals with the knowledge and skills to succeed in the dynamic world of programming. We are committed to providing top-notch educational resources and creating a supportive learning community that fosters growth, creativity, and innovation. </span>
                         </div>
                     </div>
                 </div>
@@ -298,10 +309,10 @@
             <div class="col aboutstarclasses">
                 <div>
                     <div>
-                        <h3>Our history</h3>
+                        <h3 data-i18n="text294">Our history</h3>
                     </div>
                     <div>
-                        With a passion for programming and a deep understanding of its impact, Programming Prodigy was founded in 2019. Since then, we have helped countless students, professionals, and coding enthusiasts embark on successful programming journeys. Our team of experienced instructors brings a wealth of knowledge and industry expertise to guide you through every step of your learning process.
+                        <span data-i18n="text295"> With a passion for programming and a deep understanding of its impact, Programming Prodigy was founded in 2019. Since then, we have helped countless students, professionals, and coding enthusiasts embark on successful programming journeys. Our team of experienced instructors brings a wealth of knowledge and industry expertise to guide you through every step of your learning process. </span>
                     </div>
                 </div>
             </div>
@@ -328,10 +339,10 @@
                 <div class="col ourmission">
                     <div>
                         <div>
-                            <h3>Our Approach</h3>
+                            <h3 data-i18n="text296">Our Approach</h3>
                         </div>
                         <div>
-                            At <strong>Star classes</strong>, we believe in a hands-on, project-based approach to learning. Our courses are carefully crafted to ensure a balance between theoretical concepts and practical application. Through engaging lectures, interactive coding exercises, and real-world projects, we strive to make the learning experience enjoyable, effective, and relevant.
+                          <span data-i18n="text297">  At <strong>Star classes</strong>, we believe in a hands-on, project-based approach to learning. Our courses are carefully crafted to ensure a balance between theoretical concepts and practical application. Through engaging lectures, interactive coding exercises, and real-world projects, we strive to make the learning experience enjoyable, effective, and relevant. </span>
                         </div>
                     </div>
                 </div>
@@ -343,8 +354,8 @@
     <div class="container">
         <div class="text-center">
             <div>
-                <h6>INSTRUCTOR</h6>
-                <h2>Expert Teachers</h2>
+                <h6 data-i18n="text298">INSTRUCTOR</h6>
+                <h2 data-i18n="text299">Expert Teachers</h2>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -353,8 +364,8 @@
                     <img src="picteacher/teacher.jpg" class="card-img-top" alt="teacher">
                     <div class="card-body text-center">
                         <h5 class="card-title">Amelia Parker</h5>
-                        <p class="card-text">Principal</p>
-                        <a href="ameliaparker.html" class="btn btn-danger">More info</a>
+                        <p class="card-text" data-i18n="text300">Principal</p>
+                        <a href="ameliaparker.html" class="btn btn-danger" data-i18n="text301">More info</a>
                     </div>
                 </div>
             </div>
@@ -364,8 +375,8 @@
                     <img src="picteacher/teacher1.jpg" class="card-img-top" alt="teacher1">
                     <div class="card-body text-center">
                         <h5 class="card-title">Michael Davis</h5>
-                        <p class="card-text">Professor</p>
-                        <a href="michaeldavis.html" class="btn btn-danger">More info</a>
+                        <p class="card-text" data-i18n="text302">Professor</p>
+                        <a href="michaeldavis.html" class="btn btn-danger" data-i18n="text301">More info</a>
                     </div>
                 </div>
             </div>
@@ -374,8 +385,8 @@
                     <img src="picteacher/teacher2.jpg" class="card-img-top" alt="teacher2">
                     <div class="card-body text-center">
                         <h5 class="card-title">Sophia Thompson</h5>
-                        <p class="card-text">Professor</p>
-                        <a href="sophiathompson.html" class="btn btn-danger">More info</a>
+                        <p class="card-text" data-i18n="text302">Professor</p>
+                        <a href="sophiathompson.html" class="btn btn-danger" data-i18n="text301">More info</a>
                     </div>
                 </div>
             </div>
@@ -385,8 +396,8 @@
                     <img src="picteacher/teacher3.jpg" class="card-img-top" alt="teacher3">
                     <div class="card-body text-center">
                         <h5 class="card-title">William Brown</h5>
-                        <p class="card-text">Assistant Director</p>
-                        <a href="williambrown.html" class="btn btn-danger">More info</a>
+                        <p class="card-text" data-i18n="text303">Assistant Director</p>
+                        <a href="williambrown.html" class="btn btn-danger" data-i18n="text301">More info</a>
                     </div>
                 </div>
             </div>
@@ -396,8 +407,8 @@
                     <img src="picteacher/teacher4.jpg" class="card-img-top" alt="teacher4">
                     <div class="card-body text-center">
                         <h5 class="card-title">Olivia Martinez</h5>
-                        <p class="card-text">Assistant Director</p>
-                        <a href="oliviamartinez.html" class="btn btn-danger">More info</a>
+                        <p class="card-text" data-i18n="text303">Assistant Director</p>
+                        <a href="oliviamartinez.html" class="btn btn-danger" data-i18n="text301">More info</a>
                     </div>
                 </div>
             </div>
@@ -407,8 +418,8 @@
                     <img src="picteacher/teacher5.jpg" class="card-img-top" alt="teacher5">
                     <div class="card-body text-center">
                         <h5 class="card-title">Charlotte Taylor</h5>
-                        <p class="card-text">Assistant Director</p>
-                        <a href="charlottetaylor.html" class="btn btn-danger">More info</a>
+                        <p class="card-text" data-i18n="text303">Assistant Director</p>
+                        <a href="charlottetaylor.html" class="btn btn-danger" data-i18n="text301">More info</a>
                     </div>
                 </div>
             </div>

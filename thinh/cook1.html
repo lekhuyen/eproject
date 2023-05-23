@@ -17,10 +17,11 @@
 </head>
 <body ng-app="myApp">
     <header>
-        <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary "
-            style="background-color: #3275a5;">
+        <nav
+            class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="/picture/logo.png" width="50px" height="50px"></a>
+                <a class="navbar-brand" href="index.html"><img
+                        src="/picture/logo.png" width="40px" height="40px"></a>
                 <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false"
@@ -33,43 +34,66 @@
                         100px;">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page"
-                                href="/phong/doan.html" data-i18n="home"
+                                href="/index.html" data-i18n="home"
                                 style="margin-left: 20px;">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#"
-                                role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" data-i18n="course"
-                                style="margin-left: 20px;">Course
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/baimoi/course1.html">Course-1</a></li>
-                                <li><a class="dropdown-item" href="/baimoi/course2.html">Course-2</a></li>
-                                
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                            href="/baimoi/course1.html" data-i18n="home"
+                            style="margin-left: 20px;">Course</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-i18n="about"
+                            <a class="nav-link"
+                                href="/Hau/aboutus/aboutus.html"
+                                data-i18n="about"
                                 style="margin-left: 20px;">About Us</a>
                             <span id="usernameSpan"></span>
                         </li>
-      
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-i18n="contact"
+                            <a class="nav-link" href="/Hau/Contact us/contact.html" data-i18n="contact"
                                 style="margin-left: 10px;">Contact Us</a>
                         </li>
-                        <li class="nav-item" >
-                            <a href="/phong/dangnhap.html" class="nav-link" id="loginLink"  style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
-                            <a href="#" onclick="logout(event)" class="nav-link" id="logoutLink" style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
-      
+                        <li class="nav-item">
+                            <a href="/phong/dangnhap.html" class="nav-link"
+                                id="loginLink"
+                                style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                            <a href="#" onclick="logout(event)"
+                                class="nav-link" id="logoutLink"
+                                style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
                         </li>
                         <li class="nav-item">
-                            <p style="margin-left: 20px;" class="nav-link">Username: <span id="username"  style="color: rgb(0, 145, 255); font-weight: 600;"></span></p>
+                            <p style="margin-left: 20px;" class="nav-link">
+                                Username: <span id="username"
+                                    style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                    onclick="showUserOptions()">Username</span>
+                                <img id="avatarImg" src
+                                    style="width: 30px; height: 30px; margin-left: 10px; display: none;">
+                            </p>
+                            <div id="userOptions" class="user-options">
+                                <div class="option"
+                                    onclick="showChangePasswordModal()">Đổi
+                                    mật khẩu</div>
+                                <div class="option"
+                                    onclick="showChangeNameModal()">Đổi tên</div>
+                                <div class="option"
+                                    onclick="document.getElementById('avatarInput').click()">Đổi
+                                    avatar</div>
+                                <div id="fileInputContainer"
+                                    style="display: none;">
+                                    <input type="file" id="avatarInput"
+                                        accept="image/*"
+                                        onchange="changeAvatar(event)"
+                                        style="display: none;">
+                                </div>
+                            </div>
                         </li>
-      
+                        <!-- Modal cho đổi mật khẩu -->
+
                         <li>
-                            <div class="navbar-language" style="margin-left:
-                                50px;">
+                            <div class="navbar-language"
+                                style="margin-left:
+                                100px;">
                                 <select id="language-selector"
                                     onchange="changeLanguage()">
                                     <option value="en">English</option>
@@ -79,10 +103,14 @@
                             </div>
                         </li>
                         <li class="nav-item" style="margin-left: 50px;">
-                            <a href="/phong/cart.html" class="nav-link"><ion-icon name="cart"
-                                    style="width: 50px; height: 50px; color: blue;"></ion-icon>
-                                    <span id="cartItemCount" class="cart-item-count" style="position: absolute; color: rgb(11, 51, 251);">0</span></a>
-                                    
+                            <a href="/phong/cart.html" class="nav-link"><ion-icon
+                                    name="cart"
+                                    style="width: 50px; height: 50px; color:
+                                    blue;"></ion-icon>
+                                <span id="cartItemCount"
+                                    class="cart-item-count"
+                                    style="position:
+                                    absolute; color: rgb(11, 51, 251);">0</span></a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -94,8 +122,8 @@
                 </div>
             </div>
         </nav>
-      
-      </header>
+
+    </header>
     <div class="main-1-img">
         <div class="main-1-img-1">
             <div class="main-1-img-1-title">
@@ -113,45 +141,32 @@
             <div class="col-lg-8 col-md-12 col-sm-12" style=" padding: 0;  box-shadow: 0 0 30px #eee; margin-bottom: 50px;">
                 <div class="describe-1" style="background-color: rgb(244,243,243);">
                     <div class="overview">
-                        <p>Overview</p>
+                        <p data-i18n="text28">Overview</p>
                     </div>
                     <div class="curriculum">
-                        <p>Requirements</p>
+                        <p data-i18n="text29">Requirements</p>
                     </div>
                     <div class="instructor">
-                        <p>Educators</p>
+                        <p data-i18n="text30">Educators</p>
                     </div>
                     <div class="reviews">
-                        <p>Reviews</p>
+                        <p data-i18n="text31">Reviews</p>
                     </div>                   
                 </div>
                 <div class="overview-child">
-                    <h2>Gain the skills to handle food from start to finish in a safe and hygienic way</h2>
+                    <h2 data-i18n="text259">Gain the skills to handle food from start to finish in a safe and hygienic way</h2>
                     <div class="overview-child-1">
-                        <p>Hygiene is so important in food preparation. If caterers, chefs and wait staff are not adequately trained they can present huge health risks to the community.</p>
-                        <p>On this course from the International Culinary Studio (ICS), you’ll learn why food safety matters and develop the confidence and skills to prepare and present food to the highest standards of hygiene and safety.
-
-                        </p>
-                    <h2>Discover food safety procedures and the importance of both personal and workplace hygiene</h2>
+                        <p data-i18n="text260">>Hygiene is so important in food preparation. If caterers, chefs and wait staff are not adequately trained they can present huge health risks to the community.</p>
+                        <p data-i18n="text261">>On this course from the International Culinary Studio (ICS), you’ll learn why food safety matters and develop the confidence and skills to prepare and present food to the highest standards of hygiene and safety.</p>
+                    <h2 data-i18n="text262">Discover food safety procedures and the importance of both personal and workplace hygiene</h2>
                     
-                    <p>
-                        You’ll start by discussing the reasons for maintaining a high standard of food safety, such as food safety laws and reputation. Then, you’ll jump straight into what this means for you and how to implement processes to keep yourself and the working environment clean and hygienic.<br>
-                    <h2>Learn the different categories of food poisoning and how to prevent them</h2>
-                    <p>
-                        One of the biggest risks of poor food hygiene is food poisoning. Not only is it bad for your business’ reputation but it can be very dangerous for your customers.
-                    </p>
-                    <p>
-                        This course will guide you through the different types of food poisoning, what causes them, and how to prevent them. You’ll also look at hazardous foods as well as contamination in the kitchen.
-                    </p>
-                    <h2>
-                        Explore food preparation and kitchen conduct in an ordinary and a COVID-19 environment
-                    </h2>
-                    <p>
-                        Food safety and hygiene practices are easy to implement once you know how. This course will take you through all aspects of kitchen conduct including presentation in the kitchen, handwashing, and illness or injury.
-                    </p>
-                    <p>
-                        You’ll then learn the different ways that you can maintain a safe environment, from how to receive and store all types of food hygienically, to how to prepare, cook, hold, and serve food safely. This course will also cover COVID-19 and how the current pandemic affects food safety procedures.
-                    </p>
+                    <p data-i18n="text263">>You’ll start by discussing the reasons for maintaining a high standard of food safety, such as food safety laws and reputation. Then, you’ll jump straight into what this means for you and how to implement processes to keep yourself and the working environment clean and hygienic.<br>
+                    <h2 data-i18n="text264">Learn the different categories of food poisoning and how to prevent them</h2>
+                    <p data-i18n="text265">>One of the biggest risks of poor food hygiene is food poisoning. Not only is it bad for your business’ reputation but it can be very dangerous for your customers. </p>
+                    <p data-i18n="text266">>This course will guide you through the different types of food poisoning, what causes them, and how to prevent them. You’ll also look at hazardous foods as well as contamination in the kitchen.</p>
+                    <h2 data-i18n="text267">Explore food preparation and kitchen conduct in an ordinary and a COVID-19 environment</h2>
+                    <p data-i18n="text268">Food safety and hygiene practices are easy to implement once you know how. This course will take you through all aspects of kitchen conduct including presentation in the kitchen, handwashing, and illness or injury.</p>
+                    <p data-i18n="text269">You’ll then learn the different ways that you can maintain a safe environment, from how to receive and store all types of food hygienically, to how to prepare, cook, hold, and serve food safely. This course will also cover COVID-19 and how the current pandemic affects food safety procedures.</p>
                         
                         <!-- //<button class="viewsample" id="viewsample">View Sample Workout</button>
                         <button class="viewsample">View Full Calendar</button> -->
@@ -459,11 +474,52 @@
 
               </script>
 </body>
+<div id="changePasswordModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Đổi mật khẩu</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="changePassword(event)">
+            <div class="form-group">
+              <label for="newPassword">Mật khẩu mới:</label>
+              <input type="password" class="form-control" id="newPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Đổi tên Modal -->
+  <div id="changeNameModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Đổi tên</h5>
+          <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form onsubmit="changeName(event)">
+            <div class="form-group">
+              <label for="newName">Tên mới:</label>
+              <input type="text" class="form-control" id="newName" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đổi tên</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 <footer>
     <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
         class="iframe3"></iframe>
 </footer>
 <script src="/baimoi/courses.js"></script>
 <script src="/baimoi/cart.js"></script>
+<script src="/phong/doan.js"></script>
 
 </html>
