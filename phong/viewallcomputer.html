@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script>
+            "use strict";
+            
+            !function() {
+              var t = window.driftt = window.drift = window.driftt || [];
+              if (!t.init) {
+                if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+                t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+                t.factory = function(e) {
+                  return function() {
+                    var n = Array.prototype.slice.call(arguments);
+                    return n.unshift(e), t.push(n), t;
+                  };
+                }, t.methods.forEach(function(e) {
+                  t[e] = t.factory(e);
+                }), t.load = function(t) {
+                  var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                  o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                  var i = document.getElementsByTagName("script")[0];
+                  i.parentNode.insertBefore(o, i);
+                };
+              }
+            }();
+            drift.SNIPPET_VERSION = '0.3.1';
+            drift.load('skd536zbews8');
+            </script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/rating/rating.css">
+        <link rel="stylesheet" href="/phong/viewalllui.css">
+
+        <script type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav
+                class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img
+                            src="/picture/logo.png" width="40px" height="40px"></a>
+                    <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                        aria-controls="navbarScroll" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarScroll">
+                        <ul class="navbar-nav me-auto my-2 my-lg-0
+                            navbar-nav-scroll" style="--bs-scroll-height:
+                            100px;">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="index.html" data-i18n="home"
+                                    style="margin-left: 20px;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                href="/baimoi/course1.html" data-i18n="home"
+                                style="margin-left: 20px;">Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                    href="/Hau/aboutus/aboutus.html"
+                                    data-i18n="about"
+                                    style="margin-left: 20px;">About Us</a>
+                                <span id="usernameSpan"></span>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Hau/Contact us/contact.html" data-i18n="contact"
+                                    style="margin-left: 10px;">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/phong/dangnhap.html" class="nav-link"
+                                    id="loginLink"
+                                    style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                                <a href="#" onclick="logout(event)"
+                                    class="nav-link" id="logoutLink"
+                                    style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <p style="margin-left: 20px;" class="nav-link">
+                                    Username: <span id="username"
+                                        style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                        onclick="showUserOptions()">Username</span>
+                                    <img id="avatarImg" src
+                                        style="width: 30px; height: 30px; margin-left: 10px; display: none;">
+                                </p>
+                                <div id="userOptions" class="user-options">
+                                    <div class="option"
+                                        onclick="showChangePasswordModal()">Đổi
+                                        mật khẩu</div>
+                                    <div class="option"
+                                        onclick="showChangeNameModal()">Đổi tên</div>
+                                    <div class="option"
+                                        onclick="document.getElementById('avatarInput').click()">Đổi
+                                        avatar</div>
+                                    <div id="fileInputContainer"
+                                        style="display: none;">
+                                        <input type="file" id="avatarInput"
+                                            accept="image/*"
+                                            onchange="changeAvatar(event)"
+                                            style="display: none;">
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Modal cho đổi mật khẩu -->
+
+                            <li>
+                                <div class="navbar-language"
+                                    style="margin-left:
+                                    100px;">
+                                    <select id="language-selector"
+                                        onchange="changeLanguage()">
+                                        <option value="en">English</option>
+                                        <option value="vn">Tiếng Việt</option>
+                                        <option value="hi">हिन्दी</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li class="nav-item" style="margin-left: 50px;">
+                                <a href="/phong/cart.html" class="nav-link"><ion-icon
+                                        name="cart"
+                                        style="width: 50px; height: 50px; color:
+                                        blue;"></ion-icon>
+                                    <span id="cartItemCount"
+                                        class="cart-item-count"
+                                        style="position:
+                                        absolute; color: rgb(11, 51, 251);">0</span></a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success"
+                                type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <div class="main-1-img">
+            <div class="main-1-img-2">
+                <div class="main-1-img-1-title">
+                    <p>Courses</p>
+                    <div class="a-home">
+                        <a href="#">Home</a> / Courses Two
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="choose-row-col" style="
+                        background-color:rgb(249,248,248); ">
+                        <div class="choose-row-col-1">
+                            <div class="row-col-icon">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div class="soluong">
+                                <span>Showing 1-5 of results</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="choose-row-col" style="
+                        background-color:rgb(249,248,248); ">
+                        <div class="choose-row-col-2">
+                            <div class="input-courses">
+                                <input type="text" placeholder="Search our
+                                    courses">
+                            </div>
+                            <div class="row-col-icon-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row" style="margin-top: 50px">
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="uxui">
+                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                            
+                                <a href="/baimoi/course-us-ui.html" class="a-img">
+                                    <img src="/baimoi/img/img-courses-8.jpg" alt="" style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>$40.00</span>
+                                    </div>
+                                    <div class="free-1-1" style="font-size: 14px; ">
+                                        <span>ux/ui</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/course-us-ui.html">
+                                        <span data-i18n="text24">User experience: The beginner'guide & learning</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i class="fa-regular fa-user"></i> 
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+    
+                                        
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="star5-8" name="rating" value="5" />
+                                                    <label class = "full" for="star5-8" title="Awesome - 5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4half-8" name="rating" value="4 and a half" />
+                                                    <label class="half" for="star4half-8" title="Pretty good - 4.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4-8" name="rating" value="4" />
+                                                    <label class = "full" for="star4-8" title="Pretty good - 4 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3half-8" name="rating" value="3 and a half" />
+                                                    <label class="half" for="star3half-8" title="Meh - 3.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3-8" name="rating" value="3" />
+                                                    <label class = "full" for="star3-8" title="Meh - 3 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2half-8" name="rating" value="2 and a half" />
+                                                    <label class="half" for="star2half-8" title="Kinda bad - 2.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2-8" name="rating" value="2" />
+                                                    <label class = "full" for="star2-8" title="Kinda bad - 2 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1half-8" name="rating" value="1 and a half" />
+                                                    <label class="half" for="star1half-8" title="Meh - 1.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1-8" name="rating" value="1" />
+                                                    <label class = "full" for="star1-8" title="Sucks big time - 1 star"></label>
+                                                    
+                                                    <input type="radio" id="starhalf-8" name="rating" value="half" />
+                                                    <label class="half" for="starhalf-8" title="Sucks big time - 0.5 stars"></label>
+                                                </div>                   
+                                            </div>                               
+                                        </div>
+                                        <div class="next-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="uxui">
+                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                                <a href="/baimoi/course-us-ui-1.html"  class="a-img">
+                                    <img src="/baimoi/img/img-courses-9.jpg" alt="" style="width:100%">
+                                </a>                                            
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>$80.00</span>
+                                    </div>
+                                    <div class="free-1-1" style="font-size: 14px; ">
+                                        <span>ux/ui</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/course-us-ui-1.html">
+                                        <span data-i18n="text25">Gestalt and web design: The ux ultimate guide</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i class="fa-regular fa-user"></i> 
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="star5-9" name="rating" value="5" />
+                                                    <label class = "full" for="star5-9" title="Awesome - 5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4half-9" name="rating" value="4 and a half" />
+                                                    <label class="half" for="star4half-9" title="Pretty good - 4.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4-9" name="rating" value="4" />
+                                                    <label class = "full" for="star4-9" title="Pretty good - 4 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3half-9" name="rating" value="3 and a half" />
+                                                    <label class="half" for="star3half-9" title="Meh - 3.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3-9" name="rating" value="3" />
+                                                    <label class = "full" for="star3-9" title="Meh - 3 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2half-9" name="rating" value="2 and a half" />
+                                                    <label class="half" for="star2half-9" title="Kinda bad - 2.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2-9" name="rating" value="2" />
+                                                    <label class = "full" for="star2-9" title="Kinda bad - 2 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1half-9" name="rating" value="1 and a half" />
+                                                    <label class="half" for="star1half-9" title="Meh - 1.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1-9" name="rating" value="1" />
+                                                    <label class = "full" for="star1-9" title="Sucks big time - 1 star"></label>
+                                                    
+                                                    <input type="radio" id="starhalf-9" name="rating" value="half" />
+                                                    <label class="half" for="starhalf-9" title="Sucks big time - 0.5 stars"></label>
+                                                </div>                   
+                                            </div>                               
+                                        </div>
+                                        <div class="next-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="uxui">
+                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                            
+                                <a href="/baimoi/python.html" class="a-img">
+                                    <img src="https://static.skillshare.com/uploads/video/thumbnails/a7b11789ffbda7863108df53b3b8a9c6/original" alt="" style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>$40.00</span>
+                                    </div>
+                                    <div class="free-1-1" style="font-size: 14px; ">
+                                        <span>Developer</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/python.html">
+                                        <span data-i18n="text27">30 Days of Python - Coding for Beginners</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i class="fa-regular fa-user"></i> 
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+    
+                                        
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="star5-8" name="rating" value="5" />
+                                                    <label class = "full" for="star5-8" title="Awesome - 5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4half-8" name="rating" value="4 and a half" />
+                                                    <label class="half" for="star4half-8" title="Pretty good - 4.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4-8" name="rating" value="4" />
+                                                    <label class = "full" for="star4-8" title="Pretty good - 4 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3half-8" name="rating" value="3 and a half" />
+                                                    <label class="half" for="star3half-8" title="Meh - 3.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3-8" name="rating" value="3" />
+                                                    <label class = "full" for="star3-8" title="Meh - 3 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2half-8" name="rating" value="2 and a half" />
+                                                    <label class="half" for="star2half-8" title="Kinda bad - 2.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2-8" name="rating" value="2" />
+                                                    <label class = "full" for="star2-8" title="Kinda bad - 2 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1half-8" name="rating" value="1 and a half" />
+                                                    <label class="half" for="star1half-8" title="Meh - 1.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1-8" name="rating" value="1" />
+                                                    <label class = "full" for="star1-8" title="Sucks big time - 1 star"></label>
+                                                    
+                                                    <input type="radio" id="starhalf-8" name="rating" value="half" />
+                                                    <label class="half" for="starhalf-8" title="Sucks big time - 0.5 stars"></label>
+                                                </div>                   
+                                            </div>                               
+                                        </div>
+                                        <div class="next-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="uxui">
+                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                            
+                                <a href="/baimoi/developer.html" class="a-img">
+                                    <img src="https://img.freepik.com/free-vector/hand-drawn-web-developers_23-2148819604.jpg?w=900&t=st=1684652932~exp=1684653532~hmac=4c6b58e483adfb6b3885d8cc01a8dfddb130ef976639c9413475b469bac4ebf9" alt="" style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>$40.00</span>
+                                    </div>
+                                    <div class="free-1-1" style="font-size: 14px; ">
+                                        <span>Developer</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/developer.html">
+                                        <span data-i18n="text26">Coding for Beginners 1: You Can Code!</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i class="fa-regular fa-user"></i> 
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+    
+                                        
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="star5-8" name="rating" value="5" />
+                                                    <label class = "full" for="star5-8" title="Awesome - 5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4half-8" name="rating" value="4 and a half" />
+                                                    <label class="half" for="star4half-8" title="Pretty good - 4.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star4-8" name="rating" value="4" />
+                                                    <label class = "full" for="star4-8" title="Pretty good - 4 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3half-8" name="rating" value="3 and a half" />
+                                                    <label class="half" for="star3half-8" title="Meh - 3.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star3-8" name="rating" value="3" />
+                                                    <label class = "full" for="star3-8" title="Meh - 3 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2half-8" name="rating" value="2 and a half" />
+                                                    <label class="half" for="star2half-8" title="Kinda bad - 2.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star2-8" name="rating" value="2" />
+                                                    <label class = "full" for="star2-8" title="Kinda bad - 2 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1half-8" name="rating" value="1 and a half" />
+                                                    <label class="half" for="star1half-8" title="Meh - 1.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="star1-8" name="rating" value="1" />
+                                                    <label class = "full" for="star1-8" title="Sucks big time - 1 star"></label>
+                                                    
+                                                    <input type="radio" id="starhalf-8" name="rating" value="half" />
+                                                    <label class="half" for="starhalf-8" title="Sucks big time - 0.5 stars"></label>
+                                                </div>                   
+                                            </div>                               
+                                        </div>
+                                        <div class="next-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-ms-12 item-1" style="margin-bottom: 30px;" type="webdeveloper">
+                    <div class="card" style="background-color: rgb(249,248,248);  border: none;">
+                        <div class="card-body" style="padding:25px">
+                            <div class="div">
+                                <a href="/baimoi/course1-js.html" class="a-img">
+                                    <img src="/baimoi/img/img-excel.jpg" alt="" style="width:100%">
+                                </a>
+                                <div class="free">
+                                    <div class="free-1">
+                                        <span>FREE</span>
+                                    </div>
+                                    <div class="free-1-1" style="font-size: 14px; ">
+                                        <span>Excel</span>
+                                    </div>
+                                </div>
+                                <div class="name-course">
+                                    <a href="/baimoi/course1-js.html">
+                                        <span data-i18n="text1">The ultimate in becoming an Excel teacher</span>
+                                    </a>
+                                </div>
+                                <div class="quantity-user-0">
+                                    <div class="quantity-user">
+                                        <div class="quantity-user-1">
+                                            <div class="quantity-icon">
+                                                <div class="quantity-icon-1">
+                                                    <i class="fa-regular fa-user"></i> 
+                                                </div>
+                                                <div class="quantity-icon-2">
+                                                    120
+                                                </div>
+                                            </div>
+                                            <div class="evaluate-star">
+                                                <div class="rating">
+                                                    <input type="radio" id="qq" name="rating" value="5" />
+                                                    <label class = "full" for="qq" title="Awesome - 5 stars"></label>
+                                                    
+                                                    <input type="radio" id="ee" name="rating" value="4 and a half" />
+                                                    <label class="half" for="ee" title="Pretty good - 4.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="rr" name="rating" value="4" />
+                                                    <label class = "full" for="rr" title="Pretty good - 4 stars"></label>
+                                                    
+                                                    <input type="radio" id="tt" name="rating" value="3 and a half" />
+                                                    <label class="half" for="tt" title="Meh - 3.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="ty" name="rating" value="3" />
+                                                    <label class = "full" for="ty" title="Meh - 3 stars"></label>
+                                                    
+                                                    <input type="radio" id="yy" name="rating" value="2 and a half" />
+                                                    <label class="half" for="yy" title="Kinda bad - 2.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="uu" name="rating" value="2" />
+                                                    <label class = "full" for="uu" title="Kinda bad - 2 stars"></label>
+                                                    
+                                                    <input type="radio" id="yu" name="rating" value="1 and a half" />
+                                                    <label class="half" for="yu" title="Meh - 1.5 stars"></label>
+                                                    
+                                                    <input type="radio" id="er" name="rating" value="1" />
+                                                    <label class = "full" for="er" title="Sucks big time - 1 star"></label>
+                                                    
+                                                    <input type="radio" id="xz" name="rating" value="half" />
+                                                    <label class="half" for="xz" title="Sucks big time - 0.5 stars"></label>
+                                                </div>
+                                                
+                                            </div>                               
+                                        </div>
+                                        <div class="next-icon">
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script>
+                // Kiểm tra xem người dùng đã đăng nhập hay chưa
+                function isLoggedIn() {
+                  return localStorage.getItem('isLoggedIn') === 'true';
+                }
+            
+                // Cập nhật trạng thái đăng nhập
+                function updateLoginStatus() {
+                  var loginLink = document.getElementById('loginLink');
+                  var logoutLink = document.getElementById('logoutLink');
+                  var username = document.getElementById('username');
+            
+                  if (isLoggedIn()) {
+                    username.textContent = localStorage.getItem('username'); // Hiển thị tên người dùng
+                    loginLink.style.display = 'none'; // Ẩn liên kết "Login"
+                    logoutLink.style.display = 'inline-block'; // Hiển thị liên kết "Logout"
+                  } else {
+                    username.textContent = ''; // Xóa tên người dùng
+                    loginLink.style.display = 'inline-block'; // Hiển thị liên kết "Login"
+                    logoutLink.style.display = 'none'; // Ẩn liên kết "Logout"
+                  }
+                }
+            
+                // Xử lý khi trang index được tải
+                document.addEventListener('DOMContentLoaded', function() {
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                });
+            
+                // Xử lý khi người dùng logout
+                function logout(event) {
+                  event.preventDefault();
+                  localStorage.setItem('isLoggedIn', 'false');
+                  updateLoginStatus(); // Cập nhật trạng thái đăng nhập
+                }
+              </script>
+        <script src="/baimoi/cart.js"></script>
+        <script src="/phong/doan.js"></script> 
+    </body>
+    <div id="changePasswordModal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Đổi mật khẩu</h5>
+              <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form onsubmit="changePassword(event)">
+                <div class="form-group">
+                  <label for="newPassword">Mật khẩu mới:</label>
+                  <input type="password" class="form-control" id="newPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Đổi tên Modal -->
+      <div id="changeNameModal" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Đổi tên</h5>
+              <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form onsubmit="changeName(event)">
+                <div class="form-group">
+                  <label for="newName">Tên mới:</label>
+                  <input type="text" class="form-control" id="newName" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Đổi tên</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer>
+        <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
+            class="iframe3"></iframe>
+    </footer>
+</html>

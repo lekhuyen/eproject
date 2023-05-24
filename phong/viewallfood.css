@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .main-1-img {
+    width: 100%;
+    height: 570px;
+    position: relative;
+    background-repeat: no-repeat;
+    /* background-color: red; */
+    background: url("/picture/img-courses-6.jpg");
+    background-size: cover;
+  }
+  .main-1-img-1 {
+    width: 100%;
+    height: 100%;
+    /* background-image: url(/picture/img-courses-1.jpg); */
+    
+  }
+  .main-1-img-1-title {
+    color: white;
+    width: 100%;
+    top: 350px;
+    text-align: center;
+    position: absolute;
+  }
+  .main-1-img-1-title>p {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  .a-home>a {
+    color: white;
+    text-decoration: none;
+  }
+  .a-home>a:hover {
+    color: wheat;
+  }
+  .choose-row-col {
+    border-radius: 5px;
+    height: 60px;
+  }
+  .choose-row-col-1 {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .row-col-icon {
+    width: 44px;
+    height: 36px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0,0,0,.1);
+  }
+  .row-col-icon:hover {
+    background-color:rgb(255, 84, 33);
+  }
+  .row-col-icon>i {
+    font-size: 20px;
+  }
+  .soluong {
+    line-height:50px;
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  .choose-row-col-2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .input-courses {
+    width: 100%;
+  }
+  .input-courses>input {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    opacity: .5;
+    outline: none;
+    padding-left: 14px;
+    background-color:rgb(249,248,248); ;
+  }
+  .row-col-icon-2 {
+    height: 100%;
+    width: 70px;
+    display: flex;
+    cursor: pointer;
+    color: white;
+    margin-right: -12px;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    justify-content:center;
+    transition: all 0.4s;
+    background-color: rgb(255, 84, 33);
+  }
+  .row-col-icon-2:hover {
+    background-color: rgb(229, 71, 23);
+  }
+  /* header */
+  /* card */
+  .free {
+    margin-top: 40px;
+    display: flex;
+  }
+  .free-1 {
+    width: 50px;
+    height: 27px;
+    color: white;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: rgb(229, 71, 23);
+  }
+  
+  .name-course {
+    margin-top: 20px;
+  }
+  .name-course>a>span {
+    transition: all 0.4s linear;
+  }
+  .name-course>a>span:hover {
+    color: rgb(229, 71, 23);
+  }
+  .name-course a {
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .quantity-user {
+    display: flex;
+    justify-content:space-between;
+  }
+  .quantity-user-1 {
+    display: flex;
+  }
+  .quantity-user-0 {
+    margin-top: 20px;
+  }
+  .quantity-icon {
+    display: flex;
+  }
+  .evaluate-star {
+    display: flex;
+    margin-left: 10px;
+    color: rgb(255,182,10);
+  }
+  .next-icon {
+    width: 46px;
+    height: 42px;
+    display: flex;
+    cursor: pointer;
+    border: 1px solid #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+  .next-icon:hover {
+    background-color: rgb(229, 71, 23);
+  }
+  .a-img img {
+    transition: transform .4s ease-out;
+  }
+  .a-img img:hover {
+    transform: scale(1.1);
+  }
+  /* footer */
+  
+  .iframe3{
+    width: 100%;
+    height: 440px;
+    background-color: transparent;
+    }
+    footer{
+    width: 100%;
+    height: 440px;
+    }
+    .navbar-language {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      }
+      
+      #language-selector {
+      font-size: 16px;
+      padding: 8px;
+      padding-right: 50px;
+      }
+      .user-options {
+        position: absolute;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 5px 0;
+        display: none;
+      }
+      
+      .user-options.show {
+        display: block;
+      }
+      
+      .user-options .option {
+        padding: 10px;
+        cursor: pointer;
+      }
+      
+      .user-options .option:hover {
+        background-color: #f5f5f5;
+      }
