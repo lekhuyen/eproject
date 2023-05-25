@@ -73,7 +73,7 @@
             <nav
                 class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img
+                    <a class="navbar-brand" href="/index.html"><img
                             src="/picture/logo.png" width="40px" height="40px"></a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarScroll"
@@ -88,18 +88,18 @@
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
                                     href="index.html" data-i18n="home"
-                                    style="margin-left: 20px;">Home</a>
+                                    style="margin-left: 30px;">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
                                     href="/baimoi/course1.html" data-i18n="home"
-                                    style="margin-left: 20px;">Course</a>
+                                    style="margin-left: 30px;">Course</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
                                     href="/Hau/aboutus/aboutus.html"
                                     data-i18n="about"
-                                    style="margin-left: 20px;">About Us</a>
+                                    style="margin-left: 30px;">About us</a>
                                 <span id="usernameSpan"></span>
                             </li>
 
@@ -107,21 +107,19 @@
                                 <a class="nav-link"
                                     href="/Hau/Contact us/contact.html"
                                     data-i18n="contact"
-                                    style="margin-left: 10px;">Contact Us</a>
+                                    style="margin-left: 30px;">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/phong/dangnhap.html" class="nav-link"
                                     id="loginLink"
-                                    style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px;">Login</a>
+                                    style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px; font-weight: 800;">Login</a>
                                 <a href="#" onclick="logout(event)"
                                     class="nav-link" id="logoutLink"
-                                    style="display: none; text-decoration: none; color: rgb(30, 147, 201);">Logout</a>
+                                    style="display: none; text-decoration: none; color: rgb(30, 147, 201); font-weight: 800;">Logout</a>
                             </li>
                             <li class="nav-item">
                                 <p style="margin-left: 20px;" class="nav-link">
-                                    Username: <span id="username"
-                                        style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
-                                        onclick="showUserOptions()">Username</span>
+                                    Username:<span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()"></span>
                                     <img id="avatarImg" src
                                         style="width: 30px; height: 30px; margin-left: 10px; display: none;">
                                 </p>
@@ -148,7 +146,7 @@
                             <li>
                                 <div class="navbar-language"
                                     style="margin-left:
-                                    100px;">
+                                    50px;">
                                     <select id="language-selector"
                                         onchange="changeLanguage()">
                                         <option value="en">English</option>
@@ -169,7 +167,7 @@
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search"
+                            <input class="form-control me-2 w-50" type="search"
                                 placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success"
                                 type="submit">Search</button>
@@ -206,10 +204,12 @@
                     <a href="/phong/viewallfood.html">
                         <div class="card5">
                             <div class="wrapper1">
-                                <img src="https://img.freepik.com/free-photo/japanese-man-woman-cooking-restaurant_23-2149319368.jpg?w=900&t=st=1684932385~exp=1684932985~hmac=1fc2fb264882421dcffdfdef2dcc3dcf8ce592a1a1d529c42c8b78d92fe8f933"
+                                <img
+                                    src="https://img.freepik.com/free-photo/japanese-man-woman-cooking-restaurant_23-2149319368.jpg?w=900&t=st=1684932385~exp=1684932985~hmac=1fc2fb264882421dcffdfdef2dcc3dcf8ce592a1a1d529c42c8b78d92fe8f933"
                                     class="cover-image" />
                             </div>
-                            <span class="title" data-i18n="text4">Categories Cooking</span>
+                            <span class="title" data-i18n="text4">Categories
+                                Cooking</span>
                             <img src="/picture/cookingremove.png"
                                 class="character" />
                         </div>
@@ -761,18 +761,27 @@
                                                                 <div
                                                                     class="col-md-6
                                                                     mb-4">
-                                                                    <select class="select" id="stateSelect">
-                                                                        <option value="1">State</option>
-                                                                        <option value="2">VietNam</option>
-                                                                        <option value="3">American</option>
-                                                                        <option value="4">Hindi</option>
+                                                                    <select
+                                                                        class="select"
+                                                                        id="stateSelect">
+                                                                        <option
+                                                                            value="1">State</option>
+                                                                        <option
+                                                                            value="2">VietNam</option>
+                                                                        <option
+                                                                            value="3">American</option>
+                                                                        <option
+                                                                            value="4">Hindi</option>
                                                                     </select>
                                                                 </div>
                                                                 <div
                                                                     class="col-md-6
                                                                     mb-4">
-                                                                    <select class="select" id="citySelect">
-                                                                        <option value="1">City</option>
+                                                                    <select
+                                                                        class="select"
+                                                                        id="citySelect">
+                                                                        <option
+                                                                            value="1">City</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -839,7 +848,11 @@
                                                                     btn-light
                                                                     btn-lg">Reset
                                                                     all</button>
-                                                                    <button type="button" id="submitBtn" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                                                <button
+                                                                    type="button"
+                                                                    id="submitBtn"
+                                                                    class="btn btn-warning btn-lg ms-2">Submit
+                                                                    form</button>
 
                                                             </div>
 
@@ -1027,13 +1040,17 @@
                 </div>
                 <div class="anhpage6">
                     <button class="button2" onclick="openPopup()"></button>
-    <div class="popup">
-      <div class="popup-video">
-        <!-- Embed your video player here -->
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=MTtHU1LNEYE&ab_channel=IdeaSpot" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <span class="close" onclick="closePopup()">&times;</span>
-      </div>
-    </div>
+                    <div class="popup">
+                        <div class="popup-video">
+                            <!-- Embed your video player here -->
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/watch?v=MTtHU1LNEYE&ab_channel=IdeaSpot"
+                                frameborder="0"
+                                allow="autoplay; encrypted-media"
+                                allowfullscreen></iframe>
+                            <span class="close" onclick="closePopup()">&times;</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -1109,55 +1126,59 @@
                   updateLoginStatus(); // Cập nhật trạng thái đăng nhập
                 }
               </script>
-        </body>
-        <div id="changePasswordModal" class="modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Đổi mật khẩu</h5>
-                        <button type="button" class="close" data-dismiss="modal"
-                            onclick="closeChangePasswordModal()">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <form onsubmit="changePassword(event)">
-                            <div class="form-group">
-                                <label for="newPassword">Mật khẩu mới:</label>
-                                <input type="password" class="form-control"
-                                    id="newPassword" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Đổi
-                                mật khẩu</button>
-                        </form>
+            <div id="changePasswordModal" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Đổi mật khẩu</h5>
+                            <button type="button" class="close"
+                                data-dismiss="modal"
+                                onclick="closeChangePasswordModal()">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form onsubmit="changePassword(event)">
+                                <div class="form-group">
+                                    <label for="newPassword">Mật khẩu mới:</label>
+                                    <input type="password" class="form-control"
+                                        id="newPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Đổi
+                                    mật khẩu</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Đổi tên Modal -->
-        <div id="changeNameModal" class="modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Đổi tên</h5>
-                        <button type="button" class="close" data-dismiss="modal"
-                            onclick="closeChangePasswordModal()">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <form onsubmit="changeName(event)">
-                            <div class="form-group">
-                                <label for="newName">Tên mới:</label>
-                                <input type="text" class="form-control"
-                                    id="newName" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Đổi
-                                tên</button>
-                        </form>
+            <!-- Đổi tên Modal -->
+            <div id="changeNameModal" class="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Đổi tên</h5>
+                            <button type="button" class="close"
+                                data-dismiss="modal"
+                                onclick="closeChangePasswordModal()">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form onsubmit="changeName(event)">
+                                <div class="form-group">
+                                    <label for="newName">Tên mới:</label>
+                                    <input type="text" class="form-control"
+                                        id="newName" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Đổi
+                                    tên</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <footer>
-            <iframe src="/phong/footer.html" frameborder="0" scrolling="no"
-                class="iframe3"></iframe>
-        </footer>
-    </html>
+            <c/body>
+
+                <footer>
+                    <iframe src="/phong/footer.html" frameborder="0"
+                        scrolling="no"
+                        class="iframe3"></iframe>
+                </footer>
+            </html>
