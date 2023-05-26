@@ -7,8 +7,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family:  cursive;
 }
+body{
+background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg);
+background-position: center;
+background-repeat: repeat;
+background-size: 4%;
+height: 100vh;
+width: 100%;
 
+}
 
 .product-image {
 
@@ -162,13 +171,22 @@ label {
 .product .remove-product:hover {
   background-color: #a44;
 }
-
+/* cart-items */
+.cart-items{
+  width: 100%;
+  background-color: rgb(254, 254, 254);
+  /* color: rgb(0, 255, 38); */
+  font-weight: 700;
+}
 /* Totals section */
+
 .totals .totals-item {
   float: right;
   clear: both;
   width: 100%;
   margin-bottom: 10px;
+  font-weight: 700;
+  
 }
 
 .totals .totals-item label {
