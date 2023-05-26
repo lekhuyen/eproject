@@ -42,7 +42,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
             citySelect.appendChild(option);
         });
     } else if (selectedState === '4') { // Korean
-        var cities = ['Madhya Pradesh', 'Assam', 'Madras '];
+        var cities = ['Mumbai', 'Delhi', 'Bangalore '];
         cities.forEach(function(city) {
             var option = document.createElement('option');
             option.value = city;
