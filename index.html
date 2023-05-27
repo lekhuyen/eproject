@@ -99,7 +99,7 @@
                                 <a class="nav-link"
                                     href="/Hau/aboutus/aboutus.html"
                                     data-i18n="about"
-                                    style="margin-left: 30px;">About us</a>
+                                    style="margin-left: 20px;">About us</a>
                                 <span id="usernameSpan"></span>
                             </li>
       
@@ -125,13 +125,11 @@
                                 </p>
                                 <div id="userOptions" class="user-options">
                                     <div class="option"
-                                        onclick="showChangePasswordModal()">Đổi
-                                        mật khẩu</div>
+                                        onclick="showChangePasswordModal()">Change Password</div>
                                     <div class="option"
-                                        onclick="showChangeNameModal()">Đổi tên</div>
+                                        onclick="showChangeNameModal()">Change Name</div>
                                     <div class="option"
-                                        onclick="document.getElementById('avatarInput').click()">Đổi
-                                        avatar</div>
+                                        onclick="document.getElementById('avatarInput').click()">Change Avatar</div>
                                     <div id="fileInputContainer"
                                         style="display: none;">
                                         <input type="file" id="avatarInput"
@@ -1114,7 +1112,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Đổi mật khẩu</h5>
+                            <h5 class="modal-title">Change Password</h5>
                             <button type="button" class="close"
                                 data-dismiss="modal"
                                 onclick="closeChangePasswordModal()">&times;</button>
@@ -1122,12 +1120,11 @@
                         <div class="modal-body">
                             <form onsubmit="changePassword(event)">
                                 <div class="form-group">
-                                    <label for="newPassword">Mật khẩu mới:</label>
+                                    <label for="newPassword">New Password:</label>
                                     <input type="password" class="form-control"
                                         id="newPassword" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Đổi
-                                    mật khẩu</button>
+                                <button type="submit" class="btn btn-primary">Change</button>
                             </form>
                         </div>
                     </div>
@@ -1139,7 +1136,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Đổi tên</h5>
+                            <h5 class="modal-title">Change Name</h5>
                             <button type="button" class="close"
                                 data-dismiss="modal"
                                 onclick="closeChangePasswordModal()">&times;</button>
@@ -1147,12 +1144,11 @@
                         <div class="modal-body">
                             <form onsubmit="changeName(event)">
                                 <div class="form-group">
-                                    <label for="newName">Tên mới:</label>
+                                    <label for="newName">New Name:</label>
                                     <input type="text" class="form-control"
                                         id="newName" required>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Đổi
-                                    tên</button>
+                                <button type="submit" class="btn btn-primary">Change</button>
                             </form>
                         </div>
                     </div>
