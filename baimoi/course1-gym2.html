@@ -137,12 +137,12 @@
                                     absolute; color: rgb(11, 51, 251);">0</span></a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2 w-50" type="search"
-                            placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success"
-                            type="submit">Search</button>
-                    </form>
+                    <form autocomplete="off" action="/action_page.php" class="d-flex" role="search">
+                        <div class="autocomplete" style="width:300px;">
+                          <input id="myInput" class="form-control w-75" type="text" name="myCountry" placeholder="Search">
+                        </div>
+                        
+                      </form>
                 </div>
             </div>
         </nav>
@@ -929,4 +929,5 @@
 <script src="/baimoi/courses.js"></script>
 <script src="/baimoi/cart.js"></script>
 <script src="/phong/doan.js"></script>
+<script src="/baimoi/search.js"></script>
 </html>

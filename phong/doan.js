@@ -1136,6 +1136,7 @@ function changeAvatar(event) {
   };
   reader.readAsDataURL(file);
 }
+
 //  // Lắng nghe sự kiện click vào nút "Submit form"
 //  document.getElementById('submitBtn').addEventListener('click', function() {
 //   // Kiểm tra các trường input trong form

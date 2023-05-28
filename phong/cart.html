@@ -29,6 +29,7 @@
       drift.load('skd536zbews8');
       </script>
     <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="/phong/search.css">
     <script src="/baimoi/cart.js"></script>
     <!-- <script src="/baimoi/cart.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
@@ -137,11 +138,11 @@
                                   absolute; color: rgb(11, 51, 251);">0</span></a>
                       </li>
                   </ul>
-                  <form class="d-flex" role="search">
-                      <input class="form-control me-2 w-50" type="search"
-                          placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success"
-                          type="submit">Search</button>
+                  <form autocomplete="off" action="/action_page.php" class="d-flex" role="search">
+                    <div class="autocomplete" style="width:300px;">
+                      <input id="myInput" class="form-control w-75" type="text" name="myCountry" placeholder="Search">
+                    </div>
+                    
                   </form>
               </div>
           </div>
@@ -160,7 +161,7 @@
 </div>
     <div id="cart-content" class="shopping-cart">
       <div class="list">
-        <h3><img src="/picture/logo.png" width="150px" height="150px"> <span class="city">List Cart Product</span></h3> 
+        <h3><div class="dark fire"><h1 class="Blazing" contenteditable="true">Product Cart</h1></div></h3> 
       </div>
 
       <div class="column-labels">
@@ -459,6 +460,7 @@
     });
   </script>
   <script src="/phong/doan.js"></script>
+<script src="/baimoi/search.js"></script>
   </body>
   <div id="changePasswordModal" class="modal">
     <div class="modal-dialog">
