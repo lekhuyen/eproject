@@ -849,3 +849,27 @@ to {
 .user-options .option:hover {
   background-color: #f5f5f5;
 }
+.slidecardtext{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 25px;
+  font-weight: 1000;
+  width: 100%;
+  background-color: transparent;
+}
+.popup3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}

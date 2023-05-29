@@ -245,12 +245,12 @@ label {
 .totals .totals-item label {
   float: left;
   clear: both;
-  width: 79%;
+  width: 70%;
   text-align: right;
 }
 
 .totals .totals-item .totals-value {
-  float: right;
+  float: left;
   width: 21%;
   text-align: right;
 }
@@ -261,9 +261,10 @@ label {
 
 .checkout {
   float: right;
+  margin-right: 100px;
   border: 0;
   margin-top: 20px;
-  padding: 6px 25px;
+  padding: 7px 150px;
   background-color: #6b6;
   color: #fff;
   font-size: 25px;

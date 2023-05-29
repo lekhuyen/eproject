@@ -91,6 +91,6 @@ function autocomplete(inp, arr) {
     });
   }
   
-  var products = ["The ultimate in becoming an Excel teacher", "Weight Training Fundamentals", "Calorie Blast Aerobics: Shape, Burn, and Tone", "Yoga for Mind and Body Wellness", "Pilates Fundamentals for Core Strength and Flexibility", "Swimming Fundamentals for Beginners", "Introduction to Martial Arts", "Introduction to Programming for Beginners","Gestalt and web design: The ux ultimate guide","Coding for Beginners 1: You Can Code!","30 Days of Python - Coding for Beginners","Food Safety and Personal Hygiene in a Professional Kitchen","A Beginner’s Guide to Basic Cooking Skills", "FST-7: Big and Ripped",];
+  var products = ["The ultimate in becoming an Excel teacher", "Weight Training Fundamentals", "Calorie Blast Aerobics: Shape, Burn, and Tone", "Yoga for Mind and Body Wellness", "Pilates Fundamentals for Core Strength and Flexibility", "Swimming Fundamentals for Beginners", "Introduction to Martial Arts", "Gestalt and web design: The ux ultimate guide","Coding for Beginners 1: You Can Code!","30 Days of Python - Coding for Beginners","Food Safety and Personal Hygiene in a Professional Kitchen","A Beginner’s Guide to Basic Cooking Skills", "FST-7: Big and Ripped",];
   autocomplete(document.getElementById("myInput"), products);
   
