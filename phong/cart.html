@@ -28,12 +28,12 @@
       drift.SNIPPET_VERSION = '0.3.1';
       drift.load('skd536zbews8');
       </script>
-    <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="/phong/search.css">
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="./phong/search.css">
     <script src="/baimoi/cart.js"></script>
     <!-- <script src="/baimoi/cart.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="/phong/doan.js"></script>
+    
 
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -47,8 +47,8 @@
       <nav
           class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark-subtle">
           <div class="container-fluid">
-              <a class="navbar-brand" href="/index.html"><img
-                      src="/picture/logo.png" width="40px" height="40px"></a>
+              <a class="navbar-brand" href="../index.html"><img
+                      src="./picture/logo.png" width="40px" height="40px"></a>
               <button class="navbar-toggler" type="button"
                   data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                   aria-controls="navbarScroll" aria-expanded="false"
@@ -66,25 +66,25 @@
                       </li>
                       <li class="nav-item">
                           <a class="nav-link active" aria-current="page"
-                              href="/baimoi/course1.html" data-i18n="home"
+                              href="./baimoi/course1.html" data-i18n="home"
                               style="margin-left: 30px;">Course</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link"
-                              href="/Hau/aboutus/aboutus.html"
+                              href="./Hau/aboutus/aboutus.html"
                               data-i18n="about"
-                              style="margin-left: 30px;">About us</a>
+                              style="margin-left: 20px;">About us</a>
                           <span id="usernameSpan"></span>
                       </li>
 
                       <li class="nav-item">
                           <a class="nav-link"
-                              href="/Hau/Contact us/contact.html"
+                              href="./Hau/Contact us/contact.html"
                               data-i18n="contact"
                               style="margin-left: 30px;">Contact</a>
                       </li>
                       <li class="nav-item">
-                          <a href="/phong/dangnhap.html" class="nav-link"
+                          <a href="dangnhap.html" class="nav-link"
                               id="loginLink"
                               style="text-decoration: none; color: rgb(30, 147, 201); margin-left: 30px; font-weight: 800;">Login</a>
                           <a href="#" onclick="logout(event)"
@@ -128,7 +128,7 @@
                           </div>
                       </li>
                       <li class="nav-item" style="margin-left: 50px;">
-                          <a href="/phong/cart.html" class="nav-link"><ion-icon
+                          <a href="cart.html" class="nav-link"><ion-icon
                                   name="cart"
                                   style="width: 50px; height: 50px; color:
                                   blue;"></ion-icon>
@@ -139,11 +139,12 @@
                       </li>
                   </ul>
                   <form autocomplete="off" action="/action_page.php" class="d-flex" role="search">
-                    <div class="autocomplete" style="width:300px;">
-                      <input id="myInput" class="form-control w-75" type="text" name="myCountry" placeholder="Search">
-                    </div>
-                    
-                  </form>
+                      <div class="autocomplete" style="width:300px;">
+                        <input id="myInput" class="form-control w-75" type="text" name="myCountry" placeholder="Search">
+                      </div>
+                      
+                    </form>
+                 
               </div>
           </div>
       </nav>
@@ -459,8 +460,9 @@
       updateCartDisplay();
     });
   </script>
-  <script src="/phong/doan.js"></script>
-<script src="/baimoi/search.js"></script>
+  <script src="./phong/doan.js"></script>
+<script src="./baimoi/search.js"></script>
+<script src="./phong/doan.js"></script>
   </body>
   <div id="changePasswordModal" class="modal">
     <div class="modal-dialog">
@@ -503,6 +505,6 @@
     </div>
   </div>
   <footer>
-    <iframe src="/phong/footer.html" frameborder="0" scrolling="no" class="iframe3"></iframe>
+    <iframe src="footer.html" frameborder="0" scrolling="no" class="iframe3"></iframe>
   </footer>
 </html>
