@@ -23,7 +23,7 @@ eProject documentation at https://github.com/lekhuyen/eproject/tree/main/documen
 
 ============================
 
-eProject published at https://lekhuyen.github.io/eproject/
+eProject published at https://github.com/lekhuyen/eproject/blob/main/index.html
 
 ============================
 
