@@ -111,39 +111,31 @@ padding-right: 50px;
   width: 100%;
   height: 700px;
 }
-.main-1-img {
-  margin-top: 90px;
+.nav2{
+  margin-top: 85px;
   width: 100%;
-  height: 570px;
+  height: 50px;
+  background-color: rgb(232, 227, 227);
 }
-.main-1-img-1 {
-  width: 100%;
-  height: 570px;
-  position: relative;
-  background-repeat: no-repeat;
-  background-image: url(../picture/img-courses-6.jpg);
-  background-size: cover;
+.nav2 ul{
+  list-style-type: none;
+  display: inline-flex;
 }
-.main-1-img-1-title {
-  color: white;
-  width: 100%;
-  top: 300px;
-  text-align: center;
-  position: absolute;
+.nav2 ul li{
+  margin-left: 30px;
 }
-.main-1-img-1-title>p {
-  font-weight: bold;
-  font-size: 1.8em;
-}
-.a-home>a {
-  color: white;
+.nav2 ul a{
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
 }
-.a-home a:hover{
-  color: #fa6400;
+.mySlides {display:none;}
+.slide{
+  width: 100%;
+  background-color: transparent;
 }
+
+
 .page1{
   margin-top: 40px;
   width: 100%;

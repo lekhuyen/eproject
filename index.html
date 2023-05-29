@@ -34,6 +34,7 @@
         <title>Document</title>
         <link rel="stylesheet" href="./phong/doan.css">
         <link rel="stylesheet" href="./rating/index.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script type="module"
             src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule
@@ -92,7 +93,8 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                    href="./baimoi/course1.html" data-i18n="home"
+                                    href="./baimoi/course1.html"
+                                    data-i18n="home"
                                     style="margin-left: 30px;">Course</a>
                             </li>
                             <li class="nav-item">
@@ -102,7 +104,7 @@
                                     style="margin-left: 20px;">About us</a>
                                 <span id="usernameSpan"></span>
                             </li>
-      
+
                             <li class="nav-item">
                                 <a class="nav-link"
                                     href="./Hau/Contact us/contact.html"
@@ -119,17 +121,22 @@
                             </li>
                             <li class="nav-item">
                                 <p style="margin-left: 20px;" class="nav-link">
-                                    Username:<span id="username" style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;" onclick="showUserOptions()"></span>
+                                    Username:<span id="username"
+                                        style="color: rgb(0, 145, 255); font-weight: 600; cursor: pointer;"
+                                        onclick="showUserOptions()"></span>
                                     <img id="avatarImg" src
                                         style="width: 30px; height: 30px; margin-left: 10px; display: none;">
                                 </p>
                                 <div id="userOptions" class="user-options">
                                     <div class="option"
-                                        onclick="showChangePasswordModal()">Change Password</div>
+                                        onclick="showChangePasswordModal()">Change
+                                        Password</div>
                                     <div class="option"
-                                        onclick="showChangeNameModal()">Change Name</div>
+                                        onclick="showChangeNameModal()">Change
+                                        Name</div>
                                     <div class="option"
-                                        onclick="document.getElementById('avatarInput').click()">Change Avatar</div>
+                                        onclick="document.getElementById('avatarInput').click()">Change
+                                        Avatar</div>
                                     <div id="fileInputContainer"
                                         style="display: none;">
                                         <input type="file" id="avatarInput"
@@ -140,7 +147,7 @@
                                 </div>
                             </li>
                             <!-- Modal cho đổi mật khẩu -->
-      
+
                             <li>
                                 <div class="navbar-language"
                                     style="margin-left:
@@ -164,30 +171,36 @@
                                         absolute; color: rgb(11, 51, 251);">0</span></a>
                             </li>
                         </ul>
-                        <form autocomplete="off" action="/action_page.php" class="d-flex" role="search">
+                        <form autocomplete="off" action="/action_page.php"
+                            class="d-flex" role="search">
                             <div class="autocomplete" style="width:300px;">
-                              <input id="myInput" class="form-control w-75" type="text" name="myCountry" placeholder="Search">
+                                <input id="myInput" class="form-control w-75"
+                                    type="text" name="myCountry"
+                                    placeholder="Search">
                             </div>
-                            
-                          </form>
-                       
+
+                        </form>
+
                     </div>
                 </div>
             </nav>
-      
+
         </header>
-
-        <div class="main-1-img">
-            <div class="main-1-img-1">
-                <div class="main-1-img-1-title">
-                    <p>Home</p>
-                    <div class="a-home">
-                        <a href="#">Home</a> / Courses
-                    </div>
-                </div>
-            </div>
+        <div class="nav2">
+                <ul style="display: inline-flex;">
+                    <li><a href="./phong/recruitment.html">Recruitment</a></li>
+                    <li><a href="#">Học Sinh Xuất Sắc</a></li>
+                </ul>
         </div>
-
+        <!-- slide -->
+        <div class="slide">
+        <div class="w3-section" style="width: 100%;">
+            <img class="mySlides w3-animate-top" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" style="width:100%">
+            <img class="mySlides w3-animate-bottom" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" style="width:100%">
+            <img class="mySlides w3-animate-top" src="https://images.unsplash.com/photo-1587614313085-5da51cebd8ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" style="width:100%">
+            <img class="mySlides w3-animate-bottom" src="https://images.unsplash.com/photo-1590402494727-0375eeaacf68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" style="width:100%">
+          </div>
+        </div>
         <div class="page2">
             <div class="textpage2">
                 <p><span data-i18n="textpage2">SELECT COURSE</span></p>
@@ -385,8 +398,10 @@
                         style="background-color: rgb(249,248,248);  border: none;">
                         <div class="card-body" style="padding:25px">
                             <div class="div">
-                                <a href="./baimoi/course1-gym.html" class="a-img">
-                                    <img src="./baimoi/img/img-courses-2.jpg" alt
+                                <a href="./baimoi/course1-gym.html"
+                                    class="a-img">
+                                    <img src="./baimoi/img/img-courses-2.jpg"
+                                        alt
                                         style="width:100%">
                                 </a>
                                 <div class="free">
@@ -493,7 +508,8 @@
                             <div class="div">
                                 <a href="./baimoi/course1-gym2.html"
                                     class="a-img">
-                                    <img src="./baimoi/img/img-courses-4.jpg" alt
+                                    <img src="./baimoi/img/img-courses-4.jpg"
+                                        alt
                                         style="width:100%">
                                 </a>
                                 <div class="free">
@@ -622,234 +638,249 @@
                             of knowledge..</p>
                         <p class="p3"><button class="button-92" id="button-92"
                                 role="button" data-i18n="register">Register Now</button></p>
-                                <div class="popup-form-container">
-                                    <section class="h-100 bg-dark">
-                                        <div class="container py-5 h-100">
-                                            <div class="row d-flex
+                        <div class="popup-form-container">
+                            <section class="h-100 bg-dark">
+                                <div class="container py-5 h-100">
+                                    <div class="row d-flex
                                                 justify-content-center
                                                 align-items-center
                                                 h-100">
-                                                <div class="col">
-                                                    <div class="card card-registration
+                                        <div class="col">
+                                            <div class="card card-registration
                                                         my-4">
-                                                        <div class="row g-0">
-                                                            <div class="col-xl-6 d-none
+                                                <div class="row g-0">
+                                                    <div class="col-xl-6 d-none
                                                                 d-xl-block">
-                                                                <img
-                                                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
-                                                                    alt="Sample photo"
-                                                                    class="img-fluid"
-                                                                    style="border-top-left-radius:
+                                                        <img
+                                                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                                                            alt="Sample photo"
+                                                            class="img-fluid"
+                                                            style="border-top-left-radius:
                                                                     .25rem;
                                                                     border-bottom-left-radius:
                                                                     .25rem;" />
-                                                            </div>
-                                                            <div class="col-xl-6">
-                                                                <div class="card-body
+                                                    </div>
+                                                    <div class="col-xl-6">
+                                                        <div class="card-body
                                                                     p-md-5 text-black">
-                                                                    <h3 class="mb-5
+                                                            <h3 class="mb-5
                                                                         text-uppercase">Student
-                                                                        registration
-                                                                        form</h3>
-        
-                                                                    <div class="row">
-                                                                        <div
-                                                                            class="col-md-6
+                                                                registration
+                                                                form</h3>
+
+                                                            <div class="row">
+                                                                <div
+                                                                    class="col-md-6
                                                                             mb-4">
-                                                                            <div
-                                                                                class="form-outline">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    id="form3Example1m"
-                                                                                    class="form-control
-                                                                                    form-control-lg" />
-                                                                                <label
-                                                                                    class="form-label"
-                                                                                    for="form3Example1m">First
-                                                                                    name</label>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="col-md-6
-                                                                            mb-4">
-                                                                            <div
-                                                                                class="form-outline">
-                                                                                <input
-                                                                                    type="text"
-                                                                                    id="form3Example1n"
-                                                                                    class="form-control
-                                                                                    form-control-lg" />
-                                                                                <label
-                                                                                    class="form-label"
-                                                                                    for="form3Example1n">Last
-                                                                                    name</label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-        
                                                                     <div
-                                                                        class="form-outline
-                                                                        mb-4">
+                                                                        class="form-outline">
                                                                         <input
                                                                             type="text"
-                                                                            id="form3Example8"
+                                                                            id="form3Example1m"
                                                                             class="form-control
-                                                                            form-control-lg" />
+                                                                                    form-control-lg" />
                                                                         <label
                                                                             class="form-label"
-                                                                            for="form3Example8">Address</label>
+                                                                            for="form3Example1m">First
+                                                                            name</label>
                                                                     </div>
-        
+                                                                </div>
+                                                                <div
+                                                                    class="col-md-6
+                                                                            mb-4">
                                                                     <div
-                                                                        class="d-md-flex
+                                                                        class="form-outline">
+                                                                        <input
+                                                                            type="text"
+                                                                            id="form3Example1n"
+                                                                            class="form-control
+                                                                                    form-control-lg" />
+                                                                        <label
+                                                                            class="form-label"
+                                                                            for="form3Example1n">Last
+                                                                            name</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                        mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example8"
+                                                                    class="form-control
+                                                                            form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example8">Address</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="d-md-flex
                                                                         justify-content-start
                                                                         align-items-center
                                                                         mb-4 py-2">
-        
-                                                                        <h6 class="mb-0
+
+                                                                <h6 class="mb-0
                                                                             me-4">Gender:
-                                                                        </h6>
-                                                                        <div
-                                                                            class="form-check
+                                                                </h6>
+                                                                <div
+                                                                    class="form-check
                                                                             form-check-inline
                                                                             mb-0 me-4">
-                                                                            <input
-                                                                                class="form-check-input"
-                                                                                type="radio"
-                                                                                name="inlineRadioOptions"
-                                                                                id="femaleGender"
-                                                                                value="option1" />
-                                                                            <label
-                                                                                class="form-check-label"
-                                                                                for="femaleGender">Female</label>
-                                                                        </div>
-        
-                                                                        <div
-                                                                            class="form-check
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="inlineRadioOptions"
+                                                                        id="femaleGender"
+                                                                        value="option1" />
+                                                                    <label
+                                                                        class="form-check-label"
+                                                                        for="femaleGender">Female</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="form-check
                                                                             form-check-inline
                                                                             mb-0 me-4">
-                                                                            <input
-                                                                                class="form-check-input"
-                                                                                type="radio"
-                                                                                name="inlineRadioOptions"
-                                                                                id="maleGender"
-                                                                                value="option2" />
-                                                                            <label
-                                                                                class="form-check-label"
-                                                                                for="maleGender">Male</label>
-                                                                        </div>
-        
-                                                                        <div
-                                                                            class="form-check
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="inlineRadioOptions"
+                                                                        id="maleGender"
+                                                                        value="option2" />
+                                                                    <label
+                                                                        class="form-check-label"
+                                                                        for="maleGender">Male</label>
+                                                                </div>
+
+                                                                <div
+                                                                    class="form-check
                                                                             form-check-inline
                                                                             mb-0">
-                                                                            <input
-                                                                                class="form-check-input"
-                                                                                type="radio"
-                                                                                name="inlineRadioOptions"
-                                                                                id="otherGender"
-                                                                                value="option3" />
-                                                                            <label
-                                                                                class="form-check-label"
-                                                                                for="otherGender">Other</label>
-                                                                        </div>
-        
-                                                                    </div>
-        
-                                                                    <div class="row">
-                                                                        <div class="col-md-6 mb-4">
-                                                                            <select class="select" id="stateSelect">
-                                                                                <option value="1">State</option>
-                                                                                <option value="2">VietNam</option>
-                                                                                <option value="3">American</option>
-                                                                                <option value="4">India</option>
-                                                                            </select>
-                                                                        </div>
-                                                                        <div class="col-md-6 mb-4">
-                                                                            <select class="select" id="citySelect">
-                                                                                <option value="1">City</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-        
-                                                                    <div
-                                                                        class="form-outline
-                                                                        mb-4">
-                                                                        <input
-                                                                            type="date"
-                                                                            id="form3Example9"
-                                                                            class="form-control
-                                                                            form-control-lg" />
-                                                                        <label
-                                                                            class="form-label"
-                                                                            for="form3Example9">Birthday</label>
-                                                                    </div>
-        
-                                                                    <div
-                                                                        class="form-outline
-                                                                        mb-4">
-                                                                        <input
-                                                                            type="text"
-                                                                            id="form3Example90"
-                                                                            class="form-control
-                                                                            form-control-lg" />
-                                                                        <label
-                                                                            class="form-label"
-                                                                            for="form3Example90">ZipCode</label>
-                                                                    </div>
-        
-                                                                    <div
-                                                                        class="form-outline
-                                                                        mb-4">
-                                                                        <input
-                                                                            type="text"
-                                                                            id="form3Example99"
-                                                                            class="form-control
-                                                                            form-control-lg" />
-                                                                        <label
-                                                                            class="form-label"
-                                                                            for="form3Example99">Phone</label>
-                                                                    </div>
-        
-                                                                    <div
-                                                                        class="form-outline
-                                                                        mb-4">
-                                                                        <input
-                                                                            type="text"
-                                                                            id="form3Example97"
-                                                                            class="form-control
-                                                                            form-control-lg" />
-                                                                        <label
-                                                                            class="form-label"
-                                                                            for="form3Example97">Email
-                                                                            ID</label>
-                                                                    </div>
-        
-                                                                    <div class="d-flex
-                                                                        justify-content-end
-                                                                        pt-3">
-                                                                        <button
-                                                                            type="button"
-                                                                            class="btn
-                                                                            btn-light
-                                                                            btn-lg">Reset
-                                                                            all</button>
-                                                                            <button type="button" id="submitBtn" class="btn btn-warning btn-lg ms-2">Submit form</button>
-                                                                    </div>
-        
+                                                                    <input
+                                                                        class="form-check-input"
+                                                                        type="radio"
+                                                                        name="inlineRadioOptions"
+                                                                        id="otherGender"
+                                                                        value="option3" />
+                                                                    <label
+                                                                        class="form-check-label"
+                                                                        for="otherGender">Other</label>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div
+                                                                    class="col-md-6 mb-4">
+                                                                    <select
+                                                                        class="select"
+                                                                        id="stateSelect">
+                                                                        <option
+                                                                            value="1">State</option>
+                                                                        <option
+                                                                            value="2">VietNam</option>
+                                                                        <option
+                                                                            value="3">American</option>
+                                                                        <option
+                                                                            value="4">India</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div
+                                                                    class="col-md-6 mb-4">
+                                                                    <select
+                                                                        class="select"
+                                                                        id="citySelect">
+                                                                        <option
+                                                                            value="1">City</option>
+                                                                    </select>
                                                                 </div>
                                                             </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                        mb-4">
+                                                                <input
+                                                                    type="date"
+                                                                    id="form3Example9"
+                                                                    class="form-control
+                                                                            form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example9">Birthday</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                        mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example90"
+                                                                    class="form-control
+                                                                            form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example90">ZipCode</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                        mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example99"
+                                                                    class="form-control
+                                                                            form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example99">Phone</label>
+                                                            </div>
+
+                                                            <div
+                                                                class="form-outline
+                                                                        mb-4">
+                                                                <input
+                                                                    type="text"
+                                                                    id="form3Example97"
+                                                                    class="form-control
+                                                                            form-control-lg" />
+                                                                <label
+                                                                    class="form-label"
+                                                                    for="form3Example97">Email
+                                                                    ID</label>
+                                                            </div>
+
+                                                            <div class="d-flex
+                                                                        justify-content-end
+                                                                        pt-3">
+                                                                <button
+                                                                    type="button"
+                                                                    class="btn
+                                                                            btn-light
+                                                                            btn-lg">Reset
+                                                                    all</button>
+                                                                <button
+                                                                    type="button"
+                                                                    id="submitBtn"
+                                                                    class="btn btn-warning btn-lg ms-2">Submit
+                                                                    form</button>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </section>
+                                    </div>
                                 </div>
-                            </div>
+                            </section>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
         <div class="page4">
             <div class="textpage4" data-i18n="text9">Frequently Asked Questions</div>
             <div class="khungpage5">
@@ -1070,6 +1101,7 @@
             <script src="./baimoi/cart.js"></script>
             <script src="./phong/form.js"></script>
             <script src="./baimoi/search.js"></script>
+            <script src="./phong/slide.js"></script>
             <script
                 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script
@@ -1109,7 +1141,7 @@
                   updateLoginStatus(); // Cập nhật trạng thái đăng nhập
                 }
               </script>
-              
+
             <div id="changePasswordModal" class="modal">
                 <div class="modal-dialog">
                     <div class="modal-content">
