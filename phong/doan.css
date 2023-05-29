@@ -121,7 +121,7 @@ padding-right: 50px;
   height: 570px;
   position: relative;
   background-repeat: no-repeat;
-  background-image: url(../picture/img-courses-6.jpg);
+  background-image: url(/picture/img-courses-6.jpg);
   background-size: cover;
 }
 .main-1-img-1-title {
