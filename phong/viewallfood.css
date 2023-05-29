@@ -9,7 +9,7 @@
     position: relative;
     background-repeat: no-repeat;
     /* background-color: red; */
-    background: url("/picture/img-courses-6.jpg");
+    background: url("../picture/img-courses-6.jpg");
     background-size: cover;
   }
   .main-1-img-1 {
