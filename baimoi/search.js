@@ -32,7 +32,7 @@ function autocomplete(inp, arr) {
               "30 Days of Python - Coding for Beginners 120" : "baimoi/python.html",
               "Food Safety and Personal Hygiene in a Professional Kitchen": "thinh/cook1.html",
               "A Beginner’s Guide to Basic Cooking Skills": "thinh/cook2.html",
-              "FST-7: Big and Ripped": "thinh/fst7.html",
+              "FST-7: Big and Ripped": "thinh/fst7.html"
               // Các sản phẩm khác
             };
             var selectedProduct = inp.value;
