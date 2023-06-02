@@ -127,7 +127,7 @@
     
         // Kiểm tra nếu các trường không được điền hoặc mật khẩu không trùng khớp
         if (!username || !email || !password || !passwordRepeat) {
-          alert('Vui lòng điền đầy đủ thông tin!');
+          alert('Please complete all information!');
           return;
         }
         if (password !== passwordRepeat) {
@@ -148,7 +148,7 @@
         }
         users.push(user);
         localStorage.setItem('users', JSON.stringify(users));
-        alert('Đăng ký thành công!');
+        alert('Sign Up Success!');
         window.location.href = "./dangnhap.html"; // Chuyển hướng đến trang đăng nhập sau khi đăng ký thành công
       }
     </script>
