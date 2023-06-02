@@ -250,9 +250,9 @@
         // Người dùng chưa đăng nhập
         var cartItems = getCart();
         if (cartItems.length > 0) {
-          alert('Bạn chưa đăng nhập!');
+          alert('You are not logged in!');
         } else {
-          alert('Giỏ hàng của bạn đang trống!');
+          alert('Your shopping cart is empty!');
         }
       }
     }
@@ -467,16 +467,16 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Đổi mật khẩu</h5>
+          <h5 class="modal-title">Change password</h5>
           <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
         </div>
         <div class="modal-body">
           <form onsubmit="changePassword(event)">
             <div class="form-group">
-              <label for="newPassword">Mật khẩu mới:</label>
+              <label for="newPassword">New password</label>
               <input type="password" class="form-control" id="newPassword" required>
             </div>
-            <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+            <button type="submit" class="btn btn-primary">Confirm</button>
           </form>
         </div>
       </div>
@@ -488,16 +488,16 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Đổi tên</h5>
+          <h5 class="modal-title">Change name</h5>
           <button type="button" class="close" data-dismiss="modal" onclick="closeChangePasswordModal()">&times;</button>
         </div>
         <div class="modal-body">
           <form onsubmit="changeName(event)">
             <div class="form-group">
-              <label for="newName">Tên mới:</label>
+              <label for="newName">New name:</label>
               <input type="text" class="form-control" id="newName" required>
             </div>
-            <button type="submit" class="btn btn-primary">Đổi tên</button>
+            <button type="submit" class="btn btn-primary">Confirm</button>
           </form>
         </div>
       </div>
