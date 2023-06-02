@@ -62,7 +62,7 @@ h6 {
     position: relative;
     background-repeat: no-repeat;
     /* background-color: red; */
-    background: url("/picture/img-courses-1.jpg");
+    background: url("../../picture/img-courses-1.jpg");
     background-size: cover;
 }
 

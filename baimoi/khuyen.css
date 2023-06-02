@@ -23,7 +23,7 @@ body{
     height: 100%;
     position: relative;
     background-repeat: no-repeat;
-    background-image: url(/baimoi/img/main-1-img.jpg);
+    background-image: url(../baimoi/img/main-1-img.jpg);
 }
 
 .main-1-img-1-title {
