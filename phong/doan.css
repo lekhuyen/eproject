@@ -886,3 +886,7 @@ to {
   font-size: 20px;
   cursor: pointer;
 }
+#visitorCount {
+
+  font-weight: bold;
+}

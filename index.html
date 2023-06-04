@@ -85,6 +85,7 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html"><img
                             src="./picture/logo.png" width="40px" height="40px"></a>
+                            Visitor:<div id="visitorCount">0</div>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                         aria-controls="navbarScroll" aria-expanded="false"
@@ -1398,6 +1399,42 @@
                 popup.style.display = 'none';
             };
         };
+          // Kiểm tra xem đã tính số lượng khách truy cập chưa
+    var counted = getCookie('counted');
+    if (!counted) {
+      // Nếu chưa, tăng số lượng khách truy cập lên 1 và lưu cookie
+      var visitorCount = parseInt(getCookie('visitorCount')) || 0;
+      visitorCount++;
+      setCookie('visitorCount', visitorCount, 365);
+      setCookie('counted', true, 365);
+    }
+
+    // Lấy số lượng khách truy cập từ cookie và cập nhật trong phần tử
+    var countElement = document.getElementById('visitorCount');
+    countElement.innerText = getCookie('visitorCount');
+
+    // Hàm lấy cookie
+    function getCookie(name) {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.indexOf(name + '=') === 0) {
+          return cookie.substring((name + '=').length, cookie.length);
+        }
+      }
+      return '';
+    }
+
+    // Hàm đặt cookie
+    function setCookie(name, value, days) {
+      var expires = '';
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = '; expires=' + date.toUTCString();
+      }
+      document.cookie = name + '=' + value + expires + '; path=/';
+    }
               </script>
 
             <div id="changePasswordModal" class="modal">
