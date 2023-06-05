@@ -19,8 +19,8 @@ function autocomplete(input, options) {
           input.value = this.getElementsByTagName("input")[0].value;
           closeAllLists();
           const productURLs = {
-            "The ultimate in becoming an Excel teacher": "./baimoi/course1-js.html", 
-            "Weight Training Fundamentals": "./baimoi/course1-gym.html",
+            "The ultimate in becoming an Excel teacher": "./course1-js.html", 
+            "Weight Training Fundamentals": "./course1-gym.html",
             "Calorie Blast Aerobics: Shape, Burn, and Tone": "./baimoi/course1-gym2.html",
             "Yoga for Mind and Body Wellness": "./baimoi/course1-gym4.html",
             "Pilates Fundamentals for Core Strength and Flexibility": "./baimoi/course1-gym5.html",
@@ -33,7 +33,6 @@ function autocomplete(input, options) {
             "Food Safety and Personal Hygiene in a Professional Kitchen": "../thinh/cook1.html",
             "A Beginner’s Guide to Basic Cooking Skills": "./thinh/cook2.html",
             "FST-7: Big and Ripped": "./thinh/fst7.html"
-            // Các sản phẩm khác
           };
           const selectedProduct = input.value;
           let selectedProductURL = productURLs[selectedProduct];
@@ -50,7 +49,7 @@ function autocomplete(input, options) {
   });
 
   input.addEventListener("keydown", function(e) {
-    const dropdownOptions = document.getElementById(`${this.id}-autocomplete-list`);
+    let dropdownOptions = document.getElementById(`${this.id}-autocomplete-list`);
     if (dropdownOptions) {
       dropdownOptions = dropdownOptions.getElementsByTagName("div");
       if (e.keyCode === 40) {
