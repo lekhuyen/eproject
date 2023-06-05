@@ -19,27 +19,27 @@ function autocomplete(input, options) {
           input.value = this.getElementsByTagName("input")[0].value;
           closeAllLists();
           const productURLs = {
-            "The ultimate in becoming an Excel teacher": "./course1-js.html", 
-            "Weight Training Fundamentals": "./course1-gym.html",
+            "The ultimate in becoming an Excel teacher": "./baimoi/course1-js.html", 
+            "Weight Training Fundamentals": "./baimoi/course1-gym.html",
             "Calorie Blast Aerobics: Shape, Burn, and Tone": "./baimoi/course1-gym2.html",
             "Yoga for Mind and Body Wellness": "./baimoi/course1-gym4.html",
             "Pilates Fundamentals for Core Strength and Flexibility": "./baimoi/course1-gym5.html",
             "Swimming Fundamentals for Beginners": "./baimoi/course1-gym6.html",
             "Introduction to Martial Arts": "./baimoi/course1-gym7.html",
             "User experience: The beginner's guide & learning": "./baimoi/course-us-ui.html",
-            "Gestalt and web design: The ux ultimate guide": "../baimoi/course-us-ui-1.html",
+            "Gestalt and web design: The ux ultimate guide": "./baimoi/course-us-ui-1.html",
             "Coding for Beginners 1: You Can Code!": "./baimoi/developer.html",
             "30 Days of Python - Coding for Beginners 120": "./baimoi/python.html",
-            "Food Safety and Personal Hygiene in a Professional Kitchen": "../thinh/cook1.html",
+            "Food Safety and Personal Hygiene in a Professional Kitchen": "./thinh/cook1.html",
             "A Beginner’s Guide to Basic Cooking Skills": "./thinh/cook2.html",
             "FST-7: Big and Ripped": "./thinh/fst7.html"
           };
           const selectedProduct = input.value;
           let selectedProductURL = productURLs[selectedProduct];
-          if (!selectedProductURL) {
-            selectedProductURL = selectedProductURL.replace("../", "./");
-          }
           if (selectedProductURL) {
+            if (selectedProductURL.startsWith('./')) {
+              selectedProductURL = '../' + selectedProductURL;
+            }
             window.location.href = selectedProductURL;
           }
         });
@@ -94,7 +94,6 @@ function autocomplete(input, options) {
     closeAllLists(e.target);
   });
 }
-
 
 const products = [
   "The ultimate in becoming an Excel teacher",
