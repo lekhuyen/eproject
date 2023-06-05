@@ -1399,42 +1399,24 @@
                 popup.style.display = 'none';
             };
         };
-          // Kiểm tra xem đã tính số lượng khách truy cập chưa
-    var counted = getCookie('counted');
-    if (!counted) {
-      // Nếu chưa, tăng số lượng khách truy cập lên 1 và lưu cookie
-      var visitorCount = parseInt(getCookie('visitorCount')) || 0;
-      visitorCount++;
-      setCookie('visitorCount', visitorCount, 365);
-      setCookie('counted', true, 365);
+           // Kiểm tra xem có dữ liệu visitorCount trong Local Storage hay không
+    if (localStorage.getItem('visitorCount')) {
+      // Nếu có, lấy giá trị từ Local Storage
+      var visitorCount = parseInt(localStorage.getItem('visitorCount'));
+    } else {
+      // Nếu không, khởi tạo giá trị ban đầu là 0
+      var visitorCount = 0;
     }
 
-    // Lấy số lượng khách truy cập từ cookie và cập nhật trong phần tử
+    // Tăng số lượng khách truy cập lên 1
+    visitorCount++;
+
+    // Cập nhật số lượng khách truy cập trong phần tử
     var countElement = document.getElementById('visitorCount');
-    countElement.innerText = getCookie('visitorCount');
+    countElement.innerText = visitorCount;
 
-    // Hàm lấy cookie
-    function getCookie(name) {
-      var cookies = document.cookie.split(';');
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i].trim();
-        if (cookie.indexOf(name + '=') === 0) {
-          return cookie.substring((name + '=').length, cookie.length);
-        }
-      }
-      return '';
-    }
-
-    // Hàm đặt cookie
-    function setCookie(name, value, days) {
-      var expires = '';
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = '; expires=' + date.toUTCString();
-      }
-      document.cookie = name + '=' + value + expires + '; path=/';
-    }
+    // Lưu số lượng khách truy cập vào Local Storage
+    localStorage.setItem('visitorCount', visitorCount.toString());
               </script>
 
             <div id="changePasswordModal" class="modal">
