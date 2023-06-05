@@ -37,9 +37,8 @@ function autocomplete(input, options) {
           const selectedProduct = input.value;
           let selectedProductURL = productURLs[selectedProduct];
           if (selectedProductURL) {
-            if (selectedProductURL.startsWith('./')) {
-              selectedProductURL = '../' + selectedProductURL;
-            }
+            const basePath = window.location.href.replace(window.location.pathname, '');
+            selectedProductURL = basePath + '/' + selectedProductURL;
             window.location.href = selectedProductURL;
           }
         });
@@ -47,6 +46,7 @@ function autocomplete(input, options) {
       }
     }
   });
+
 
   input.addEventListener("keydown", function(e) {
     let dropdownOptions = document.getElementById(`${this.id}-autocomplete-list`);
