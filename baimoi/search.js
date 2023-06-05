@@ -19,7 +19,7 @@ function autocomplete(input, options) {
           input.value = this.getElementsByTagName("input")[0].value;
           closeAllLists();
           const productURLs = {
-            "The ultimate in becoming an Excel teacher": "./baimoi/course1-js.html", 
+            "The ultimate in becoming an Excel teacher": "./baimoi/course1-js.html",
             "Weight Training Fundamentals": "./baimoi/course1-gym.html",
             "Calorie Blast Aerobics: Shape, Burn, and Tone": "./baimoi/course1-gym2.html",
             "Yoga for Mind and Body Wellness": "./baimoi/course1-gym4.html",
@@ -36,9 +36,10 @@ function autocomplete(input, options) {
           };
           const selectedProduct = input.value;
           let selectedProductURL = productURLs[selectedProduct];
+          if (!selectedProductURL) {
+            selectedProductURL = selectedProduct;
+          }
           if (selectedProductURL) {
-            const basePath = window.location.href.replace(window.location.pathname, '');
-            selectedProductURL = basePath + '/' + selectedProductURL;
             window.location.href = selectedProductURL;
           }
         });
@@ -112,3 +113,4 @@ const products = [
 ];
 
 autocomplete(document.getElementById("myInput"), products);
+
