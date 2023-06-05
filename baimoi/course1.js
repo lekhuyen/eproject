@@ -52,15 +52,14 @@ function changePage(i) {
 const input = document.querySelector('.input-courses input')
 const row = document.querySelectorAll('.item-1')
 input.addEventListener('input', function(e) {
-    const inputt = e.target.value.toLowerCase()
+    const inputValue = e.target.value.toLowerCase()
     row.forEach(item => {
-        const item1 = item.getAttribute('type')
-        if(item1.includes(inputt)){
+        const itemType = item.getAttribute('type')
+        const itemName = item.querySelector('.free-1-1 span').textContent.toLowerCase()
+        if (itemType.includes(inputValue) || itemName.includes(inputValue)) {
             item.style.display = 'block'
-        }else{
+        } else {
             item.style.display = 'none'
-
         }
-
     })
 })

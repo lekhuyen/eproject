@@ -19,7 +19,7 @@ function autocomplete(inp, arr) {
             inp.value = this.getElementsByTagName("input")[0].value;
             closeAllLists();
             var productURLs = {
-              "The ultimate in becoming an Excel teacher": "../baimoi/course1-js.html",
+              "The ultimate in becoming an Excel teacher": "../baimoi/course1-js.html", 
               "Weight Training Fundamentals": "../baimoi/course1-gym.html",
               "Calorie Blast Aerobics: Shape, Burn, and Tone": "../baimoi/course1-gym2.html",
               "Yoga for Mind and Body Wellness": "../baimoi/course1-gym4.html",
